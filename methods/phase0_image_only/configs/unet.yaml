@@ -1,0 +1,23 @@
+schema_version: 1
+method: unet
+upstream_commit: fdeb44037aba52900d852271293b165a697ecf06
+datasets: [qata, mosmed, busi]
+seeds: [1001, 1002, 1003]
+data:
+  manifest_directory: data_manifests
+model: {input_channels: 1, output_channels: 1, encoder_channels: [64, 128, 256, 512, 1024]}
+loss: {name: bce_with_logits_plus_soft_dice, dice_smooth: 1.0}
+preprocessing: {color_mode: grayscale, resize: [384, 384], image_interpolation: bilinear, mask_interpolation: nearest, image_scale: 255.0}
+augmentation: {horizontal_flip_probability: 0.5, rotation_probability: 0.5, rotation_degrees: [-15, 15], brightness_probability: 0.5, brightness_range: [0.9, 1.1], contrast_probability: 0.5, contrast_range: [0.9, 1.1]}
+training:
+  image_size: 384
+  epochs: 100
+  batch_size: 4
+  optimizer: {name: AdamW, learning_rate: 0.0003, weight_decay: 0.0001}
+  scheduler: {name: ReduceLROnPlateau, mode: max, patience: 5, factor: 0.5}
+  early_stopping: {metric: val_dice, mode: max, patience: 15}
+  checkpoint_rule: best_validation_dice_strictly_greater
+  num_workers: 4
+  amp: false
+evaluation: {threshold: 0.5, per_case_prediction_export: required}
+frozen: true

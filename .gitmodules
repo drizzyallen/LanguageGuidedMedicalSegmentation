@@ -1,0 +1,12 @@
+[submodule "upstream/LViT"]
+	path = upstream/LViT
+	url = https://github.com/HUANGLIZI/LViT.git
+[submodule "upstream/RecLMIS"]
+	path = upstream/RecLMIS
+	url = https://github.com/ShawnHuang497/RecLMIS.git
+[submodule "upstream/ProLearn"]
+	path = upstream/ProLearn
+	url = https://github.com/ShuchangYe-bib/ProLearn.git
+[submodule "upstream/Summer2026Research"]
+	path = upstream/Summer2026Research
+	url = https://github.com/drizzyallen/Summer2026Research.git

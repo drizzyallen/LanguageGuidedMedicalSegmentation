@@ -1,0 +1,24 @@
+schema_version: 1
+source:
+  repository: https://github.com/drizzyallen/Summer2026Research.git
+  commit: fdeb44037aba52900d852271293b165a697ecf06
+  commit_date: "2026-08-09T21:57:18-04:00"
+  subject: Add segmentation benchmarks and heatmap-prompted SAM2 results
+methods:
+  unet:
+    source_file: upstream/Summer2026Research/UNETmodel/U-Net-Model.py
+    wrapper: methods/phase0_image_only/models/unet.py
+  tripath_lesionnet:
+    source_file: upstream/Summer2026Research/TriPathLesionNetmodel/TriPathLesionNet.py
+    wrapper: methods/phase0_image_only/models/tripath_lesionnet.py
+  panoptic_fpn:
+    source_file: upstream/Summer2026Research/PanopticFeaturePyramidNetmodel/PFPN.py
+    wrapper: methods/phase0_image_only/models/panoptic_fpn.py
+freeze:
+  architecture_changed: false
+  loss_changed: false
+  optimizer_changed: false
+  scheduler_changed: false
+  augmentation_changed: false
+  checkpoint_rule_changed: false
+  training_runs_started: false

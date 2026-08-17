@@ -1,0 +1,12 @@
+schema_version: 1
+analysis_seed: 20260817
+bootstrap_resamples: 10000
+permutation_resamples: 100000
+confidence_level: 0.95
+metrics: [dice, miou, hd95, assd]
+pairs:
+  - [unet, tripath_lesionnet]
+  - [unet, panoptic_fpn]
+  - [tripath_lesionnet, panoptic_fpn]
+multiple_testing: holm_within_dataset_across_three_dice_comparisons
+unit: source_id_cluster_when_available_otherwise_image
