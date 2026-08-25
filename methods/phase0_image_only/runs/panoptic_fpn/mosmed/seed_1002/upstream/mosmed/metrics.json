@@ -1,0 +1,7 @@
+{
+  "dataset": "mosmed",
+  "best_epoch": 65,
+  "best_val_dice": 0.8024420975971982,
+  "parameters": 28617793,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1002/upstream/mosmed"
+}

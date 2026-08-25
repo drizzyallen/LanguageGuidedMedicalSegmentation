@@ -1,0 +1,13 @@
+{
+  "method": "tripath_lesionnet",
+  "dataset": "busi",
+  "seed": 1003,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1003/upstream/busi/best.pt",
+  "checkpoint_epoch": 45,
+  "test_samples": 130,
+  "threshold": 0.5,
+  "test_dice": 0.7951851282685553,
+  "test_miou": 0.7046546101472656,
+  "test_hd95": 37.01687020415315,
+  "test_assd": 12.138782505992227
+}

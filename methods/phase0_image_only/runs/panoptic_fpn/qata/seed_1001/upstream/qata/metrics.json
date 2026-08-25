@@ -1,0 +1,7 @@
+{
+  "dataset": "qata",
+  "best_epoch": 28,
+  "best_val_dice": 0.7837839010913304,
+  "parameters": 28617793,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1001/upstream/qata"
+}

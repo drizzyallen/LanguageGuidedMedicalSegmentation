@@ -1,0 +1,7 @@
+{
+  "dataset": "busi",
+  "best_epoch": 34,
+  "best_val_dice": 0.7746883197825335,
+  "parameters": 28617793,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1002/upstream/busi"
+}

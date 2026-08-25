@@ -1,0 +1,47 @@
+{
+  "dataset": "busi",
+  "output_dir": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1002/upstream",
+  "image_size": 384,
+  "epochs": 100,
+  "batch_size": 4,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "early_stopping_patience": 15,
+  "scheduler_patience": 5,
+  "scheduler_factor": 0.5,
+  "num_workers": 4,
+  "seed": 1002,
+  "device": "cuda",
+  "amp": true,
+  "max_train_samples": null,
+  "max_val_samples": null,
+  "max_test_samples": null,
+  "threshold": 0.5,
+  "save_visualizations": false,
+  "max_visualizations": 0,
+  "pretrained_backbone": true,
+  "train_samples": 413,
+  "validation_samples": 104,
+  "model_config": {
+    "input_channels": 1,
+    "base_channels": 32,
+    "dropout": 0.1,
+    "context_dilations": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "normalization_groups": 8
+  },
+  "loss_config": {
+    "dice_weight": 1.0,
+    "boundary_weight": 0.2,
+    "location_weight": 0.2,
+    "consistency_weight": 0.1,
+    "boundary_kernel_size": 3,
+    "dice_smooth": 1.0
+  },
+  "parameters": 1154150,
+  "flops": 6608748544
+}

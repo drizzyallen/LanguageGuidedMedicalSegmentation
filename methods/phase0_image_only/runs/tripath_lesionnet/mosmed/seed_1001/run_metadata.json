@@ -1,0 +1,17 @@
+{
+  "method": "tripath_lesionnet",
+  "dataset": "mosmed",
+  "seed": 1001,
+  "upstream_commit": "fdeb44037aba52900d852271293b165a697ecf06",
+  "config": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/configs/tripath_lesionnet.yaml",
+  "config_sha256": "0659c5929a037e4fe463be3164421d1e4fd6a75676d60c13b09be8b5e07187de",
+  "manifest": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/data_manifests/mosmed.csv",
+  "manifest_sha256": "5f2cbe3a7e1cf91cb5dec1697c1d82c65bd8c46860186dfa67f584c5c6d2973e",
+  "determinism": {
+    "seed": 1001,
+    "torch_deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  }
+}

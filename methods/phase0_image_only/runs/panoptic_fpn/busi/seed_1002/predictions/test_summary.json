@@ -1,0 +1,13 @@
+{
+  "method": "panoptic_fpn",
+  "dataset": "busi",
+  "seed": 1002,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1002/upstream/busi/best.pt",
+  "checkpoint_epoch": 34,
+  "test_samples": 130,
+  "threshold": 0.5,
+  "test_dice": 0.8262808688467042,
+  "test_miou": 0.7463481688287382,
+  "test_hd95": 30.816411403048253,
+  "test_assd": 11.48632618106627
+}

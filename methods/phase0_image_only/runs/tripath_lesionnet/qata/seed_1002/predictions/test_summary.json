@@ -1,0 +1,13 @@
+{
+  "method": "tripath_lesionnet",
+  "dataset": "qata",
+  "seed": 1002,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1002/upstream/qata/best.pt",
+  "checkpoint_epoch": 55,
+  "test_samples": 2113,
+  "threshold": 0.5,
+  "test_dice": 0.7779413674628606,
+  "test_miou": 0.6756518812325556,
+  "test_hd95": 53.19888024971868,
+  "test_assd": 14.308648110657622
+}

@@ -1,0 +1,13 @@
+{
+  "method": "tripath_lesionnet",
+  "dataset": "mosmed",
+  "seed": 1001,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1001/upstream/mosmed/best.pt",
+  "checkpoint_epoch": 89,
+  "test_samples": 546,
+  "threshold": 0.5,
+  "test_dice": 0.8155445213226487,
+  "test_miou": 0.7089048539975771,
+  "test_hd95": 16.749174149459066,
+  "test_assd": 4.772411462159568
+}

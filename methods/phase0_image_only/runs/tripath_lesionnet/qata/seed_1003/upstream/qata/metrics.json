@@ -1,0 +1,11 @@
+{
+  "dataset": "qata",
+  "best_epoch": 54,
+  "best_val_dice": 0.7664365024730156,
+  "best_val_miou": 0.6580464156296305,
+  "best_val_hd95": 55.66806027126657,
+  "best_val_assd": 15.046116377767012,
+  "parameters": 1154150,
+  "flops": 6608748544,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1003/upstream/qata"
+}

@@ -1,0 +1,13 @@
+{
+  "method": "unet",
+  "dataset": "mosmed",
+  "seed": 1003,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/mosmed/seed_1003/upstream/mosmed/best.pt",
+  "checkpoint_epoch": 89,
+  "test_samples": 546,
+  "threshold": 0.5,
+  "test_dice": 0.792990228230532,
+  "test_miou": 0.681509896527212,
+  "test_hd95": 20.432175893283876,
+  "test_assd": 5.852842692675265
+}

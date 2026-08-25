@@ -1,0 +1,11 @@
+{
+  "dataset": "busi",
+  "best_epoch": 45,
+  "best_val_dice": 0.7506861480382773,
+  "best_val_miou": 0.6478075155845056,
+  "best_val_hd95": 53.01848985265596,
+  "best_val_assd": 17.25924929064784,
+  "parameters": 1154150,
+  "flops": 6608748544,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1002/upstream/busi"
+}

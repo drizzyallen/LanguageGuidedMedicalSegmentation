@@ -1,0 +1,13 @@
+{
+  "method": "panoptic_fpn",
+  "dataset": "qata",
+  "seed": 1002,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1002/upstream/qata/best.pt",
+  "checkpoint_epoch": 18,
+  "test_samples": 2113,
+  "threshold": 0.5,
+  "test_dice": 0.8003057207287576,
+  "test_miou": 0.7067085342098851,
+  "test_hd95": 47.65088012999656,
+  "test_assd": 13.024966806672092
+}

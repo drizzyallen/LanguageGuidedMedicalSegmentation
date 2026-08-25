@@ -1,0 +1,17 @@
+{
+  "method": "panoptic_fpn",
+  "dataset": "busi",
+  "seed": 1002,
+  "upstream_commit": "fdeb44037aba52900d852271293b165a697ecf06",
+  "config": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/configs/panoptic_fpn.yaml",
+  "config_sha256": "6fc20799539cc60c76c25bee156a156dd55bdb1632a4229c3095d040ece36503",
+  "manifest": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/data_manifests/busi.csv",
+  "manifest_sha256": "b4063cc1cdd0823024aa9c96fa199cdb108907cb31c7329413fb6f51a15685af",
+  "determinism": {
+    "seed": 1002,
+    "torch_deterministic_algorithms": true,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8"
+  }
+}

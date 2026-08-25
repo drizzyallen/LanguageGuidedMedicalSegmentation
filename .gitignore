@@ -1,0 +1,14 @@
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local Phase 0 execution artifacts
+methods/phase0_image_only/logs/
+methods/phase0_image_only/aborted_attempts/
+methods/phase0_image_only/run_unet_queue.sh
+
+# Large Phase 0 artifacts stay on the training host.
+methods/phase0_image_only/runs/**/best.pt
+methods/phase0_image_only/runs/**/last.pt
+methods/phase0_image_only/runs/**/predictions/probabilities/
+methods/phase0_image_only/runs/**/predictions/masks/

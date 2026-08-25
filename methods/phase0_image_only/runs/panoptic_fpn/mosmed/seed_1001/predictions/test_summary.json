@@ -1,0 +1,13 @@
+{
+  "method": "panoptic_fpn",
+  "dataset": "mosmed",
+  "seed": 1001,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1001/upstream/mosmed/best.pt",
+  "checkpoint_epoch": 48,
+  "test_samples": 546,
+  "threshold": 0.5,
+  "test_dice": 0.8083815848002083,
+  "test_miou": 0.7012594844069168,
+  "test_hd95": 17.076318045731156,
+  "test_assd": 6.335995492463585
+}

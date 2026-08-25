@@ -1,0 +1,13 @@
+{
+  "method": "unet",
+  "dataset": "qata",
+  "seed": 1003,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/qata/seed_1003/upstream/qata/best.pt",
+  "checkpoint_epoch": 47,
+  "test_samples": 2113,
+  "threshold": 0.5,
+  "test_dice": 0.7801496093387804,
+  "test_miou": 0.6823604014973108,
+  "test_hd95": 55.27257277614023,
+  "test_assd": 16.983858619264716
+}

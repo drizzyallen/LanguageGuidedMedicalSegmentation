@@ -1,0 +1,11 @@
+{
+  "dataset": "mosmed",
+  "best_epoch": 98,
+  "best_val_dice": 0.7879187176920457,
+  "best_val_miou": 0.6761411673962661,
+  "best_val_hd95": 27.111145563453206,
+  "best_val_assd": 10.819788841638532,
+  "params": 31042369,
+  "flops": 245638250496,
+  "output_dir": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/mosmed/seed_1001/upstream/mosmed"
+}

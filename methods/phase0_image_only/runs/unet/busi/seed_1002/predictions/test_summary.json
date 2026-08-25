@@ -1,0 +1,13 @@
+{
+  "method": "unet",
+  "dataset": "busi",
+  "seed": 1002,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/busi/seed_1002/upstream/busi/best.pt",
+  "checkpoint_epoch": 46,
+  "test_samples": 130,
+  "threshold": 0.5,
+  "test_dice": 0.7114816207660055,
+  "test_miou": 0.6158711299682024,
+  "test_hd95": 70.37099954942191,
+  "test_assd": 37.06974344957364
+}

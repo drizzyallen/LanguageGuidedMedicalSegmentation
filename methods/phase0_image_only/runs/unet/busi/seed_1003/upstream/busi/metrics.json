@@ -1,0 +1,11 @@
+{
+  "dataset": "busi",
+  "best_epoch": 51,
+  "best_val_dice": 0.6659728254263217,
+  "best_val_miou": 0.5651384202333597,
+  "best_val_hd95": 84.76860553751295,
+  "best_val_assd": 42.77847881834821,
+  "params": 31042369,
+  "flops": 245638250496,
+  "output_dir": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/busi/seed_1003/upstream/busi"
+}

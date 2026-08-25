@@ -1,0 +1,11 @@
+{
+  "dataset": "qata",
+  "best_epoch": 47,
+  "best_val_dice": 0.7653232628520007,
+  "best_val_miou": 0.6581097349910322,
+  "best_val_hd95": 59.22764040341717,
+  "best_val_assd": 17.58083771635153,
+  "params": 31042369,
+  "flops": 245638250496,
+  "output_dir": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/qata/seed_1003/upstream/qata"
+}

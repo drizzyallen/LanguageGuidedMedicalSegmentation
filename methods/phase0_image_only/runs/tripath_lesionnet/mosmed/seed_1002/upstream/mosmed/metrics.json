@@ -1,0 +1,11 @@
+{
+  "dataset": "mosmed",
+  "best_epoch": 49,
+  "best_val_dice": 0.7910089012687211,
+  "best_val_miou": 0.6808860248777359,
+  "best_val_hd95": 22.89950509094152,
+  "best_val_assd": 8.063051332462386,
+  "parameters": 1154150,
+  "flops": 6608748544,
+  "output_directory": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1002/upstream/mosmed"
+}
