@@ -1,0 +1,81 @@
+phase: 1
+upstream_policy: immutable
+methods:
+  lvit_t:
+    path: upstream/LViT
+    repository: https://github.com/HUANGLIZI/LViT.git
+    commit: ba90775ead37d6f445f65ce83d1a0be64157f76f
+    requirements_sha256: 49e12e3ef2574ef82b489da1b3f31dd67f9750fda5c91b5b9c803c38de28564c
+    official_python: "3.7"
+    official_environment: phase1_official_lvit
+  reclmis:
+    path: upstream/RecLMIS
+    repository: https://github.com/ShawnHuang497/RecLMIS.git
+    commit: d3265c8b4d4582a94595fe1c8b1892c618bc9715
+    requirements_sha256: 86aaa2a3cb745cd666fe0b39de867c64d9da2f562fe5fd9994bce238f1e4706c
+    official_python: "3.9"
+    official_environment: phase1_official_reclmis
+  prolearn:
+    path: upstream/ProLearn
+    repository: https://github.com/ShuchangYe-bib/ProLearn.git
+    commit: 971c35f312f7af530f47596978ab4621ed4c77ce
+    requirements_sha256: 660be778cdf8cd9eb5281a54d15bfea60698b4924a0b8cdb6dfeef55cc0a6f71
+    official_python: "3.11"
+    official_environment: phase1_official_prolearn
+preservation_contract:
+  architecture: native
+  loss_terms: native
+  pretrained_weights: native
+  text_processing: native
+data_sources:
+  qata:
+    frozen_manifest:
+      path: methods/phase0_image_only/data_manifests/qata.csv
+      sha256: e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a
+    phase1_manifest:
+      path: methods/phase1_language_guided/data_manifests/qata.csv
+      sha256: b372f232624de86bb1da1b386e6f735f7454efa7431a1dd95a3370fcb2a1d7da
+      split_authority:
+        train:
+          path: /data/ramialle/datasets/QaTa-Text/train/Train_ID.xlsx
+          sha256: f904331c368ddf9e773b8239efd659fab1152952beb2624f57a2841eda994468
+        val:
+          path: /data/ramialle/datasets/QaTa-Text/train/Val_ID.xlsx
+          sha256: 559b0af19134b6ec0b389326e507648c2c38de97d7ec9fd2412e8aef7990df30
+        test: /data/ramialle/datasets/QaTa-Text/Test_text_for_Covid19.xlsx
+    text_workbooks:
+      - path: /data/ramialle/datasets/QaTa-Text/Train_text_for_Covid19.xlsx
+        sha256: 35c0f5250c2e8ee5e2bfbefd83823472ede28d5d587add3083449510e3a6e909
+      - path: /data/ramialle/datasets/QaTa-Text/Test_text_for_Covid19.xlsx
+        sha256: 708587c318248d305ff6e61757b4c0d7fec9037c93f86b870a5c76ccbacfc08a
+  mosmed:
+    frozen_manifest:
+      path: methods/phase0_image_only/data_manifests/mosmed.csv
+      sha256: 5f2cbe3a7e1cf91cb5dec1697c1d82c65bd8c46860186dfa67f584c5c6d2973e
+    phase1_manifest:
+      path: methods/phase1_language_guided/data_manifests/mosmed.csv
+      sha256: 9f86cf11e64ebd8072fbc88d7f59201f3e7c9dac0cd47dc86c13010efcc885ea
+      split_authority:
+        train: "/data/ramialle/datasets/MosMedData+-Text/Train_text_MosMedData+ 1.xlsx"
+        val: "/data/ramialle/datasets/MosMedData+-Text/Val_text_MosMedData+ 1.xlsx"
+        test: "/data/ramialle/datasets/MosMedData+-Text/Test_text_MosMedData+.xlsx"
+    text_workbooks:
+      - path: "/data/ramialle/datasets/MosMedData+-Text/Train_text_MosMedData+ 1.xlsx"
+        sha256: f029c1bd606ab6fef682d6e6d67fb875cd17f8268b834ef3ad5baf444134db33
+      - path: "/data/ramialle/datasets/MosMedData+-Text/Val_text_MosMedData+ 1.xlsx"
+        sha256: c8763cb6d636f84de9b14004c9f5c22729f6c49ce8d594af8501c75b4d7c7401
+      - path: "/data/ramialle/datasets/MosMedData+-Text/Test_text_MosMedData+.xlsx"
+        sha256: f6b7d569c71af79773bfd926a7ee295ccf8ef058b5159d686323cd091d5a8db1
+pretrained_assets:
+  reclmis_clip_vit_b32:
+    path: methods/phase1_language_guided/assets/reclmis/ViT-B-32.pt
+    source: https://openaipublic.azureedge.net/clip/models/40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af/ViT-B-32.pt
+    sha256: 40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af
+  reclmis_qata_author_checkpoint:
+    path: methods/phase1_language_guided/assets/reclmis/covid19_author.pth.tar
+    source: https://drive.google.com/file/d/1SEj361mYZqAZ2fYJfFquMVxjv3d6RqKm/view
+    sha256: 9227ee7b424100f8695b59ff8aa744933ac996654852be4cf1f0335c16d72ee8
+  reclmis_mosmed_author_checkpoint:
+    path: methods/phase1_language_guided/assets/reclmis/mosmed_author.pth.tar
+    source: https://drive.google.com/file/d/1IcclC7Gi0RBmWPj-JMM2qI2w4CHbxtuc/view
+    sha256: 9d3f2e2226f0d740bd8db8ba8e5bb79892213da7c35c3f08a6fda0768b1c0521

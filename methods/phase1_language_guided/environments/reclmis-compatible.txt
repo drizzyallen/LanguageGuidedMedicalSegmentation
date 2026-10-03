@@ -1,0 +1,26 @@
+# External compatibility overlay for pinned RecLMIS.
+# Install torch==1.8.0+cu111 and torchvision==0.9.0+cu111 first from the
+# official PyTorch cu111 index. Torchaudio is omitted because upstream pins
+# torchaudio 2.4.1 (which requires Torch 2.4.1) while the model pins Torch 1.8,
+# and no RecLMIS source imports torchaudio.
+torchinfo==1.8.0
+torchsummary==1.5.1
+tokenizers==0.13.3
+tqdm==4.64.1
+tensorboard==2.17.0
+tensorboardX==2.6.2.2
+pandas==1.5.1
+opencv-python==4.6.0.66
+opencv-python-headless==4.10.0.84
+numpy==1.22.3
+ninja==1.11.1.1
+# Imported by upstream source but absent from its requirements.txt:
+timm==0.4.12
+einops==0.3.0
+scipy==1.7.3
+scikit-learn==1.0.2
+thop==0.1.1.post2209072238
+Pillow==9.5.0
+matplotlib==3.5.3
+ml-collections==0.1.0
+openai-clip==1.0.1

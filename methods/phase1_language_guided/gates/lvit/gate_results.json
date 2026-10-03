@@ -1,0 +1,76 @@
+{
+  "data_gate": {
+    "test": 32,
+    "train": 32,
+    "val": 32
+  },
+  "gradient_gate": {
+    "nonzero_parameters": {
+      "text_module1.bias": 0.08856739848852158,
+      "text_module1.weight": 3.1644253730773926,
+      "text_module2.bias": 0.06855592131614685,
+      "text_module2.weight": 8.932199478149414,
+      "text_module3.bias": 0.05649575963616371,
+      "text_module3.weight": 24.115859985351562,
+      "text_module4.bias": 0.04771377146244049,
+      "text_module4.weight": 53.01896667480469
+    }
+  },
+  "inference_gate": {
+    "saved_masks": 1429
+  },
+  "method": "lvit",
+  "official_check_gate": {
+    "author_checkpoint_available": false,
+    "status": "pending_official_style_qata_run"
+  },
+  "overfit_gate": {
+    "dice": 0.900467038154602,
+    "history": [
+      {
+        "dice": 0.20489829778671265,
+        "loss": 0.8198821544647217,
+        "step": 1
+      },
+      {
+        "dice": 0.731320858001709,
+        "loss": 0.44568324089050293,
+        "step": 25
+      }
+    ],
+    "step": 40
+  },
+  "shape_gate": {
+    "embedding": [
+      8,
+      10,
+      768
+    ],
+    "image": [
+      8,
+      3,
+      224,
+      224
+    ],
+    "mask": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "output": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "token": [
+      8,
+      10
+    ]
+  },
+  "text_use_gate": {
+    "null_max_abs_difference": 0.1681797355413437,
+    "shuffled_max_abs_difference": 0.027252644300460815
+  }
+}
