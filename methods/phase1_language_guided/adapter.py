@@ -1,7 +1,8 @@
 """Shared, read-only image-mask-text records for Phase 1.
 
-Image/mask paths and stable IDs come from copied Phase 0 rows. Split
-membership comes from annotation authorities recorded in copied manifests.
+Manifests are byte-identical copies of the frozen Phase 0 manifests: IDs,
+paths, hashes and split membership all come from Phase 0. Report text is
+joined by image basename from the annotation workbooks.
 """
 
 from __future__ import annotations
@@ -33,8 +34,8 @@ DEFAULT_TEXT_WORKBOOKS = {
     ),
 }
 PINNED_SHA256 = {
-    str((PHASE1_MANIFESTS / "qata.csv").resolve()): "b372f232624de86bb1da1b386e6f735f7454efa7431a1dd95a3370fcb2a1d7da",
-    str((PHASE1_MANIFESTS / "mosmed.csv").resolve()): "9f86cf11e64ebd8072fbc88d7f59201f3e7c9dac0cd47dc86c13010efcc885ea",
+    str((PHASE1_MANIFESTS / "qata.csv").resolve()): "e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a",
+    str((PHASE1_MANIFESTS / "mosmed.csv").resolve()): "5f2cbe3a7e1cf91cb5dec1697c1d82c65bd8c46860186dfa67f584c5c6d2973e",
     str(DEFAULT_TEXT_WORKBOOKS["qata"][0].resolve()): "35c0f5250c2e8ee5e2bfbefd83823472ede28d5d587add3083449510e3a6e909",
     str(DEFAULT_TEXT_WORKBOOKS["qata"][1].resolve()): "708587c318248d305ff6e61757b4c0d7fec9037c93f86b870a5c76ccbacfc08a",
     str(DEFAULT_TEXT_WORKBOOKS["mosmed"][0].resolve()): "f029c1bd606ab6fef682d6e6d67fb875cd17f8268b834ef3ad5baf444134db33",

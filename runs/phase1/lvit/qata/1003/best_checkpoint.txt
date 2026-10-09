@@ -1,0 +1,5 @@
+path: methods/phase1_language_guided/runs/lvit/qata/seed_1003/best_checkpoint.pt
+sha256: 1c3ef87c212095f634ce91f338c2805f9a137375968529655dd73cc6c3de696b
+epoch: 10
+best_val_dice: 0.8044380245507389
+selection: validation mean per-case Dice at threshold 0.5

@@ -1,0 +1,15 @@
+{
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/runs/lvit/mosmed/seed_1001/best_checkpoint.pt",
+  "checkpoint_epoch": 28,
+  "checkpoint_sha256": "54f7f7ea4ed7a3c68db928730f1c95fde86a974682f2c139d6830083473b0c8e",
+  "dataset": "mosmed",
+  "method": "lvit",
+  "seed": 1001,
+  "test_assd": 7.620650580290401,
+  "test_dice": 0.692286036368246,
+  "test_hd95": 20.553616238771188,
+  "test_miou": 0.5502268890381437,
+  "test_samples": 273,
+  "text_required_at_inference": true,
+  "threshold": 0.5
+}

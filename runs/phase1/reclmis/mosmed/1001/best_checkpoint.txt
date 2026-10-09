@@ -1,0 +1,5 @@
+path: methods/phase1_language_guided/runs/reclmis/mosmed/seed_1001/best_checkpoint.pt
+sha256: 9289311ba9a7faf050b7e577eec4d19f0a80542216239904c7ea90fcb49de2da
+epoch: 35
+best_val_dice: 0.7842568685588357
+selection: validation mean per-case Dice at threshold 0.5

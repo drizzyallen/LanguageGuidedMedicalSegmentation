@@ -1,0 +1,89 @@
+START reclmis qata 1001 GPU 1
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+/data/ramialle/miniconda3/envs/phase1_official_reclmis/lib/python3.9/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+use clip version: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/ViT-B-32.pt
+512 8 12
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:217: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  img_weight = img_weight.masked_fill_(torch.tensor((1 - img_mask.int()), dtype=torch.bool), float("-inf"))
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:225: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text_weight = text_weight.masked_fill_(torch.tensor((1 - text_mask.int()), dtype=torch.bool), float("-inf"))
+{"epoch": 1, "train_loss": 2.8494080367665595, "val_dice": 0.6964580332006584, "lr": 0.00029510565162951536}
+{"epoch": 2, "train_loss": 1.9462629476571267, "val_dice": 0.7327881928004111, "lr": 0.00028090169943749475}
+{"epoch": 3, "train_loss": 1.644357240892441, "val_dice": 0.7333139875203767, "lr": 0.0002587785252292473}
+{"epoch": 4, "train_loss": 1.4429060244076397, "val_dice": 0.7488019480581798, "lr": 0.00023090169943749473}
+{"epoch": 5, "train_loss": 1.2625038771465826, "val_dice": 0.7951814271587855, "lr": 0.00019999999999999998}
+{"epoch": 6, "train_loss": 1.1298998471654487, "val_dice": 0.7783188208822941, "lr": 0.00016909830056250526}
+{"epoch": 7, "train_loss": 1.0496842429469397, "val_dice": 0.8025448148779472, "lr": 0.00014122147477075268}
+{"epoch": 8, "train_loss": 0.9729647472490374, "val_dice": 0.7573518501536007, "lr": 0.00011909830056250527}
+{"epoch": 9, "train_loss": 0.9126842645934781, "val_dice": 0.8103602393012184, "lr": 0.00010489434837048466}
+{"epoch": 10, "train_loss": 0.8684439863501269, "val_dice": 0.8092783859261605, "lr": 0.0003}
+{"epoch": 11, "train_loss": 0.9836455643635851, "val_dice": 0.7838743636873404, "lr": 0.00029510565162951536}
+{"epoch": 12, "train_loss": 0.9374069224044608, "val_dice": 0.8047316279171062, "lr": 0.00028090169943749475}
+{"epoch": 13, "train_loss": 0.862412471467586, "val_dice": 0.8110738065044224, "lr": 0.0002587785252292473}
+{"epoch": 14, "train_loss": 0.8363158050911504, "val_dice": 0.8097954361984327, "lr": 0.00023090169943749473}
+{"epoch": 15, "train_loss": 0.79155314677741, "val_dice": 0.7971630390913358, "lr": 0.00019999999999999998}
+{"epoch": 16, "train_loss": 0.7459861580686522, "val_dice": 0.7487037883011756, "lr": 0.00016909830056250526}
+{"epoch": 17, "train_loss": 0.707471864844136, "val_dice": 0.8196913798093962, "lr": 0.00014122147477075268}
+{"epoch": 18, "train_loss": 0.6777496456766229, "val_dice": 0.8205090490482002, "lr": 0.00011909830056250527}
+{"epoch": 19, "train_loss": 0.6371294943664022, "val_dice": 0.8082368254161031, "lr": 0.00010489434837048466}
+{"epoch": 20, "train_loss": 0.6210723070517714, "val_dice": 0.8170126566025993, "lr": 0.0003}
+{"epoch": 21, "train_loss": 0.7466474016535274, "val_dice": 0.8102178647853512, "lr": 0.00029510565162951536}
+{"epoch": 22, "train_loss": 0.7257155223773692, "val_dice": 0.800374104728058, "lr": 0.00028090169943749475}
+{"epoch": 23, "train_loss": 0.7062467719559239, "val_dice": 0.8049010435879189, "lr": 0.0002587785252292473}
+{"epoch": 24, "train_loss": 0.6638979241512638, "val_dice": 0.8089794924494434, "lr": 0.00023090169943749473}
+{"epoch": 25, "train_loss": 0.6153444225676332, "val_dice": 0.815135887947176, "lr": 0.00019999999999999998}
+{"epoch": 26, "train_loss": 0.5818097588897502, "val_dice": 0.8138912180406052, "lr": 0.00016909830056250526}
+{"epoch": 27, "train_loss": 0.5335238274366727, "val_dice": 0.8040378268487475, "lr": 0.00014122147477075268}
+{"epoch": 28, "train_loss": 0.4945259978505929, "val_dice": 0.8212831827458007, "lr": 0.00011909830056250527}
+{"epoch": 29, "train_loss": 0.46571844749470703, "val_dice": 0.8133555253624832, "lr": 0.00010489434837048466}
+{"epoch": 30, "train_loss": 0.4412775794845765, "val_dice": 0.8074851364335286, "lr": 0.0003}
+{"epoch": 31, "train_loss": 0.6143162148744598, "val_dice": 0.7926042206726182, "lr": 0.00029510565162951536}
+{"epoch": 32, "train_loss": 0.6307054535753666, "val_dice": 0.7860419255524269, "lr": 0.00028090169943749475}
+{"epoch": 33, "train_loss": 0.5712507934191579, "val_dice": 0.8132670104211657, "lr": 0.0002587785252292473}
+{"epoch": 34, "train_loss": 0.5002898262087659, "val_dice": 0.8035250040014946, "lr": 0.00023090169943749473}
+{"epoch": 35, "train_loss": 0.4580811052117171, "val_dice": 0.8134792718627054, "lr": 0.00019999999999999998}
+{"epoch": 36, "train_loss": 0.4263344738056311, "val_dice": 0.8084856273829312, "lr": 0.00016909830056250526}
+{"epoch": 37, "train_loss": 0.3923622936198059, "val_dice": 0.8100310317530676, "lr": 0.00014122147477075268}
+{"epoch": 38, "train_loss": 0.36657987623635163, "val_dice": 0.8122572199375668, "lr": 0.00011909830056250527}
+{"epoch": 39, "train_loss": 0.3506380235339646, "val_dice": 0.8155272362364014, "lr": 0.00010489434837048466}
+{"epoch": 40, "train_loss": 0.33241906534799587, "val_dice": 0.8096969560612491, "lr": 0.0003}
+{"epoch": 41, "train_loss": 0.47775860563535805, "val_dice": 0.7221939394822732, "lr": 0.00029510565162951536}
+{"epoch": 42, "train_loss": 0.5750743004097815, "val_dice": 0.7970530079577335, "lr": 0.00028090169943749475}
+{"epoch": 43, "train_loss": 0.4962338808952636, "val_dice": 0.8053996207999382, "lr": 0.0002587785252292473}
+{"epoch": 44, "train_loss": 0.4475272361676621, "val_dice": 0.7985386444272654, "lr": 0.00023090169943749473}
+{"epoch": 45, "train_loss": 0.38748426942912073, "val_dice": 0.7969426103952967, "lr": 0.00019999999999999998}
+{"epoch": 46, "train_loss": 0.3481339959726207, "val_dice": 0.801584774960664, "lr": 0.00016909830056250526}
+{"epoch": 47, "train_loss": 0.3254898104157124, "val_dice": 0.8038165942199419, "lr": 0.00014122147477075268}
+{"epoch": 48, "train_loss": 0.30557947011991676, "val_dice": 0.8047972077919604, "lr": 0.00011909830056250527}
+{"epoch": 49, "train_loss": 0.2934442528004076, "val_dice": 0.8085872282341195, "lr": 0.00010489434837048466}
+{"epoch": 50, "train_loss": 0.28267345981551184, "val_dice": 0.808954084645292, "lr": 0.0003}
+{"epoch": 51, "train_loss": 0.38569650804771255, "val_dice": 0.7502612603386438, "lr": 0.00029510565162951536}
+{"epoch": 52, "train_loss": 0.5159535229706614, "val_dice": 0.7126065437154723, "lr": 0.00028090169943749475}
+{"epoch": 53, "train_loss": 0.4233286359286792, "val_dice": 0.8012959069101188, "lr": 0.0002587785252292473}
+{"epoch": 54, "train_loss": 0.3444474668374339, "val_dice": 0.8019837153133101, "lr": 0.00023090169943749473}
+{"epoch": 55, "train_loss": 0.30985465057668693, "val_dice": 0.8058448681637822, "lr": 0.00019999999999999998}
+{"epoch": 56, "train_loss": 0.28873996147749054, "val_dice": 0.8054867258348859, "lr": 0.00016909830056250526}
+{"epoch": 57, "train_loss": 0.27204378651020994, "val_dice": 0.8074270390062752, "lr": 0.00014122147477075268}
+{"epoch": 58, "train_loss": 0.2609719999442157, "val_dice": 0.809316149326869, "lr": 0.00011909830056250527}
+{"epoch": 59, "train_loss": 0.2535515290256811, "val_dice": 0.8034401821706411, "lr": 0.00010489434837048466}
+{"epoch": 60, "train_loss": 0.24187800821055058, "val_dice": 0.8031844309445776, "lr": 0.0003}
+{"epoch": 61, "train_loss": 0.2879077154827585, "val_dice": 0.7912992057556703, "lr": 0.00029510565162951536}
+{"epoch": 62, "train_loss": 0.3714182801893994, "val_dice": 0.7418252355239874, "lr": 0.00028090169943749475}
+{"epoch": 63, "train_loss": 0.3569685414673316, "val_dice": 0.7877309395768077, "lr": 0.0002587785252292473}
+{"epoch": 64, "train_loss": 0.2932720920729253, "val_dice": 0.7987193826864949, "lr": 0.00023090169943749473}
+{"epoch": 65, "train_loss": 0.2674570541289238, "val_dice": 0.799844533976681, "lr": 0.00019999999999999998}
+{"epoch": 66, "train_loss": 0.25126949653415265, "val_dice": 0.7999200974418368, "lr": 0.00016909830056250526}
+{"epoch": 67, "train_loss": 0.2342707647820133, "val_dice": 0.8030080748154952, "lr": 0.00014122147477075268}
+{"epoch": 68, "train_loss": 0.22640051783966467, "val_dice": 0.8028512137014604, "lr": 0.00011909830056250527}
+{"epoch": 69, "train_loss": 0.22043556709069317, "val_dice": 0.8047662462030282, "lr": 0.00010489434837048466}
+{"epoch": 70, "train_loss": 0.21202781119698658, "val_dice": 0.8020411839094755, "lr": 0.0003}
+{"epoch": 71, "train_loss": 0.25745004710615554, "val_dice": 0.7778482645270373, "lr": 0.00029510565162951536}
+Traceback (most recent call last):
+  File "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/main_experiment.py", line 347, in <module>
+    main()
+  File "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/main_experiment.py", line 343, in main
+    run(args)
+  File "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/main_experiment.py", line 312, in run
+    raise RuntimeError("Nonfinite training loss")
+RuntimeError: Nonfinite training loss

@@ -1,0 +1,38 @@
+{
+  "dataset": "mosmed",
+  "evaluation_space": "native ground-truth mask grid",
+  "evaluator": "evaluation/shared_evaluator.py",
+  "evaluator_sha256": "fe61779e18a0079c9d1f0b7dc24cfab8774b18abda88cf3c62289c2cabbaf5e1",
+  "method": "lvit",
+  "native_mask_shape": [
+    512,
+    512
+  ],
+  "phase": "phase1",
+  "probability_resize": "bilinear, corner-aligned (inverse of the pipeline's target resizing)",
+  "seed": 1002,
+  "source_predictions": "methods/phase1_language_guided/runs/lvit/mosmed/seed_1002/predictions",
+  "stored_probability_shape": [
+    224,
+    224
+  ],
+  "stored_resolution_means": {
+    "assd": 5.97233045649224,
+    "dice": 0.7970886096452546,
+    "hd95": 12.029902817632413,
+    "miou": 0.6887031118796275
+  },
+  "stored_resolution_reproduction_max_abs_error": {
+    "assd": 0.0,
+    "dice": 0.0,
+    "hd95": 0.0,
+    "miou": 0.0
+  },
+  "test_assd": 12.73591971579152,
+  "test_dice": 0.7931090956168433,
+  "test_hd95": 28.121407298883653,
+  "test_miou": 0.6831374009751744,
+  "test_samples": 546,
+  "threshold": 0.5,
+  "threshold_rule": "probability >= 0.5"
+}

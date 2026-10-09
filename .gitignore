@@ -12,3 +12,25 @@ methods/phase0_image_only/runs/**/best.pt
 methods/phase0_image_only/runs/**/last.pt
 methods/phase0_image_only/runs/**/predictions/probabilities/
 methods/phase0_image_only/runs/**/predictions/masks/
+
+# Large Phase 1 artifacts stay on the training host.
+methods/phase1_language_guided/assets/
+methods/phase1_language_guided/cache/
+methods/phase1_language_guided/smoke_runs/
+methods/phase1_language_guided/smoke_runs_v2/
+methods/phase1_language_guided/**/*.pt
+methods/phase1_language_guided/**/*.tmp
+methods/phase1_language_guided/**/predictions/probabilities/
+methods/phase1_language_guided/**/predictions/masks/
+methods/phase1_language_guided/gates/**/validation_masks/
+methods/phase1_language_guided/gates/prolearn/official_qata/image_embeddings/
+
+# Local Phase 1 process files
+methods/phase1_language_guided/*.pid
+methods/phase1_language_guided/**/*.pid
+methods/phase1_language_guided/**/*.lock
+methods/phase1_language_guided/**/run.lock
+
+# Shared-evaluator prediction exports (native masks + probability symlinks);
+# regenerate with evaluation/shared_evaluator.py.
+runs/**/predictions/

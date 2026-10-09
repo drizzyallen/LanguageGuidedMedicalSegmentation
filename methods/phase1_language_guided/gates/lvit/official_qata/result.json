@@ -1,0 +1,19 @@
+{
+  "best_epoch": 40,
+  "best_val_dice": 0.8067377537092686,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gates/lvit/official_qata/best_checkpoint.pt",
+  "cuda_device": "cuda:0",
+  "elapsed_seconds": 48910.1497092247,
+  "epochs": 91,
+  "method": "lvit",
+  "native_settings": {
+    "batch_size": 2,
+    "loss": "WeightedDiceBCE(0.5,0.5)",
+    "lr": 0.0003,
+    "max_epochs": 2000,
+    "patience": 50,
+    "seed": 666
+  },
+  "physical_cuda_device": "0",
+  "status": "pass"
+}

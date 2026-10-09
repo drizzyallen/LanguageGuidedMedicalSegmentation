@@ -1,0 +1,77 @@
+{
+  "data_gate": {
+    "test": 32,
+    "train": 32,
+    "val": 32
+  },
+  "gradient_gate": {
+    "nonzero_parameters": {
+      "interact.attn_img.in_proj_bias": 0.1705869883298874,
+      "interact.attn_img.in_proj_weight": 64.36570739746094,
+      "interact.attn_img.out_proj.bias": 0.07892132550477982,
+      "interact.attn_img.out_proj.weight": 39.268951416015625,
+      "interact.attn_text.in_proj_bias": 0.29188573360443115,
+      "interact.attn_text.in_proj_weight": 118.39469909667969,
+      "interact.attn_text.out_proj.bias": 0.13164353370666504,
+      "interact.attn_text.out_proj.weight": 45.79212951660156,
+      "interact.embeddings.patch_embeddings.bias": 0.5502297878265381,
+      "interact.embeddings.patch_embeddings.weight": 94.34736633300781,
+      "interact.embeddings.position_embeddings": 7.4517822265625,
+      "text_module4.bias": 0.3148570656776428,
+      "text_module4.weight": 111.45115661621094
+    }
+  },
+  "inference_gate": {
+    "saved_masks": 1429
+  },
+  "method": "reclmis",
+  "official_check_gate": {
+    "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/covid19_author_download.bin",
+    "status": "pass",
+    "strict_load": true
+  },
+  "overfit_gate": {
+    "dice": 0.9295886754989624,
+    "history": [
+      {
+        "dice": 0.8942080736160278,
+        "loss": 0.5202957391738892,
+        "step": 1
+      }
+    ],
+    "step": 3
+  },
+  "shape_gate": {
+    "embedding": [
+      8,
+      18,
+      512
+    ],
+    "image": [
+      8,
+      3,
+      224,
+      224
+    ],
+    "mask": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "output": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "token": [
+      8,
+      18
+    ]
+  },
+  "text_use_gate": {
+    "null_max_abs_difference": 0.9318011999130249,
+    "shuffled_max_abs_difference": 0.7042418718338013
+  }
+}

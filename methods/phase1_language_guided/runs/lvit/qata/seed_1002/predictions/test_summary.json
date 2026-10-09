@@ -1,0 +1,15 @@
+{
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/runs/lvit/qata/seed_1002/best_checkpoint.pt",
+  "checkpoint_epoch": 50,
+  "checkpoint_sha256": "e94b20970766b94d13c06aa15a981b9965da72a2122c010b0d7f57eb225b1ba0",
+  "dataset": "qata",
+  "method": "lvit",
+  "seed": 1002,
+  "test_assd": 6.350290923028194,
+  "test_dice": 0.815852892406379,
+  "test_hd95": 18.94243985471212,
+  "test_miou": 0.7248079696210934,
+  "test_samples": 2113,
+  "text_required_at_inference": true,
+  "threshold": 0.5
+}

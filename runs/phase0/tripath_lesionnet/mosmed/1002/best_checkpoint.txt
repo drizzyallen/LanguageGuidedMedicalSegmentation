@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1002/upstream/mosmed/best.pt
+sha256: 5e6dd6d71a96ec35b62329767cde44210c888c5715166b4ebba8c73a00bc1f48
+epoch: 49
+selection: validation Dice (frozen Phase 0 rule)

@@ -1,0 +1,18 @@
+{
+  "best_val_dice": 0.7842568685588357,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/runs/reclmis/mosmed/seed_1001/best_checkpoint.pt",
+  "checkpoint_epoch": 35,
+  "checkpoint_sha256": "9289311ba9a7faf050b7e577eec4d19f0a80542216239904c7ea90fcb49de2da",
+  "dataset": "mosmed",
+  "method": "reclmis",
+  "seed": 1001,
+  "status": "complete",
+  "test_assd": 7.377033268372178,
+  "test_dice": 0.7899102233929292,
+  "test_hd95": 13.975070096181353,
+  "test_miou": 0.6816421022838329,
+  "test_samples": 546,
+  "text_required_at_inference": true,
+  "threshold": 0.5,
+  "training_stop": "early_stopping_or_max_epochs"
+}

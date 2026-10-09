@@ -1,0 +1,139 @@
+phase: phase0
+method: tripath_lesionnet
+dataset: qata
+seed: 1001
+run_metadata:
+  method: tripath_lesionnet
+  dataset: qata
+  seed: 1001
+  upstream_commit: fdeb44037aba52900d852271293b165a697ecf06
+  config: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/configs/tripath_lesionnet.yaml
+  config_sha256: 0659c5929a037e4fe463be3164421d1e4fd6a75676d60c13b09be8b5e07187de
+  manifest: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/data_manifests/qata.csv
+  manifest_sha256: e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a
+  determinism:
+    seed: 1001
+    torch_deterministic_algorithms: true
+    cudnn_benchmark: false
+    cudnn_deterministic: true
+    cublas_workspace_config: :4096:8
+config:
+  schema_version: 1
+  method: tripath_lesionnet
+  upstream_commit: fdeb44037aba52900d852271293b165a697ecf06
+  datasets:
+  - qata
+  - mosmed
+  - busi
+  seeds:
+  - 1001
+  - 1002
+  - 1003
+  data:
+    manifest_directory: data_manifests
+  model:
+    input_channels: 1
+    base_channels: 32
+    dropout: 0.1
+    context_dilations:
+    - 1
+    - 2
+    - 4
+    - 8
+    normalization_groups: 8
+  loss:
+    dice_weight: 1.0
+    boundary_weight: 0.2
+    location_weight: 0.2
+    consistency_weight: 0.1
+    boundary_kernel_size: 3
+    dice_smooth: 1.0
+  preprocessing:
+    color_mode: grayscale
+    resize:
+    - 384
+    - 384
+    image_interpolation: bilinear
+    mask_interpolation: nearest
+    image_scale: 255.0
+  augmentation:
+    horizontal_flip_probability: 0.5
+    rotation_probability: 0.5
+    rotation_degrees:
+    - -15
+    - 15
+    brightness_probability: 0.5
+    brightness_range:
+    - 0.9
+    - 1.1
+    contrast_probability: 0.5
+    contrast_range:
+    - 0.9
+    - 1.1
+  training:
+    image_size: 384
+    epochs: 100
+    batch_size: 4
+    optimizer:
+      name: AdamW
+      learning_rate: 0.0003
+      weight_decay: 0.0001
+    scheduler:
+      name: ReduceLROnPlateau
+      mode: max
+      patience: 5
+      factor: 0.5
+    early_stopping:
+      metric: val_dice
+      mode: max
+      patience: 15
+    checkpoint_rule: best_validation_dice_strictly_greater
+    num_workers: 4
+    amp: true
+  evaluation:
+    threshold: 0.5
+    per_case_prediction_export: required
+  frozen: true
+upstream_resolved_config:
+  dataset: qata
+  output_dir: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1001/upstream
+  image_size: 384
+  epochs: 100
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+  scheduler_patience: 5
+  scheduler_factor: 0.5
+  num_workers: 4
+  seed: 1001
+  device: cuda
+  amp: true
+  max_train_samples: null
+  max_val_samples: null
+  max_test_samples: null
+  threshold: 0.5
+  save_visualizations: false
+  max_visualizations: 0
+  pretrained_backbone: true
+  train_samples: 5716
+  validation_samples: 1429
+  model_config:
+    input_channels: 1
+    base_channels: 32
+    dropout: 0.1
+    context_dilations:
+    - 1
+    - 2
+    - 4
+    - 8
+    normalization_groups: 8
+  loss_config:
+    dice_weight: 1.0
+    boundary_weight: 0.2
+    location_weight: 0.2
+    consistency_weight: 0.1
+    boundary_kernel_size: 3
+    dice_smooth: 1.0
+  parameters: 1154150
+  flops: 6608748544

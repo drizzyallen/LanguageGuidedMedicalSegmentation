@@ -1,0 +1,38 @@
+{
+  "dataset": "mosmed",
+  "evaluation_space": "native ground-truth mask grid",
+  "evaluator": "evaluation/shared_evaluator.py",
+  "evaluator_sha256": "fe61779e18a0079c9d1f0b7dc24cfab8774b18abda88cf3c62289c2cabbaf5e1",
+  "method": "panoptic_fpn",
+  "native_mask_shape": [
+    512,
+    512
+  ],
+  "phase": "phase0",
+  "probability_resize": "bilinear, centre-aligned (inverse of the pipeline's target resizing)",
+  "seed": 1002,
+  "source_predictions": "methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1002/predictions",
+  "stored_probability_shape": [
+    384,
+    384
+  ],
+  "stored_resolution_means": {
+    "assd": 9.025989816265827,
+    "dice": 0.8037344313222806,
+    "hd95": 21.27356386415526,
+    "miou": 0.6968338888251585
+  },
+  "stored_resolution_reproduction_max_abs_error": {
+    "assd": 0.0,
+    "dice": 0.0,
+    "hd95": 2.842170943040401e-14,
+    "miou": 0.0
+  },
+  "test_assd": 12.114358797949428,
+  "test_dice": 0.8047946798894504,
+  "test_hd95": 28.634384674445396,
+  "test_miou": 0.6982107451695141,
+  "test_samples": 546,
+  "threshold": 0.5,
+  "threshold_rule": "probability >= 0.5"
+}

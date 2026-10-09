@@ -1,0 +1,15 @@
+{
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/runs/reclmis/qata/seed_1003/best_checkpoint.pt",
+  "checkpoint_epoch": 17,
+  "checkpoint_sha256": "b70d72567259dd4c6e9f8e4a3ccffd3adbb1a98ad80e91044bf98dcf84de8a8b",
+  "dataset": "qata",
+  "method": "reclmis",
+  "seed": 1003,
+  "test_assd": 4.731179299470313,
+  "test_dice": 0.8411248415497022,
+  "test_hd95": 17.08161738816535,
+  "test_miou": 0.7542890161800321,
+  "test_samples": 2113,
+  "text_required_at_inference": true,
+  "threshold": 0.5
+}

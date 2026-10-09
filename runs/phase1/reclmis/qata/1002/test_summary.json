@@ -1,0 +1,38 @@
+{
+  "dataset": "qata",
+  "evaluation_space": "native ground-truth mask grid",
+  "evaluator": "evaluation/shared_evaluator.py",
+  "evaluator_sha256": "fe61779e18a0079c9d1f0b7dc24cfab8774b18abda88cf3c62289c2cabbaf5e1",
+  "method": "reclmis",
+  "native_mask_shape": [
+    224,
+    224
+  ],
+  "phase": "phase1",
+  "probability_resize": "bilinear, corner-aligned (inverse of the pipeline's target resizing)",
+  "seed": 1002,
+  "source_predictions": "methods/phase1_language_guided/runs/reclmis/qata/seed_1002/predictions",
+  "stored_probability_shape": [
+    224,
+    224
+  ],
+  "stored_resolution_means": {
+    "assd": 5.281990450992815,
+    "dice": 0.8338670477329743,
+    "hd95": 16.61925217766174,
+    "miou": 0.7485752075795984
+  },
+  "stored_resolution_reproduction_max_abs_error": {
+    "assd": 0.0,
+    "dice": 0.0,
+    "hd95": 1.4210854715202004e-14,
+    "miou": 0.0
+  },
+  "test_assd": 5.281990450992815,
+  "test_dice": 0.8338670477329743,
+  "test_hd95": 16.61925217766174,
+  "test_miou": 0.7485752075795984,
+  "test_samples": 2113,
+  "threshold": 0.5,
+  "threshold_rule": "probability >= 0.5"
+}

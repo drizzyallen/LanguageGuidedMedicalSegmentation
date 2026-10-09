@@ -1,0 +1,3 @@
+sample_id,source_id,probability_path,prediction_path,dice,miou,hd95,assd
+qata_train_covid_1008,covid_1008,probabilities/qata_train_covid_1008.npy,masks/qata_train_covid_1008.png,0.48186136576883926,0.3174027423482992,72.0,30.490257535971267
+qata_train_covid_101,covid_101,probabilities/qata_train_covid_101.npy,masks/qata_train_covid_101.png,0.07868890122900445,0.04095583546109503,162.69296235547498,92.55610642672275

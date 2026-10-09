@@ -1,0 +1,29 @@
+2026-10-03T17:30:20-04:00 WAIT reclmis qata for >= 20000 MiB free
+2026-10-03T17:30:44-04:00 WAIT reclmis qata for >= 20000 MiB free
+2026-10-05T00:08:16-04:00 GPU 2 free; smoke reclmis qata
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+/data/ramialle/miniconda3/envs/phase1_official_reclmis/lib/python3.9/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+use clip version: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/ViT-B-32.pt
+512 8 12
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:217: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  img_weight = img_weight.masked_fill_(torch.tensor((1 - img_mask.int()), dtype=torch.bool), float("-inf"))
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:225: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text_weight = text_weight.masked_fill_(torch.tensor((1 - text_mask.int()), dtype=torch.bool), float("-inf"))
+SMOKE PASS /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/smoke_runs_v2/reclmis/qata/seed_1001
+reclmis qata GPU 2 PID 692213
+2026-10-05T00:08:28-04:00 LAUNCHED reclmis qata GPU 2
+2026-10-05T00:18:28-04:00 WAIT reclmis mosmed for >= 20000 MiB free
+2026-10-05T03:54:39-04:00 GPU 2 free; smoke reclmis mosmed
+[W Context.cpp:70] Warning: torch.use_deterministic_algorithms is in beta, and its design and functionality may change in the future. (function operator())
+/data/ramialle/miniconda3/envs/phase1_official_reclmis/lib/python3.9/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+use clip version: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/ViT-B-32.pt
+512 8 12
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:217: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  img_weight = img_weight.masked_fill_(torch.tensor((1 - img_mask.int()), dtype=torch.bool), float("-inf"))
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:225: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text_weight = text_weight.masked_fill_(torch.tensor((1 - text_mask.int()), dtype=torch.bool), float("-inf"))
+SMOKE PASS /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/smoke_runs_v2/reclmis/mosmed/seed_1001
+reclmis mosmed GPU 2 PID 721429
+2026-10-05T03:54:49-04:00 LAUNCHED reclmis mosmed GPU 2

@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1002/upstream/qata/best.pt
+sha256: 3d28212956207da9b81141092baee7f506c50a3b07ec5f00a6c084b11a90c68c
+epoch: 18
+selection: validation Dice (frozen Phase 0 rule)

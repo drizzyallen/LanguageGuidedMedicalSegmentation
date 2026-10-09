@@ -1,0 +1,12 @@
+{
+  "exported_validation_cases": 2,
+  "loss": 0.8327041864395142,
+  "runner_sha256": "3c724927ee6941f6b3c248bd0ef3d5e09adb0de6a9d004c2164d50623ad5921f",
+  "shape": [
+    1,
+    1,
+    224,
+    224
+  ],
+  "status": "smoke_pass"
+}
