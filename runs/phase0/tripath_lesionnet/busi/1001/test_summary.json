@@ -1,0 +1,35 @@
+{
+  "dataset": "busi",
+  "evaluation_space": "native ground-truth mask grid",
+  "evaluator": "evaluation/shared_evaluator.py",
+  "evaluator_sha256": "e0b67012559ece78f81b98cfbabcd47d1e0be1a74041ca6ced4298770f084569",
+  "method": "tripath_lesionnet",
+  "native_mask_shape": "per image (BUSI sizes vary)",
+  "phase": "phase0",
+  "probability_resize": "bilinear, centre-aligned (inverse of the pipeline's target resizing)",
+  "seed": 1001,
+  "source_predictions": "methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1001/predictions",
+  "stored_probability_shape": [
+    384,
+    384
+  ],
+  "stored_resolution_means": {
+    "assd": 12.853611425809863,
+    "dice": 0.794841972659812,
+    "hd95": 39.53354723792871,
+    "miou": 0.7054460312254018
+  },
+  "stored_resolution_reproduction_max_abs_error": {
+    "assd": 0.0,
+    "dice": 0.0,
+    "hd95": 2.842170943040401e-14,
+    "miou": 0.0
+  },
+  "test_assd": 18.05442168074119,
+  "test_dice": 0.7951280317027959,
+  "test_hd95": 57.36426574665643,
+  "test_miou": 0.70583932353737,
+  "test_samples": 130,
+  "threshold": 0.5,
+  "threshold_rule": "probability >= 0.5"
+}

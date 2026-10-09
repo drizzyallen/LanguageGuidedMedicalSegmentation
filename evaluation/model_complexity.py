@@ -11,7 +11,7 @@ Usage (each in the method's environment):
   myenv:                    python model_complexity.py unet|tripath_lesionnet|panoptic_fpn
   phase1_official_lvit:     python model_complexity.py lvit
   phase1_official_reclmis:  python model_complexity.py reclmis
-Writes results/final_six_method/model_complexity/<method>.json.
+Writes results/final_five_method/model_complexity/<method>.json.
 """
 import json
 import os
@@ -21,7 +21,7 @@ from pathlib import Path
 import torch
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "results" / "final_six_method" / "model_complexity"
+OUT = ROOT / "results" / "final_five_method" / "model_complexity"
 
 
 def phase0_model(method):

@@ -21,7 +21,7 @@ PHASE0 = ROOT / "methods" / "phase0_image_only"
 PHASE1 = ROOT / "methods" / "phase1_language_guided"
 ENVS = Path("/data/ramialle/miniconda3/envs")
 SEEDS = (1001, 1002, 1003)
-DATASETS = ("qata", "mosmed")
+DATASETS = ("qata", "mosmed", "busi")  # BUSI: Phase 0 methods only
 METHODS = {"unet": "phase0", "tripath_lesionnet": "phase0", "panoptic_fpn": "phase0",
            "lvit": "phase1", "reclmis": "phase1"}
 ENV_NAME = {"phase0": "myenv", "lvit": "phase1_official_lvit", "reclmis": "phase1_official_reclmis"}
@@ -53,6 +53,32 @@ def write_yaml(path, payload):
     path.write_text(yaml.safe_dump(payload, sort_keys=False, default_flow_style=False))
 
 
+def recovered_history(method, dataset, seed, history):
+    """Rebuild a complete epoch log from the upstream trainer's terminal output."""
+    log = (PHASE0 / "logs" / ("%s_tmux.log" % method)).read_text().splitlines()
+    marker = "Output directory: %s" % (PHASE0 / "runs" / method / dataset / ("seed_%d" % seed) / "upstream" / dataset)
+    start = log.index(marker)
+    header = history.splitlines()[0].split(",")
+    rows = []
+    for line in log[start + 1:]:
+        if line.startswith("Output directory:"):
+            break
+        if line.startswith("Epoch "):
+            parts = line.split()
+            values = dict(item.split("=", 1) for item in parts[2:])
+            values["epoch"] = str(int(parts[1].split("/")[0]))
+            values["learning_rate"] = values.pop("lr")
+            rows.append(values)
+    if [int(r["epoch"]) for r in rows] != list(range(1, len(rows) + 1)):
+        raise RuntimeError("Terminal log does not hold a complete epoch sequence")
+    saved = {r.split(",")[0]: r.split(",") for r in history.splitlines()[1:]}
+    for epoch, columns in saved.items():
+        logged = rows[int(epoch) - 1]
+        if abs(float(logged["val_dice"]) - float(columns[header.index("val_dice")])) > 1e-4:
+            raise RuntimeError("Terminal log disagrees with history.csv at epoch " + epoch)
+    return "\n".join([",".join(header)] + [",".join(r[h] for h in header) for r in rows]) + "\n"
+
+
 def phase0_records(method, dataset, seed, output):
     run = PHASE0 / "runs" / method / dataset / ("seed_%d" % seed)
     upstream = run / "upstream" / dataset
@@ -64,7 +90,16 @@ def phase0_records(method, dataset, seed, output):
         resolved["upstream_resolved_config"] = json.loads((upstream / "config.json").read_text())
     write_yaml(output / "resolved_config.yaml", resolved)
     (output / "environment.txt").write_text(environment(ENV_NAME["phase0"]))
-    (output / "train_log.csv").write_text((upstream / "history.csv").read_text())
+    history = (upstream / "history.csv").read_text()
+    first_epoch = history.splitlines()[1].split(",")[0]
+    if first_epoch != "1":
+        history = recovered_history(method, dataset, seed, history)
+        (output / "train_log_note.txt").write_text(
+            "upstream/%s/history.csv covers only epochs %s onward: a later relaunch of this run rewrote it.\n"
+            "train_log.csv was rebuilt from the trainer's terminal log (methods/phase0_image_only/logs/%s_tmux.log),\n"
+            "and its overlapping epochs were checked against history.csv. The original files are unchanged.\n"
+            % (dataset, first_epoch, "unet" if method == "unet" else method))
+    (output / "train_log.csv").write_text(history)
     checkpoint = upstream / "best.pt"
     (output / "best_checkpoint.txt").write_text(
         "path: %s\nsha256: %s\nepoch: %s\nselection: validation Dice (frozen Phase 0 rule)\n"
@@ -99,6 +134,8 @@ def phase1_records(method, dataset, seed, output):
 def main():
     for method, phase in METHODS.items():
         for dataset in DATASETS:
+            if dataset == "busi" and phase != "phase0":
+                continue
             for seed in SEEDS:
                 output = ROOT / "runs" / phase / method / dataset / str(seed)
                 if not (output / "test_summary.json").is_file():

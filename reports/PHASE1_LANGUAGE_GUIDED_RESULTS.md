@@ -74,6 +74,34 @@ Each run's own exporter scored predictions at the network resolution against a r
 | MosMedData+ | LViT-T | 0.7972 ± 0.0003 | 0.7929 ± 0.0004 |
 | MosMedData+ | RecLMIS | 0.7932 ± 0.0046 | 0.7889 ± 0.0050 |
 
+### Post-hoc text-use check on the final checkpoints
+
+Audit check, separate from the historical 1.3 gate: each selected checkpoint was run on the first 32 validation cases (no test data) with the correct report, null text (LViT-T: zero embeddings; RecLMIS: empty string) and a shuffled report from another case. Source: `evaluation/text_use_check.py`, `results/phase1/text_use_check/`.
+
+| Method | Dataset | Seed | Val Dice, correct | Null | Shuffled | Max |dp| shuffled | Text changes output |
+|---|---|---|---|---|---|---|---|
+| LViT-T | QaTa-COV19-v2 | 1001 | 0.7895 | 0.6954 | 0.6190 | 1.000 | Yes |
+| LViT-T | QaTa-COV19-v2 | 1002 | 0.8075 | 0.7491 | 0.6103 | 1.000 | Yes |
+| LViT-T | QaTa-COV19-v2 | 1003 | 0.7937 | 0.5331 | 0.5990 | 0.998 | Yes |
+| LViT-T | MosMedData+ | 1001 | 0.8013 | 0.8026 | 0.7974 | 0.993 | Yes |
+| LViT-T | MosMedData+ | 1002 | 0.8180 | 0.8144 | 0.8136 | 0.982 | Yes |
+| LViT-T | MosMedData+ | 1003 | 0.8190 | 0.8211 | 0.8091 | 1.000 | Yes |
+| RecLMIS | QaTa-COV19-v2 | 1001 | 0.8163 | 0.5934 | 0.5782 | 0.993 | Yes |
+| RecLMIS | QaTa-COV19-v2 | 1002 | 0.7973 | 0.5671 | 0.6399 | 0.991 | Yes |
+| RecLMIS | QaTa-COV19-v2 | 1003 | 0.8130 | 0.7111 | 0.6370 | 0.994 | Yes |
+| RecLMIS | MosMedData+ | 1001 | 0.8148 | 0.7593 | 0.8145 | 0.926 | Yes |
+| RecLMIS | MosMedData+ | 1002 | 0.8179 | 0.8026 | 0.8207 | 0.792 | Yes |
+| RecLMIS | MosMedData+ | 1003 | 0.7924 | 0.7549 | 0.8111 | 0.915 | Yes |
+
+Both methods use their text input in every run. On QaTa, null or shuffled reports lower validation Dice substantially; on MosMed the effect is small for LViT-T and moderate for RecLMIS.
+
+## Interpretation caveats
+
+- **MosMedData+ patient/scan overlap.** The frozen Phase 0 MosMed split is slice-level. 68 of the 86 test CT studies also have slices in training and 63 in validation; 528 of 546 test images (97%) come from a study with training slices. All five methods share this split, so the paired comparison is like-for-like, but absolute MosMed scores describe new slices from mostly seen patients and are likely optimistic for unseen patients. The archived annotation-workbook split also overlaps (67% of its test images).
+- **QaTa-COV19-v2.** No subject appears in both training and test. 444 subjects appear in both training and validation, which can make checkpoint selection slightly optimistic but does not touch test data.
+- **Report content.** Every QaTa and MosMed report states the lesion count and lung location (for example "Bilateral pulmonary infection, two infected areas, ..."). LViT-T and RecLMIS receive this text at test time; the image-only methods do not. The reports come unchanged from the published QaTa/MosMed text annotations; this repository cannot verify whether they were written from the images or derived from the masks. Comparisons show what each method achieves with its native inputs; they do not by themselves show that language improves segmentation.
+- **Evaluation geometry.** The native-grid alignment rule for Phase 1 was investigated after a MosMed test-set drop was observed. It was fixed from the resize code, confirmed on validation masks only, applied identically to every seed, and both the stored-resolution and native-grid values are reported.
+
 ## Run records
 
 Every run has `runs/phase1/<method>/<dataset>/<seed>/` with `resolved_config.yaml`, `environment.txt`, `train_log.csv`, `best_checkpoint.txt`, `test_summary.json`, `per_case_metrics.csv` and `predictions/` (native binary masks plus the saved float32 probability maps). Training-time records, checkpoints and logs are in `methods/phase1_language_guided/runs/`.
@@ -95,6 +123,6 @@ Every run has `runs/phase1/<method>/<dataset>/<seed>/` with `resolved_config.yam
 | ProLearn | Not applicable: removed by the research advisor |
 | Each method completes three seeds on QaTa and MosMed | Met (12/12 runs) |
 | Saved per-case predictions and absolute 95% CIs | Met |
-| Final paired comparison: all Dice pairs, paired 95% CIs, raw and Holm p-values | Met for the 5-method study (10 pairs per dataset); see FINAL_SIX_METHOD_COMPARISON.md |
+| Final paired comparison: all Dice pairs, paired 95% CIs, raw and Holm p-values | Met for the 5-method study (10 pairs per dataset); see FINAL_FIVE_METHOD_COMPARISON.md |
 | Phase 0 and Phase 1 results in separate reports | Met |
 | Final report combines them only after both phases are complete | Met |

@@ -1,0 +1,149 @@
+{
+  "description": "For each method/dataset/seed, the selected best checkpoint is evaluated on the\nfirst N validation cases (test data is never loaded) with three text inputs:\n  correct  - the case's own report\n  null     - LViT-T: all-zero token embeddings; RecLMIS: the empty string\n             (the same definitions as the historical 1.3 text-use gate)\n  shuffled - the report of the next validation case with a different report\nThe image is identical across conditions. Reports the maximum and mean\nabsolute probability change and validation Dice under each condition.",
+  "results": [
+    {
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1001,
+      "validation_cases": 32,
+      "checkpoint_epoch": 29,
+      "dice": {
+        "correct": 0.789522647857666,
+        "null": 0.6953608989715576,
+        "shuffled": 0.6190393567085266
+      },
+      "null": {
+        "max_abs_probability_change": 0.9988628029823303,
+        "mean_abs_probability_change": 0.04790463671088219,
+        "fraction_pixels_label_changed": 0.04685071110725403,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9995090961456299,
+        "mean_abs_probability_change": 0.08589639514684677,
+        "fraction_pixels_label_changed": 0.08569958806037903,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1002,
+      "validation_cases": 32,
+      "checkpoint_epoch": 50,
+      "dice": {
+        "correct": 0.8074625730514526,
+        "null": 0.7490824460983276,
+        "shuffled": 0.6102910041809082
+      },
+      "null": {
+        "max_abs_probability_change": 0.9997881054878235,
+        "mean_abs_probability_change": 0.03054557740688324,
+        "fraction_pixels_label_changed": 0.029930269345641136,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9999774694442749,
+        "mean_abs_probability_change": 0.08683965355157852,
+        "fraction_pixels_label_changed": 0.0868007093667984,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1003,
+      "validation_cases": 32,
+      "checkpoint_epoch": 10,
+      "dice": {
+        "correct": 0.7937033772468567,
+        "null": 0.533055305480957,
+        "shuffled": 0.5990318059921265
+      },
+      "null": {
+        "max_abs_probability_change": 0.9982764720916748,
+        "mean_abs_probability_change": 0.10148925334215164,
+        "fraction_pixels_label_changed": 0.10280250757932663,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9976587891578674,
+        "mean_abs_probability_change": 0.09721674770116806,
+        "fraction_pixels_label_changed": 0.09737162292003632,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "validation_cases": 32,
+      "checkpoint_epoch": 149,
+      "dice": {
+        "correct": 0.8013370037078857,
+        "null": 0.802566647529602,
+        "shuffled": 0.7974263429641724
+      },
+      "null": {
+        "max_abs_probability_change": 0.9844756126403809,
+        "mean_abs_probability_change": 0.0004675256204791367,
+        "fraction_pixels_label_changed": 0.0004247548640705645,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9930957555770874,
+        "mean_abs_probability_change": 0.0007209037430584431,
+        "fraction_pixels_label_changed": 0.0006595533341169357,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "validation_cases": 32,
+      "checkpoint_epoch": 218,
+      "dice": {
+        "correct": 0.8180167078971863,
+        "null": 0.8143610954284668,
+        "shuffled": 0.8135728240013123
+      },
+      "null": {
+        "max_abs_probability_change": 0.9234445095062256,
+        "mean_abs_probability_change": 0.0008511028136126697,
+        "fraction_pixels_label_changed": 0.0008052903576754034,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.982011079788208,
+        "mean_abs_probability_change": 0.0007704842719249427,
+        "fraction_pixels_label_changed": 0.0007623166311532259,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "validation_cases": 32,
+      "checkpoint_epoch": 248,
+      "dice": {
+        "correct": 0.818991482257843,
+        "null": 0.82110595703125,
+        "shuffled": 0.8090554475784302
+      },
+      "null": {
+        "max_abs_probability_change": 0.998164713382721,
+        "mean_abs_probability_change": 0.00035996068618260324,
+        "fraction_pixels_label_changed": 0.0003487723006401211,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9997919201850891,
+        "mean_abs_probability_change": 0.0007493553566746414,
+        "fraction_pixels_label_changed": 0.0007442552014254034,
+        "identical_logits": false
+      }
+    }
+  ]
+}

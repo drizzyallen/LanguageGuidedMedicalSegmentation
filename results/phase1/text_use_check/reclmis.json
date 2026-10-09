@@ -1,0 +1,149 @@
+{
+  "description": "For each method/dataset/seed, the selected best checkpoint is evaluated on the\nfirst N validation cases (test data is never loaded) with three text inputs:\n  correct  - the case's own report\n  null     - LViT-T: all-zero token embeddings; RecLMIS: the empty string\n             (the same definitions as the historical 1.3 text-use gate)\n  shuffled - the report of the next validation case with a different report\nThe image is identical across conditions. Reports the maximum and mean\nabsolute probability change and validation Dice under each condition.",
+  "results": [
+    {
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1001,
+      "validation_cases": 32,
+      "checkpoint_epoch": 18,
+      "dice": {
+        "correct": 0.8162766695022583,
+        "null": 0.5933527946472168,
+        "shuffled": 0.5782121419906616
+      },
+      "null": {
+        "max_abs_probability_change": 0.9803897738456726,
+        "mean_abs_probability_change": 0.06374692916870117,
+        "fraction_pixels_label_changed": 0.060746170580387115,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9933028817176819,
+        "mean_abs_probability_change": 0.0771542489528656,
+        "fraction_pixels_label_changed": 0.07862698286771774,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1002,
+      "validation_cases": 32,
+      "checkpoint_epoch": 20,
+      "dice": {
+        "correct": 0.7972709536552429,
+        "null": 0.5671353340148926,
+        "shuffled": 0.6398546695709229
+      },
+      "null": {
+        "max_abs_probability_change": 0.9958307147026062,
+        "mean_abs_probability_change": 0.06821277737617493,
+        "fraction_pixels_label_changed": 0.06541910022497177,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9908519983291626,
+        "mean_abs_probability_change": 0.0644322857260704,
+        "fraction_pixels_label_changed": 0.06396421790122986,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1003,
+      "validation_cases": 32,
+      "checkpoint_epoch": 17,
+      "dice": {
+        "correct": 0.8129831552505493,
+        "null": 0.711132287979126,
+        "shuffled": 0.6370283365249634
+      },
+      "null": {
+        "max_abs_probability_change": 0.9941224455833435,
+        "mean_abs_probability_change": 0.04567686840891838,
+        "fraction_pixels_label_changed": 0.04181094840168953,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9943107962608337,
+        "mean_abs_probability_change": 0.06856320798397064,
+        "fraction_pixels_label_changed": 0.07176177203655243,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "validation_cases": 32,
+      "checkpoint_epoch": 35,
+      "dice": {
+        "correct": 0.8147718906402588,
+        "null": 0.7593334913253784,
+        "shuffled": 0.8144938349723816
+      },
+      "null": {
+        "max_abs_probability_change": 0.9921717643737793,
+        "mean_abs_probability_change": 0.0048828888684511185,
+        "fraction_pixels_label_changed": 0.004291767720133066,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9259973168373108,
+        "mean_abs_probability_change": 0.001441978383809328,
+        "fraction_pixels_label_changed": 0.0011926767183467746,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "validation_cases": 32,
+      "checkpoint_epoch": 70,
+      "dice": {
+        "correct": 0.8179420828819275,
+        "null": 0.8026044368743896,
+        "shuffled": 0.8207153081893921
+      },
+      "null": {
+        "max_abs_probability_change": 0.9913956522941589,
+        "mean_abs_probability_change": 0.0027495010290294886,
+        "fraction_pixels_label_changed": 0.0024993272963911295,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.7923096418380737,
+        "mean_abs_probability_change": 0.0010506112594157457,
+        "fraction_pixels_label_changed": 0.0008993343217298388,
+        "identical_logits": false
+      }
+    },
+    {
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "validation_cases": 32,
+      "checkpoint_epoch": 48,
+      "dice": {
+        "correct": 0.7924131155014038,
+        "null": 0.754895031452179,
+        "shuffled": 0.8111013174057007
+      },
+      "null": {
+        "max_abs_probability_change": 0.9817825555801392,
+        "mean_abs_probability_change": 0.0037778043188154697,
+        "fraction_pixels_label_changed": 0.003381222952157259,
+        "identical_logits": false
+      },
+      "shuffled": {
+        "max_abs_probability_change": 0.9148178100585938,
+        "mean_abs_probability_change": 0.0014601326547563076,
+        "fraction_pixels_label_changed": 0.0012038872810080647,
+        "identical_logits": false
+      }
+    }
+  ]
+}

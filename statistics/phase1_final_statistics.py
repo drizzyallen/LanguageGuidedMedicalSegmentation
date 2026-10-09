@@ -7,7 +7,7 @@ The statistical procedure is imported unchanged from the Phase 0 analysis
 cluster bootstrap (10,000), two-sided paired sign-permutation test on
 cluster sums (100,000), Holm within dataset. Run in the Phase 0 environment.
 
-Writes results/phase1/, results/final_six_method/ and both reports.
+Writes results/phase1/, results/final_five_method/ and both reports.
 """
 from __future__ import annotations
 
@@ -28,10 +28,11 @@ from analyze import averaged_cases, bootstrap_mean_ci, holm, paired_cluster_diff
 
 CONFIG = ROOT / "configs" / "statistics_phase1_final.yaml"
 PHASE1_RESULTS = ROOT / "results" / "phase1"
-FINAL_RESULTS = ROOT / "results" / "final_six_method"
+FINAL_RESULTS = ROOT / "results" / "final_five_method"
 PHASE1_REPORT = ROOT / "reports" / "PHASE1_LANGUAGE_GUIDED_RESULTS.md"
-FINAL_REPORT = ROOT / "reports" / "FINAL_SIX_METHOD_COMPARISON.md"
-DATASET_LABEL = {"qata": "QaTa-COV19-v2", "mosmed": "MosMedData+"}
+FINAL_REPORT = ROOT / "reports" / "FINAL_FIVE_METHOD_COMPARISON.md"
+DATASET_LABEL = {"qata": "QaTa-COV19-v2", "mosmed": "MosMedData+", "busi": "BUSI"}
+MANIFESTS = ROOT / "methods" / "phase0_image_only" / "data_manifests"
 METRIC_LABEL = {"dice": "Dice", "miou": "mIoU", "hd95": "HD95", "assd": "ASSD"}
 TEXT = {"phase0": ("No", "No"), "phase1": ("Yes", "Yes")}
 SOURCES = {
@@ -164,13 +165,31 @@ def main():
             matrix.append(entry)
     write_csv(FINAL_RESULTS / "significance_matrix.csv", matrix)
 
+    # BUSI (Phase 0 methods only; no Phase 1 counterpart). Computed last so the
+    # QaTa/MosMed random streams above, and every value derived from them, are unchanged.
+    busi_keys = [m for m in keys if phase_of[m] == "phase0"]
+    for method in busi_keys:
+        runs = cells[method, "busi"] = load_runs(method, "phase0", "busi", seeds)
+        for metric in metric_names:
+            cases = averaged_cases(runs, metric)
+            ci, n_clusters = bootstrap_mean_ci(cases, boot, rng)
+            seed_means = [float(np.mean([float(row[metric]) for row in run])) for run in runs]
+            absolute.append(dict(
+                phase="phase0", method=method, dataset="busi", metric=metric,
+                seed_1001_mean=seed_means[0], seed_1002_mean=seed_means[1], seed_1003_mean=seed_means[2],
+                three_seed_mean=float(np.mean(seed_means)), three_seed_sample_sd=float(np.std(seed_means, ddof=1)),
+                case_averaged_point_estimate=float(np.mean([c["value"] for c in cases])),
+                ci_95_lower=ci[0], ci_95_upper=ci[1], n_cases=len(cases), n_clusters=n_clusters,
+                evaluation="shared evaluator, native mask grid"))
+    write_csv(FINAL_RESULTS / "absolute_ci.csv", absolute)
+
     # Final required summary table.
     complexity = {m: json.loads((FINAL_RESULTS / "model_complexity" / (m + ".json")).read_text()) for m in keys}
     commits = {name: submodule_commit(path) for name, path in SOURCES.values()}
     stat = {(r["method"], r["dataset"], r["metric"]): r for r in absolute}
     summary = []
-    for dataset in datasets:
-        for method in keys:
+    for dataset in list(datasets) + ["busi"]:
+        for method in (keys if dataset != "busi" else busi_keys):
             phase = phase_of[method]
             source = SOURCES["phase0" if phase == "phase0" else method]
             dice = stat[method, dataset, "dice"]
@@ -181,17 +200,53 @@ def main():
             summary.append({
                 "Dataset": DATASET_LABEL[dataset], "Phase": phase[-1], "Method": label[method],
                 "Text at Train": TEXT[phase][0], "Text at Test": TEXT[phase][1],
+                "Dice 1001": "%.4f" % dice["seed_1001_mean"], "Dice 1002": "%.4f" % dice["seed_1002_mean"],
+                "Dice 1003": "%.4f" % dice["seed_1003_mean"],
                 "Dice Mean": "%.4f" % dice["three_seed_mean"], "Dice SD": "%.4f" % dice["three_seed_sample_sd"],
                 "Dice 95% CI": "[%.4f, %.4f]" % (dice["ci_95_lower"], dice["ci_95_upper"]),
                 "mIoU": "%.4f" % stat[method, dataset, "miou"]["three_seed_mean"],
                 "HD95": "%.2f" % stat[method, dataset, "hd95"]["three_seed_mean"],
                 "ASSD": "%.2f" % stat[method, dataset, "assd"]["three_seed_mean"],
                 "Parameters": params, "FLOPs": "%.2fG" % (c["flops"] / 1e9),
-                "Source Commit": "%s@%s" % (source[0], commits[source[0]][:12])})
+                "Source Commit": "%s@%s" % (source[0], commits[source[0]][:12]),
+                "Status": "Valid (3/3 seeds)"})
     write_csv(FINAL_RESULTS / "summary_table.csv", summary)
 
+    # Descriptive case-level view of each paired Dice difference (not a hypothesis test).
+    case_level = []
+    for dataset in datasets:
+        for left, right in pairs:
+            a = averaged_cases(cells[left, dataset], "dice")
+            b = averaged_cases(cells[right, dataset], "dice")
+            if [x["sample_id"] for x in a] != [x["sample_id"] for x in b]:
+                raise RuntimeError("Sample IDs differ")
+            d = np.asarray([x["value"] - y["value"] for x, y in zip(a, b)])
+            order = np.argsort(d)
+            trimmed = np.sort(d)[int(0.05 * len(d)):len(d) - int(0.05 * len(d))]
+            case_level.append(dict(
+                dataset=dataset, method_a=left, method_b=right, n_cases=len(d),
+                mean_difference=float(d.mean()), median_difference=float(np.median(d)),
+                q1_difference=float(np.percentile(d, 25)), q3_difference=float(np.percentile(d, 75)),
+                trimmed_mean_difference_5pct=float(trimmed.mean()),
+                pct_cases_a_better=float(100 * np.mean(d > 0.001)), pct_cases_b_better=float(100 * np.mean(d < -0.001)),
+                pct_cases_within_0_001=float(100 * np.mean(np.abs(d) <= 0.001)),
+                largest_a_better="; ".join("%s %+.3f" % (a[i]["sample_id"], d[i]) for i in order[::-1][:3]),
+                largest_b_better="; ".join("%s %+.3f" % (a[i]["sample_id"], d[i]) for i in order[:3])))
+    write_csv(FINAL_RESULTS / "case_level_paired_summary.csv", case_level)
+
+    stability = []
+    for dataset in list(datasets) + ["busi"]:
+        for method in (keys if dataset != "busi" else busi_keys):
+            r = stat[method, dataset, "dice"]
+            values = [r["seed_1001_mean"], r["seed_1002_mean"], r["seed_1003_mean"]]
+            stability.append(dict(dataset=dataset, method=method, dice_1001=values[0], dice_1002=values[1],
+                                  dice_1003=values[2], mean=r["three_seed_mean"], sample_sd=r["three_seed_sample_sd"],
+                                  range=max(values) - min(values)))
+    write_csv(FINAL_RESULTS / "seed_stability.csv", stability)
+
     stored = {(m, d): stored_resolution_dice(m, phase_of[m], d, seeds) for m in keys for d in datasets}
-    write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summary, stored, complexity, commits, cells)
+    write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summary, stored, complexity, commits, cells,
+                  case_level)
     print("Wrote", PHASE1_RESULTS, FINAL_RESULTS, PHASE1_REPORT, FINAL_REPORT)
 
 
@@ -223,7 +278,46 @@ def findings(dataset, keys, label, stat, comparisons):
     return text
 
 
-def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summary, stored, complexity, commits, cells):
+def split_overlap(dataset):
+    with (MANIFESTS / (dataset + ".csv")).open(newline="") as stream:
+        rows = list(csv.DictReader(stream))
+    source = {s: {r["source_id"] for r in rows if r["split"] == s} for s in ("train", "val", "test")}
+    test = [r for r in rows if r["split"] == "test"]
+    return dict(train_val=len(source["train"] & source["val"]), train_test=len(source["train"] & source["test"]),
+                val_test=len(source["val"] & source["test"]), test_sources=len(source["test"]), test_images=len(test),
+                test_images_from_train_source=sum(r["source_id"] in source["train"] for r in test))
+
+
+CAVEATS = None
+
+
+def caveats():
+    q, m = split_overlap("qata"), split_overlap("mosmed")
+    return ("## Interpretation caveats\n\n"
+            "- **MosMedData+ patient/scan overlap.** The frozen Phase 0 MosMed split is slice-level. %d of the %d "
+            "test CT studies also have slices in training and %d in validation; %d of %d test images (%.0f%%) come "
+            "from a study with training slices. All five methods share this split, so the paired comparison is "
+            "like-for-like, but absolute MosMed scores describe new slices from mostly seen patients and are likely "
+            "optimistic for unseen patients. The archived annotation-workbook split also overlaps (67%% of its test "
+            "images).\n"
+            "- **QaTa-COV19-v2.** No subject appears in both training and test. %d subjects appear in both training "
+            "and validation, which can make checkpoint selection slightly optimistic but does not touch test data.\n"
+            "- **Report content.** Every QaTa and MosMed report states the lesion count and lung location (for "
+            "example \"Bilateral pulmonary infection, two infected areas, ...\"). LViT-T and RecLMIS receive this text "
+            "at test time; the image-only methods do not. The reports come unchanged from the published "
+            "QaTa/MosMed text annotations; this repository cannot verify whether they were written from the images "
+            "or derived from the masks. Comparisons show what each method achieves with its native inputs; they do "
+            "not by themselves show that language improves segmentation.\n"
+            "- **Evaluation geometry.** The native-grid alignment rule for Phase 1 was investigated after a "
+            "MosMed test-set drop was observed. It was fixed from the resize code, confirmed on validation masks "
+            "only, applied identically to every seed, and both the stored-resolution and native-grid values are "
+            "reported.\n" % (m["train_test"], m["test_sources"], m["val_test"], m["test_images_from_train_source"],
+                              m["test_images"], 100.0 * m["test_images_from_train_source"] / m["test_images"],
+                              q["train_val"]))
+
+
+def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summary, stored, complexity, commits, cells,
+                  case_level):
     phase1 = [m for m in keys if phase_of[m] == "phase1"]
     n = {d: (len(cells[keys[0], d][0]), next(r for r in comparisons if r["dataset"] == d)["n_clusters"]) for d in datasets}
     manifests = {d: hashlib.sha256((ROOT / "methods" / "phase1_language_guided" / "data_manifests" / (d + ".csv"))
@@ -312,6 +406,23 @@ def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summa
                     [[DATASET_LABEL[d], label[m], "%.4f ± %.4f" % stored[m, d],
                       "%.4f ± %.4f" % (stat[m, d, "dice"]["three_seed_mean"], stat[m, d, "dice"]["three_seed_sample_sd"])]
                      for d in datasets for m in phase1]) + "\n")
+    p1.append("### Post-hoc text-use check on the final checkpoints\n")
+    p1.append("Audit check, separate from the historical 1.3 gate: each selected checkpoint was run on the first 32 "
+              "validation cases (no test data) with the correct report, null text (LViT-T: zero embeddings; "
+              "RecLMIS: empty string) and a shuffled report from another case. "
+              "Source: `evaluation/text_use_check.py`, `results/phase1/text_use_check/`.\n")
+    rows = []
+    for m in phase1:
+        for item in json.loads((ROOT / "results" / "phase1" / "text_use_check" / (m + ".json")).read_text())["results"]:
+            rows.append([label[m], DATASET_LABEL[item["dataset"]], item["seed"], "%.4f" % item["dice"]["correct"],
+                         "%.4f" % item["dice"]["null"], "%.4f" % item["dice"]["shuffled"],
+                         "%.3f" % item["shuffled"]["max_abs_probability_change"],
+                         "No" if item["null"]["identical_logits"] or item["shuffled"]["identical_logits"] else "Yes"])
+    p1.append(table(["Method", "Dataset", "Seed", "Val Dice, correct", "Null", "Shuffled", "Max |dp| shuffled",
+                     "Text changes output"], rows) + "\n")
+    p1.append("Both methods use their text input in every run. On QaTa, null or shuffled reports lower validation "
+              "Dice substantially; on MosMed the effect is small for LViT-T and moderate for RecLMIS.\n")
+    p1.append(caveats())
     p1.append("## Run records\n")
     p1.append("Every run has `runs/phase1/<method>/<dataset>/<seed>/` with `resolved_config.yaml`, `environment.txt`, "
               "`train_log.csv`, `best_checkpoint.txt`, `test_summary.json`, `per_case_metrics.csv` and "
@@ -336,7 +447,7 @@ def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summa
         ["Each method completes three seeds on QaTa and MosMed", "Met (12/12 runs)"],
         ["Saved per-case predictions and absolute 95% CIs", "Met"],
         ["Final paired comparison: all Dice pairs, paired 95% CIs, raw and Holm p-values",
-         "Met for the 5-method study (10 pairs per dataset); see FINAL_SIX_METHOD_COMPARISON.md"],
+         "Met for the 5-method study (10 pairs per dataset); see FINAL_FIVE_METHOD_COMPARISON.md"],
         ["Phase 0 and Phase 1 results in separate reports", "Met"],
         ["Final report combines them only after both phases are complete", "Met"],
     ]) + "\n")
@@ -344,9 +455,9 @@ def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summa
 
     f = []
     f.append("# Final Cross-Phase Comparison\n")
-    f.append("Generated by `statistics/phase1_final_statistics.py`. The file keeps the name required by the plan. "
-              "The research advisor removed ProLearn, so the study has **five** methods and **10** pairwise "
-              "comparisons per dataset (the plan's 15 assumed six).\n")
+    f.append("Generated by `statistics/phase1_final_statistics.py`. The original plan named this file "
+              "`FINAL_SIX_METHOD_COMPARISON.md`; the research advisor removed ProLearn, so the study has **five** "
+              "methods and **10** pairwise comparisons per dataset (the plan's 15 assumed six).\n")
     f.append("Phase 0 (`reports/PHASE0_IMAGE_ONLY_RESULTS.md`) and Phase 1 "
              "(`reports/PHASE1_LANGUAGE_GUIDED_RESULTS.md`) were completed and reported separately before this "
              "combined report.\n")
@@ -364,8 +475,8 @@ def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summa
              "its frozen external BERT-base encoder; RecLMIS includes its frozen CLIP model (trainable count in "
              "parentheses). Measured LViT-T FLOPs (54.16G) match the LViT paper (54.1G); measured parameters "
              "(39.93M) exceed the paper's 29.7M for the instantiated official configuration. All absolute "
-             "statistics: `results/final_six_method/absolute_ci.csv`; this table: "
-             "`results/final_six_method/summary_table.csv`.\n")
+             "statistics: `results/final_five_method/absolute_ci.csv`; this table: "
+             "`results/final_five_method/summary_table.csv`.\n")
     f.append("## Paired Dice comparisons (confirmatory)\n")
     f.append("Seed-averaged case-level differences (A minus B), 10,000 paired cluster-bootstrap resamples for the "
              "95% CI, two-sided paired sign-permutation test with 100,000 permutations on `source_id` clusters, "
@@ -396,12 +507,34 @@ def write_reports(cfg, label, phase_of, keys, datasets, stat, comparisons, summa
                                                   fmt_p(r["raw_p_value"])))
             rows.append(row)
         f.append(table(["A vs B", "mIoU difference", "HD95 difference", "ASSD difference"], rows) + "\n")
+    f.append("## Case-level paired behaviour (descriptive)\n")
+    f.append("Seed-averaged per-case Dice differences (A minus B). \"A better\" / \"B better\" count cases whose "
+             "difference exceeds 0.001 in that direction. The 5% trimmed mean drops the most extreme 5% of cases at "
+             "each end; a mean close to it means the difference is not driven by a few outliers. Descriptive only; "
+             "full rows, including the largest individual cases, are in "
+             "`results/final_five_method/case_level_paired_summary.csv`.\n")
+    for d in datasets:
+        f.append("### %s\n" % DATASET_LABEL[d])
+        f.append(table(["A vs B", "Mean", "Median [IQR]", "5% trimmed mean", "A better", "B better"],
+                       [["%s vs %s" % (label[r["method_a"]], label[r["method_b"]]), "%+.4f" % r["mean_difference"],
+                         "%+.4f [%+.4f, %+.4f]" % (r["median_difference"], r["q1_difference"], r["q3_difference"]),
+                         "%+.4f" % r["trimmed_mean_difference_5pct"], "%.0f%%" % r["pct_cases_a_better"],
+                         "%.0f%%" % r["pct_cases_b_better"]] for r in case_level if r["dataset"] == d]) + "\n")
+    f.append("## Seed stability\n")
+    f.append(table(["Dataset", "Method", "Dice 1001", "Dice 1002", "Dice 1003", "Sample SD", "Range"],
+                   [[DATASET_LABEL[d], label[m]] + ["%.4f" % stat[m, d, "dice"]["seed_%d_mean" % s] for s in cfg["seeds"]]
+                    + ["%.4f" % stat[m, d, "dice"]["three_seed_sample_sd"],
+                       "%.4f" % (max(stat[m, d, "dice"]["seed_%d_mean" % s] for s in cfg["seeds"])
+                                 - min(stat[m, d, "dice"]["seed_%d_mean" % s] for s in cfg["seeds"]))]
+                    for d in list(datasets) + ["busi"] for m in keys if (m, d, "dice") in stat]) + "\n")
+    f.append(caveats())
     f.append("## Files\n")
-    f.append("- `results/final_six_method/paired_comparisons.csv` and `.json`: all 80 paired comparisons "
+    f.append("- `results/final_five_method/paired_comparisons.csv` and `.json`: all 80 paired comparisons "
              "(10 pairs x 4 metrics x 2 datasets).\n"
-             "- `results/final_six_method/significance_matrix.csv`: Dice difference (row minus column), 95% CI and "
+             "- `results/final_five_method/significance_matrix.csv`: Dice difference (row minus column), 95% CI and "
              "Holm p for every pair; `*` marks Holm p < 0.05.\n"
-             "- `results/final_six_method/absolute_ci.csv`, `summary_table.csv`, `model_complexity/`.\n"
+             "- `results/final_five_method/absolute_ci.csv` (all methods, including BUSI), `summary_table.csv`, "
+             "`case_level_paired_summary.csv`, `seed_stability.csv`, `model_complexity/`.\n"
              "- `results/phase1/absolute_ci.csv`.\n")
     f.append("## Limitations\n")
     f.append("- Five methods instead of six: ProLearn was removed by the research advisor.\n"

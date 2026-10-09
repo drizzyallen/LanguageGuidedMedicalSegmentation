@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/unet/busi/seed_1002/upstream/busi/best.pt
+sha256: b86f1cf52a18e53bdffe107273ba9886dc4ff119b03416b339eee3cd75cdf5aa
+epoch: 46
+selection: validation Dice (frozen Phase 0 rule)

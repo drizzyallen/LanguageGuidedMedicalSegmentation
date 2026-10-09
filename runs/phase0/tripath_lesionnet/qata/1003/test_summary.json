@@ -2,7 +2,7 @@
   "dataset": "qata",
   "evaluation_space": "native ground-truth mask grid",
   "evaluator": "evaluation/shared_evaluator.py",
-  "evaluator_sha256": "fe61779e18a0079c9d1f0b7dc24cfab8774b18abda88cf3c62289c2cabbaf5e1",
+  "evaluator_sha256": "e0b67012559ece78f81b98cfbabcd47d1e0be1a74041ca6ced4298770f084569",
   "method": "tripath_lesionnet",
   "native_mask_shape": [
     224,
