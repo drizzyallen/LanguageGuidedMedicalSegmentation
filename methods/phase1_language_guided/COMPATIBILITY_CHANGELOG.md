@@ -42,3 +42,15 @@ No file under `upstream/` is modified.
 ## 2026-09-16: RecLMIS main-training dependency recovery
 
 The native reconstruction attention imports fairseq.utils.softmax lazily. Missing fairseq caused upstream to silently disable auxiliary losses. Both package installation attempts failed to build (0.10.2 packaging and 0.12.2 extension compilation). The external reclmis_compat.py provides only the required helper with the float32 calculation from fairseq v0.10.2. Both dataset smoke checks passed with all native losses asserted. No upstream source changes.
+
+## 2026-10-03 — Section 1.4 relaunch
+
+- `build_authoritative_manifests.py`: Phase 1 manifests are now byte-identical
+  copies of the Phase 0 manifests (plan §1.4 rule 2); report coverage verified.
+- `adapter.py`: pinned manifest hashes updated to the Phase 0 manifests.
+- `main_experiment.py`: nonfinite-loss stop rule (upstream-equivalent
+  checkpoint selection), `os._exit(0)` after the run, GPU index excluded from
+  the resume comparison.
+- `launch_main_queues.py`: GPU indices are arguments (`--dataset qata=3`).
+- `wait_and_launch.sh`: new; waits for free GPU memory, smoke-checks, launches.
+- ProLearn removed from Phase 1 scope per research advisor.

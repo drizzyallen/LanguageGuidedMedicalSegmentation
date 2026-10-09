@@ -1,0 +1,19 @@
+{
+  "best_epoch": 13,
+  "best_val_dice": 0.7822826228999358,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gates/prolearn/official_qata/best_checkpoint.pt",
+  "cuda_device": "cuda:0",
+  "elapsed_seconds": 2098.110459804535,
+  "epochs": 33,
+  "method": "prolearn",
+  "native_settings": {
+    "batch_size": 32,
+    "loss": "MONAI DiceCELoss",
+    "lr": 0.0001,
+    "max_epochs": 50,
+    "patience": 20,
+    "seed": 42
+  },
+  "physical_cuda_device": "0",
+  "status": "pass"
+}

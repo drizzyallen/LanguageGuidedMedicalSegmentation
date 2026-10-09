@@ -1,0 +1,5 @@
+path: methods/phase1_language_guided/runs/reclmis/qata/seed_1001/best_checkpoint.pt
+sha256: 57b4f80e29aa1b04ca11f7ec974806346e60c4224d21ddf3581460f692f00818
+epoch: 18
+best_val_dice: 0.8188597972448094
+selection: validation mean per-case Dice at threshold 0.5

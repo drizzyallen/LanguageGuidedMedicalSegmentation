@@ -1,0 +1,11 @@
+{
+  "method": "reclmis",
+  "parameters": 220717568,
+  "trainable_parameters": 69440255,
+  "macs": 24132788096.0,
+  "flops": 48265576192.0,
+  "input": "1x3x224x224 image + 1x18 CLIP tokens",
+  "scope": "whole module as instantiated, including its CLIP text encoder",
+  "tool": "thop 0.1.1",
+  "note": "thop counts module operations only; functional attention products are not counted"
+}

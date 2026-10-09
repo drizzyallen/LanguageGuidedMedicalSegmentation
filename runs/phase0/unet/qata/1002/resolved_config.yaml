@@ -1,0 +1,118 @@
+phase: phase0
+method: unet
+dataset: qata
+seed: 1002
+run_metadata:
+  method: unet
+  dataset: qata
+  seed: 1002
+  upstream_commit: fdeb44037aba52900d852271293b165a697ecf06
+  config: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/configs/unet.yaml
+  config_sha256: fbc8aa206cb96f494ea70d8ddb15ab1d0de8a994344f1fbe029173c3732ed0a6
+  manifest: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/data_manifests/qata.csv
+  manifest_sha256: e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a
+  determinism:
+    seed: 1002
+    torch_deterministic_algorithms: true
+    cudnn_benchmark: false
+    cudnn_deterministic: true
+    cublas_workspace_config: :4096:8
+config:
+  schema_version: 1
+  method: unet
+  upstream_commit: fdeb44037aba52900d852271293b165a697ecf06
+  datasets:
+  - qata
+  - mosmed
+  - busi
+  seeds:
+  - 1001
+  - 1002
+  - 1003
+  data:
+    manifest_directory: data_manifests
+  model:
+    input_channels: 1
+    output_channels: 1
+    encoder_channels:
+    - 64
+    - 128
+    - 256
+    - 512
+    - 1024
+  loss:
+    name: bce_with_logits_plus_soft_dice
+    dice_smooth: 1.0
+  preprocessing:
+    color_mode: grayscale
+    resize:
+    - 384
+    - 384
+    image_interpolation: bilinear
+    mask_interpolation: nearest
+    image_scale: 255.0
+  augmentation:
+    horizontal_flip_probability: 0.5
+    rotation_probability: 0.5
+    rotation_degrees:
+    - -15
+    - 15
+    brightness_probability: 0.5
+    brightness_range:
+    - 0.9
+    - 1.1
+    contrast_probability: 0.5
+    contrast_range:
+    - 0.9
+    - 1.1
+  training:
+    image_size: 384
+    epochs: 100
+    batch_size: 4
+    optimizer:
+      name: AdamW
+      learning_rate: 0.0003
+      weight_decay: 0.0001
+    scheduler:
+      name: ReduceLROnPlateau
+      mode: max
+      patience: 5
+      factor: 0.5
+    early_stopping:
+      metric: val_dice
+      mode: max
+      patience: 15
+    checkpoint_rule: best_validation_dice_strictly_greater
+    num_workers: 4
+    amp: false
+  evaluation:
+    threshold: 0.5
+    per_case_prediction_export: required
+  frozen: true
+upstream_resolved_config:
+  dataset: qata
+  output_dir: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase0_image_only/runs/unet/qata/seed_1002/upstream
+  image_size: 384
+  epochs: 100
+  batch_size: 4
+  learning_rate: 0.0003
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+  scheduler_patience: 5
+  scheduler_factor: 0.5
+  num_workers: 4
+  seed: 1002
+  device: cuda
+  amp: false
+  max_train_samples: null
+  max_val_samples: null
+  max_test_samples: null
+  threshold: 0.5
+  save_visualizations: false
+  max_visualizations: 0
+  pretrained_backbone: true
+  dataset_name: qata
+  train_samples: 5716
+  val_samples: 1429
+  params: 31042369
+  flops: 245638250496

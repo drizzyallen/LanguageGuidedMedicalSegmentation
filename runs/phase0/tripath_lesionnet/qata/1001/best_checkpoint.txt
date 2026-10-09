@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1001/upstream/qata/best.pt
+sha256: e21a0c888f9a392ce8c02306d22a7dcc6a7903b602231f29beb54c4a50cca99a
+epoch: 48
+selection: validation Dice (frozen Phase 0 rule)

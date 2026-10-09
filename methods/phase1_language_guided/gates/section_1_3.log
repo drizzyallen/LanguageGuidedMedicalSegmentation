@@ -1,0 +1,551 @@
+[2026-09-14T23:09:44-04:00] Starting Section 1.3 on physical GPU 0
+[2026-09-14T23:09:44-04:00] START adapter_validation
+{
+  "mosmed": {
+    "splits": {
+      "test": 273,
+      "train": 2183,
+      "val": 273
+    },
+    "status": "pass",
+    "total": 2729
+  },
+  "qata": {
+    "splits": {
+      "test": 2113,
+      "train": 5716,
+      "val": 1429
+    },
+    "status": "pass",
+    "total": 9258
+  }
+}
+[2026-09-14T23:09:46-04:00] PASS adapter_validation
+[2026-09-14T23:09:46-04:00] START lvit_gates_1_to_6
+{
+  "data_gate": {
+    "test": 32,
+    "train": 32,
+    "val": 32
+  },
+  "gradient_gate": {
+    "nonzero_parameters": {
+      "text_module1.bias": 0.08856739848852158,
+      "text_module1.weight": 3.1644253730773926,
+      "text_module2.bias": 0.06855592131614685,
+      "text_module2.weight": 8.932199478149414,
+      "text_module3.bias": 0.05649575963616371,
+      "text_module3.weight": 24.115859985351562,
+      "text_module4.bias": 0.04771377146244049,
+      "text_module4.weight": 53.01896667480469
+    }
+  },
+  "inference_gate": {
+    "saved_masks": 1429
+  },
+  "method": "lvit",
+  "official_check_gate": {
+    "author_checkpoint_available": false,
+    "status": "pending_official_style_qata_run"
+  },
+  "overfit_gate": {
+    "dice": 0.900467038154602,
+    "history": [
+      {
+        "dice": 0.20489829778671265,
+        "loss": 0.8198821544647217,
+        "step": 1
+      },
+      {
+        "dice": 0.731320858001709,
+        "loss": 0.44568324089050293,
+        "step": 25
+      }
+    ],
+    "step": 40
+  },
+  "shape_gate": {
+    "embedding": [
+      8,
+      10,
+      768
+    ],
+    "image": [
+      8,
+      3,
+      224,
+      224
+    ],
+    "mask": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "output": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "token": [
+      8,
+      10
+    ]
+  },
+  "text_use_gate": {
+    "null_max_abs_difference": 0.1681797355413437,
+    "shuffled_max_abs_difference": 0.027252644300460815
+  }
+}
+[2026-09-14T23:10:19-04:00] PASS lvit_gates_1_to_6
+[2026-09-14T23:10:19-04:00] START reclmis_gates_1_to_7
+/data/ramialle/miniconda3/envs/phase1_official_reclmis/lib/python3.9/site-packages/clip/clip.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import packaging
+use clip version: /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/ViT-B-32.pt
+512 8 12
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:217: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  img_weight = img_weight.masked_fill_(torch.tensor((1 - img_mask.int()), dtype=torch.bool), float("-inf"))
+/data/ramialle/LanguageGuidedMedicalSegmentation/upstream/RecLMIS/nets/RecLMIS.py:225: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  text_weight = text_weight.masked_fill_(torch.tensor((1 - text_mask.int()), dtype=torch.bool), float("-inf"))
+{
+  "data_gate": {
+    "test": 32,
+    "train": 32,
+    "val": 32
+  },
+  "gradient_gate": {
+    "nonzero_parameters": {
+      "interact.attn_img.in_proj_bias": 0.1316927671432495,
+      "interact.attn_img.in_proj_weight": 63.62494659423828,
+      "interact.attn_img.out_proj.bias": 0.06977945566177368,
+      "interact.attn_img.out_proj.weight": 40.565834045410156,
+      "interact.attn_text.in_proj_bias": 0.2562386989593506,
+      "interact.attn_text.in_proj_weight": 128.50308227539062,
+      "interact.attn_text.out_proj.bias": 0.09614929556846619,
+      "interact.attn_text.out_proj.weight": 47.3495979309082,
+      "interact.embeddings.patch_embeddings.bias": 0.4250941276550293,
+      "interact.embeddings.patch_embeddings.weight": 97.75761413574219,
+      "interact.embeddings.position_embeddings": 7.4411821365356445,
+      "text_module4.bias": 0.3304252624511719,
+      "text_module4.weight": 117.95407104492188
+    }
+  },
+  "inference_gate": {
+    "saved_masks": 1429
+  },
+  "method": "reclmis",
+  "official_check_gate": {
+    "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/assets/reclmis/covid19_author.pth.tar",
+    "status": "pass",
+    "strict_load": true
+  },
+  "overfit_gate": {
+    "dice": 0.9254082441329956,
+    "history": [
+      {
+        "dice": 0.8917050957679749,
+        "loss": 0.5020331740379333,
+        "step": 1
+      }
+    ],
+    "step": 3
+  },
+  "shape_gate": {
+    "embedding": [
+      8,
+      18,
+      512
+    ],
+    "image": [
+      8,
+      3,
+      224,
+      224
+    ],
+    "mask": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "output": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "token": [
+      8,
+      18
+    ]
+  },
+  "text_use_gate": {
+    "null_max_abs_difference": 0.9342132210731506,
+    "shuffled_max_abs_difference": 0.8642340898513794
+  }
+}
+[2026-09-14T23:10:42-04:00] PASS reclmis_gates_1_to_7
+[2026-09-14T23:10:42-04:00] START prolearn_gates_1_to_6
+/data/ramialle/miniconda3/envs/phase1_official_prolearn/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[✓] Loading prototypes from /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/ProLearn/prototypes/prototype_qata_6_16_1024_contrastive.pkl
+We strongly recommend passing in an `attention_mask` since your input_ids may be padded. See https://huggingface.co/docs/transformers/troubleshooting#incorrect-output-when-padding-tokens-arent-masked.
+{
+  "data_gate": {
+    "test": 32,
+    "train": 32,
+    "val": 32
+  },
+  "gradient_gate": {
+    "nonzero_parameters": {
+      "model.approx1.cross_attn1.cross_attn.in_proj_bias": 2.9677583370357752e-05,
+      "model.approx1.cross_attn1.cross_attn.in_proj_weight": 0.0283091701567173,
+      "model.approx1.cross_attn1.cross_attn.out_proj.bias": 1.1710510079865344e-05,
+      "model.approx1.cross_attn1.cross_attn.out_proj.weight": 0.010970303788781166,
+      "model.approx1.cross_attn1.cross_attn_norm.bias": 1.1121280294901226e-05,
+      "model.approx1.cross_attn1.cross_attn_norm.weight": 1.2000078640994616e-05,
+      "model.approx1.cross_attn1.norm.bias": 1.52740249177441e-05,
+      "model.approx1.cross_attn1.norm.weight": 1.216058990394231e-05,
+      "model.approx1.cross_attn1.scale": 6.221126795935561e-07,
+      "model.approx1.cross_attn2.cross_attn.in_proj_bias": 6.976622898946516e-06,
+      "model.approx1.cross_attn2.cross_attn.in_proj_weight": 0.013498291373252869,
+      "model.approx1.cross_attn2.cross_attn.out_proj.bias": 3.888322339662409e-07,
+      "model.approx1.cross_attn2.cross_attn.out_proj.weight": 0.007438326254487038,
+      "model.approx1.cross_attn2.cross_attn_norm.bias": 1.1121280294901226e-05,
+      "model.approx1.cross_attn2.cross_attn_norm.weight": 9.43480699788779e-06,
+      "model.approx1.cross_attn2.norm.bias": 5.928407517785672e-06,
+      "model.approx1.cross_attn2.norm.weight": 4.707894731836859e-06,
+      "model.approx1.cross_attn2.scale": 5.270361498332932e-07,
+      "model.approx1.norm.bias": 5.2784656872972846e-05,
+      "model.approx1.norm.weight": 4.362783511169255e-05,
+      "model.approx1.projection1.bias": 1.1105383237008937e-05,
+      "model.approx1.projection1.weight": 0.020100785419344902,
+      "model.approx1.projection2.bias": 4.094100347629137e-07,
+      "model.approx1.projection2.weight": 0.0017577563412487507,
+      "model.approx1.self_attn1.norm.bias": 2.5651263058534823e-05,
+      "model.approx1.self_attn1.norm.weight": 1.988677649933379e-05,
+      "model.approx1.self_attn1.self_attn.in_proj_bias": 3.747591108549386e-05,
+      "model.approx1.self_attn1.self_attn.in_proj_weight": 0.01499253697693348,
+      "model.approx1.self_attn1.self_attn.out_proj.bias": 6.117714656284079e-05,
+      "model.approx1.self_attn1.self_attn.out_proj.weight": 0.01852150820195675,
+      "model.approx1.self_attn1.self_attn_norm.bias": 2.5898621970554814e-05,
+      "model.approx1.self_attn1.self_attn_norm.weight": 2.069659240078181e-05,
+      "model.approx1.self_attn2.norm.bias": 2.5036988517967984e-05,
+      "model.approx1.self_attn2.norm.weight": 1.9388367945794016e-05,
+      "model.approx1.self_attn2.self_attn.in_proj_bias": 3.568221291061491e-05,
+      "model.approx1.self_attn2.self_attn.in_proj_weight": 0.014107419177889824,
+      "model.approx1.self_attn2.self_attn.out_proj.bias": 5.528106339625083e-05,
+      "model.approx1.self_attn2.self_attn.out_proj.weight": 0.015892893075942993,
+      "model.approx1.self_attn2.self_attn_norm.bias": 2.333967131562531e-05,
+      "model.approx1.self_attn2.self_attn_norm.weight": 1.878713010228239e-05,
+      "model.approx2.cross_attn1.cross_attn.in_proj_bias": 0.00022094287851359695,
+      "model.approx2.cross_attn1.cross_attn.in_proj_weight": 0.07464400678873062,
+      "model.approx2.cross_attn1.cross_attn.out_proj.bias": 0.0003478512808214873,
+      "model.approx2.cross_attn1.cross_attn.out_proj.weight": 0.07611650228500366,
+      "model.approx2.cross_attn1.cross_attn_norm.bias": 9.887989290291443e-05,
+      "model.approx2.cross_attn1.cross_attn_norm.weight": 8.597362466389313e-05,
+      "model.approx2.cross_attn1.norm.bias": 8.451757821603678e-06,
+      "model.approx2.cross_attn1.norm.weight": 7.032957000774331e-06,
+      "model.approx2.cross_attn1.scale": 4.213554348098114e-06,
+      "model.approx2.cross_attn2.cross_attn.in_proj_bias": 3.525392457959242e-05,
+      "model.approx2.cross_attn2.cross_attn.in_proj_weight": 0.06963636726140976,
+      "model.approx2.cross_attn2.cross_attn.out_proj.bias": 3.59485020453576e-05,
+      "model.approx2.cross_attn2.cross_attn.out_proj.weight": 0.06780679523944855,
+      "model.approx2.cross_attn2.cross_attn_norm.bias": 9.887989290291443e-05,
+      "model.approx2.cross_attn2.cross_attn_norm.weight": 8.31561628729105e-05,
+      "model.approx2.cross_attn2.norm.bias": 1.2975001482118387e-05,
+      "model.approx2.cross_attn2.norm.weight": 9.799523468245752e-06,
+      "model.approx2.cross_attn2.scale": 5.378195965022314e-06,
+      "model.approx2.norm.bias": 0.0004620563122443855,
+      "model.approx2.norm.weight": 0.0004315106198191643,
+      "model.approx2.projection1.bias": 0.0003049391962122172,
+      "model.approx2.projection1.weight": 0.048807542771101,
+      "model.approx2.projection2.bias": 3.0063629310461693e-05,
+      "model.approx2.projection2.weight": 0.007645095698535442,
+      "model.approx2.self_attn1.norm.bias": 0.00022687442833557725,
+      "model.approx2.self_attn1.norm.weight": 0.00017166259931400418,
+      "model.approx2.self_attn1.self_attn.in_proj_bias": 0.00030529047944583,
+      "model.approx2.self_attn1.self_attn.in_proj_weight": 0.12121452391147614,
+      "model.approx2.self_attn1.self_attn.out_proj.bias": 0.000514896702952683,
+      "model.approx2.self_attn1.self_attn.out_proj.weight": 0.1458534449338913,
+      "model.approx2.self_attn1.self_attn_norm.bias": 0.00019776137196458876,
+      "model.approx2.self_attn1.self_attn_norm.weight": 0.00015882511797826737,
+      "model.approx2.self_attn2.norm.bias": 0.00022366331540979445,
+      "model.approx2.self_attn2.norm.weight": 0.00017342584033031017,
+      "model.approx2.self_attn2.self_attn.in_proj_bias": 0.00030521248118020594,
+      "model.approx2.self_attn2.self_attn.in_proj_weight": 0.12067640572786331,
+      "model.approx2.self_attn2.self_attn.out_proj.bias": 0.0005155851249583066,
+      "model.approx2.self_attn2.self_attn.out_proj.weight": 0.14543095231056213,
+      "model.approx2.self_attn2.self_attn_norm.bias": 0.0001973185280803591,
+      "model.approx2.self_attn2.self_attn_norm.weight": 0.0001675672538112849,
+      "model.approx3.cross_attn1.cross_attn.in_proj_bias": 0.002941474784165621,
+      "model.approx3.cross_attn1.cross_attn.in_proj_weight": 0.8675861954689026,
+      "model.approx3.cross_attn1.cross_attn.out_proj.bias": 0.0037921511102467775,
+      "model.approx3.cross_attn1.cross_attn.out_proj.weight": 0.7234894037246704,
+      "model.approx3.cross_attn1.cross_attn_norm.bias": 0.0010113223688676953,
+      "model.approx3.cross_attn1.cross_attn_norm.weight": 0.0008032757323235273,
+      "model.approx3.cross_attn1.norm.bias": 0.00013012197450734675,
+      "model.approx3.cross_attn1.norm.weight": 0.00010431066766614094,
+      "model.approx3.cross_attn1.scale": 5.6557324569439515e-05,
+      "model.approx3.cross_attn2.cross_attn.in_proj_bias": 0.0010861114133149385,
+      "model.approx3.cross_attn2.cross_attn.in_proj_weight": 0.9959398508071899,
+      "model.approx3.cross_attn2.cross_attn.out_proj.bias": 0.0012291609309613705,
+      "model.approx3.cross_attn2.cross_attn.out_proj.weight": 0.7654107213020325,
+      "model.approx3.cross_attn2.cross_attn_norm.bias": 0.0010113223688676953,
+      "model.approx3.cross_attn2.cross_attn_norm.weight": 0.0008017701329663396,
+      "model.approx3.cross_attn2.norm.bias": 0.0001284235913772136,
+      "model.approx3.cross_attn2.norm.weight": 9.867794869933277e-05,
+      "model.approx3.cross_attn2.scale": 5.5916938435984775e-05,
+      "model.approx3.norm.bias": 0.00471331924200058,
+      "model.approx3.norm.weight": 0.003958337940275669,
+      "model.approx3.projection1.bias": 0.003807107452303171,
+      "model.approx3.projection1.weight": 0.2981264293193817,
+      "model.approx3.projection2.bias": 0.001279336865991354,
+      "model.approx3.projection2.weight": 0.08930860459804535,
+      "model.approx3.self_attn1.norm.bias": 0.0025661045219749212,
+      "model.approx3.self_attn1.norm.weight": 0.0019387482898309827,
+      "model.approx3.self_attn1.self_attn.in_proj_bias": 0.0033362298272550106,
+      "model.approx3.self_attn1.self_attn.in_proj_weight": 1.320044755935669,
+      "model.approx3.self_attn1.self_attn.out_proj.bias": 0.004813562147319317,
+      "model.approx3.self_attn1.self_attn.out_proj.weight": 1.4031622409820557,
+      "model.approx3.self_attn1.self_attn_norm.bias": 0.0020235758274793625,
+      "model.approx3.self_attn1.self_attn_norm.weight": 0.0016404190100729465,
+      "model.approx3.self_attn2.norm.bias": 0.0024500770960003138,
+      "model.approx3.self_attn2.norm.weight": 0.0019376882119104266,
+      "model.approx3.self_attn2.self_attn.in_proj_bias": 0.0036254338920116425,
+      "model.approx3.self_attn2.self_attn.in_proj_weight": 1.4282981157302856,
+      "model.approx3.self_attn2.self_attn.out_proj.bias": 0.005071844905614853,
+      "model.approx3.self_attn2.self_attn.out_proj.weight": 1.4038410186767578,
+      "model.approx3.self_attn2.self_attn_norm.bias": 0.002041501458734274,
+      "model.approx3.self_attn2.self_attn_norm.weight": 0.0015554805286228657,
+      "model.prototype.matrix": 0.027933210134506226
+    }
+  },
+  "inference_gate": {
+    "saved_masks": 1429
+  },
+  "method": "prolearn",
+  "official_check_gate": {
+    "author_segmentation_checkpoint_available": false,
+    "official_prototype_bank_loaded": true,
+    "status": "pending_official_style_qata_run"
+  },
+  "overfit_gate": {
+    "dice": 0.9012504816055298,
+    "history": [
+      {
+        "dice": 0.1888149082660675,
+        "loss": 1.7323068380355835,
+        "step": 1
+      }
+    ],
+    "step": 19
+  },
+  "shape_gate": {
+    "embedding": [
+      8,
+      256,
+      768
+    ],
+    "image": [
+      8,
+      3,
+      224,
+      224
+    ],
+    "mask": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "output": [
+      8,
+      1,
+      224,
+      224
+    ],
+    "token": [
+      8,
+      24
+    ]
+  },
+  "text_use_gate": {
+    "reason": "ProLearn inference consumes image and image-derived prototype query only",
+    "status": "not_applicable"
+  }
+}
+[2026-09-14T23:11:14-04:00] PASS prolearn_gates_1_to_6
+[2026-09-14T23:11:14-04:00] START lvit_official_check
+{"epoch": 1, "train_loss": 0.29497573015321127, "val_dice": 0.6909099364193109, "lr": 0.00029510565162951536}
+{"epoch": 2, "train_loss": 0.21934030721051406, "val_dice": 0.6961265103572144, "lr": 0.00028090169943749475}
+{"epoch": 3, "train_loss": 0.19471968171180878, "val_dice": 0.72691941006856, "lr": 0.0002587785252292473}
+{"epoch": 4, "train_loss": 0.17507778901797102, "val_dice": 0.7078476441603516, "lr": 0.00023090169943749473}
+{"epoch": 5, "train_loss": 0.16062139849940366, "val_dice": 0.7632377002416915, "lr": 0.00019999999999999998}
+{"epoch": 6, "train_loss": 0.15031267724086597, "val_dice": 0.7721101074597484, "lr": 0.00016909830056250526}
+{"epoch": 7, "train_loss": 0.14063088790213127, "val_dice": 0.7743826551066987, "lr": 0.00014122147477075268}
+{"epoch": 8, "train_loss": 0.1315992126427721, "val_dice": 0.7942212608579658, "lr": 0.00011909830056250527}
+{"epoch": 9, "train_loss": 0.12495080617818906, "val_dice": 0.7878837195364558, "lr": 0.00010489434837048466}
+{"epoch": 10, "train_loss": 0.11879656439095715, "val_dice": 0.7862148373632153, "lr": 0.0003}
+{"epoch": 11, "train_loss": 0.13742786706695717, "val_dice": 0.794008541182257, "lr": 0.00029510565162951536}
+{"epoch": 12, "train_loss": 0.13454317780729041, "val_dice": 0.7822066821194429, "lr": 0.00028090169943749475}
+{"epoch": 13, "train_loss": 0.1287330092133614, "val_dice": 0.7926550445292194, "lr": 0.0002587785252292473}
+{"epoch": 14, "train_loss": 0.12085763471457844, "val_dice": 0.7917572903708197, "lr": 0.00023090169943749473}
+{"epoch": 15, "train_loss": 0.11342213993098266, "val_dice": 0.8015285572278241, "lr": 0.00019999999999999998}
+{"epoch": 16, "train_loss": 0.10604519852319116, "val_dice": 0.785764613945041, "lr": 0.00016909830056250526}
+{"epoch": 17, "train_loss": 0.0983073303444693, "val_dice": 0.7907950552591, "lr": 0.00014122147477075268}
+{"epoch": 18, "train_loss": 0.09149962207308969, "val_dice": 0.7950185414500133, "lr": 0.00011909830056250527}
+{"epoch": 19, "train_loss": 0.08545974544800188, "val_dice": 0.789314682863293, "lr": 0.00010489434837048466}
+{"epoch": 20, "train_loss": 0.08009504708621137, "val_dice": 0.7958598938975263, "lr": 0.0003}
+{"epoch": 21, "train_loss": 0.10057782334066338, "val_dice": 0.7724981776845681, "lr": 0.00029510565162951536}
+{"epoch": 22, "train_loss": 0.09748748110436513, "val_dice": 0.7866962781688231, "lr": 0.00028090169943749475}
+{"epoch": 23, "train_loss": 0.09415135877448062, "val_dice": 0.780452774321767, "lr": 0.0002587785252292473}
+{"epoch": 24, "train_loss": 0.08695433304780029, "val_dice": 0.7705490825260911, "lr": 0.00023090169943749473}
+{"epoch": 25, "train_loss": 0.0803755921832409, "val_dice": 0.79360928036601, "lr": 0.00019999999999999998}
+{"epoch": 26, "train_loss": 0.07404364934849356, "val_dice": 0.795877680006688, "lr": 0.00016909830056250526}
+{"epoch": 27, "train_loss": 0.06805701645520014, "val_dice": 0.7869510255857647, "lr": 0.00014122147477075268}
+{"epoch": 28, "train_loss": 0.0631367720896867, "val_dice": 0.8017870859104044, "lr": 0.00011909830056250527}
+{"epoch": 29, "train_loss": 0.05790347608224736, "val_dice": 0.7898233220921236, "lr": 0.00010489434837048466}
+{"epoch": 30, "train_loss": 0.054467604214037485, "val_dice": 0.7980635995392601, "lr": 0.0003}
+{"epoch": 31, "train_loss": 0.07221463006094067, "val_dice": 0.7874755316210876, "lr": 0.00029510565162951536}
+{"epoch": 32, "train_loss": 0.0704113596149618, "val_dice": 0.7993944450612667, "lr": 0.00028090169943749475}
+{"epoch": 33, "train_loss": 0.06647515807045327, "val_dice": 0.7945441455066079, "lr": 0.0002587785252292473}
+{"epoch": 34, "train_loss": 0.06165355871033322, "val_dice": 0.7776420896456915, "lr": 0.00023090169943749473}
+{"epoch": 35, "train_loss": 0.05601204953829649, "val_dice": 0.7978750815585078, "lr": 0.00019999999999999998}
+{"epoch": 36, "train_loss": 0.05291008689174229, "val_dice": 0.7929895469635996, "lr": 0.00016909830056250526}
+{"epoch": 37, "train_loss": 0.047953458590872265, "val_dice": 0.7954211397107621, "lr": 0.00014122147477075268}
+{"epoch": 38, "train_loss": 0.04372394287944403, "val_dice": 0.8027331001541721, "lr": 0.00011909830056250527}
+{"epoch": 39, "train_loss": 0.04055338624364288, "val_dice": 0.7910813476050897, "lr": 0.00010489434837048466}
+{"epoch": 40, "train_loss": 0.037927516732179804, "val_dice": 0.8067377537092686, "lr": 0.0003}
+{"epoch": 41, "train_loss": 0.05255631577455555, "val_dice": 0.7922197354906002, "lr": 0.00029510565162951536}
+{"epoch": 42, "train_loss": 0.05032864925852391, "val_dice": 0.7850959949218544, "lr": 0.00028090169943749475}
+{"epoch": 43, "train_loss": 0.04888553445815957, "val_dice": 0.7898079803835227, "lr": 0.0002587785252292473}
+{"epoch": 44, "train_loss": 0.046441610435908956, "val_dice": 0.7920283886237087, "lr": 0.00023090169943749473}
+{"epoch": 45, "train_loss": 0.04166712709412532, "val_dice": 0.7822815737911246, "lr": 0.00019999999999999998}
+{"epoch": 46, "train_loss": 0.037609524190024404, "val_dice": 0.8024633935358743, "lr": 0.00016909830056250526}
+{"epoch": 47, "train_loss": 0.035094611120245374, "val_dice": 0.7948477855937458, "lr": 0.00014122147477075268}
+{"epoch": 48, "train_loss": 0.0323143016072505, "val_dice": 0.7954894942280356, "lr": 0.00011909830056250527}
+{"epoch": 49, "train_loss": 0.02954783647479535, "val_dice": 0.7935985231875039, "lr": 0.00010489434837048466}
+{"epoch": 50, "train_loss": 0.027532046325139812, "val_dice": 0.7997258848310601, "lr": 0.0003}
+{"epoch": 51, "train_loss": 0.037552937497681384, "val_dice": 0.7844229543697862, "lr": 0.00029510565162951536}
+{"epoch": 52, "train_loss": 0.04066744605874404, "val_dice": 0.7960173211121075, "lr": 0.00028090169943749475}
+{"epoch": 53, "train_loss": 0.03618098980472785, "val_dice": 0.7798511872491753, "lr": 0.0002587785252292473}
+{"epoch": 54, "train_loss": 0.03367505753425877, "val_dice": 0.7972452749450613, "lr": 0.00023090169943749473}
+{"epoch": 55, "train_loss": 0.03142861642159829, "val_dice": 0.799893545325092, "lr": 0.00019999999999999998}
+{"epoch": 56, "train_loss": 0.029635657769144938, "val_dice": 0.7940658295046124, "lr": 0.00016909830056250526}
+{"epoch": 57, "train_loss": 0.02643659883266754, "val_dice": 0.7984378988475932, "lr": 0.00014122147477075268}
+{"epoch": 58, "train_loss": 0.02424885941333052, "val_dice": 0.7993721447279606, "lr": 0.00011909830056250527}
+{"epoch": 59, "train_loss": 0.02238451156887748, "val_dice": 0.8020994940629951, "lr": 0.00010489434837048466}
+{"epoch": 60, "train_loss": 0.02068761784480357, "val_dice": 0.797293796333923, "lr": 0.0003}
+{"epoch": 61, "train_loss": 0.029180009641141702, "val_dice": 0.7929289691566671, "lr": 0.00029510565162951536}
+{"epoch": 62, "train_loss": 0.033522051852913355, "val_dice": 0.7723740039811092, "lr": 0.00028090169943749475}
+{"epoch": 63, "train_loss": 0.02813173878867573, "val_dice": 0.7947611794699482, "lr": 0.0002587785252292473}
+{"epoch": 64, "train_loss": 0.02626607859210014, "val_dice": 0.7875621969311117, "lr": 0.00023090169943749473}
+{"epoch": 65, "train_loss": 0.025523968268397014, "val_dice": 0.791184831284409, "lr": 0.00019999999999999998}
+{"epoch": 66, "train_loss": 0.02418545232381883, "val_dice": 0.7952251941960872, "lr": 0.00016909830056250526}
+{"epoch": 67, "train_loss": 0.02058007102687775, "val_dice": 0.7997183295773659, "lr": 0.00014122147477075268}
+{"epoch": 68, "train_loss": 0.01919326567344571, "val_dice": 0.8007551009766579, "lr": 0.00011909830056250527}
+{"epoch": 69, "train_loss": 0.017821819995294676, "val_dice": 0.79715664237575, "lr": 0.00010489434837048466}
+{"epoch": 70, "train_loss": 0.01649946935815076, "val_dice": 0.7978245473621274, "lr": 0.0003}
+{"epoch": 71, "train_loss": 0.023746837895074202, "val_dice": 0.7944666515016489, "lr": 0.00029510565162951536}
+{"epoch": 72, "train_loss": 0.025700780182445985, "val_dice": 0.7953180187206489, "lr": 0.00028090169943749475}
+{"epoch": 73, "train_loss": 0.025359774095725145, "val_dice": 0.763178030709275, "lr": 0.0002587785252292473}
+{"epoch": 74, "train_loss": 0.021986376895960953, "val_dice": 0.7959018219942143, "lr": 0.00023090169943749473}
+{"epoch": 75, "train_loss": 0.021039235829248597, "val_dice": 0.8002469670626434, "lr": 0.00019999999999999998}
+{"epoch": 76, "train_loss": 0.01956727044484816, "val_dice": 0.8009490183067123, "lr": 0.00016909830056250526}
+{"epoch": 77, "train_loss": 0.017876150113894776, "val_dice": 0.7931389212623354, "lr": 0.00014122147477075268}
+{"epoch": 78, "train_loss": 0.01611294808059128, "val_dice": 0.798246580232756, "lr": 0.00011909830056250527}
+{"epoch": 79, "train_loss": 0.01465157051622852, "val_dice": 0.7971694685111183, "lr": 0.00010489434837048466}
+{"epoch": 80, "train_loss": 0.013649706503420683, "val_dice": 0.8000230223182888, "lr": 0.0003}
+{"epoch": 81, "train_loss": 0.020326655589114482, "val_dice": 0.7960600162027932, "lr": 0.00029510565162951536}
+{"epoch": 82, "train_loss": 0.022701585628196568, "val_dice": 0.7943473492180075, "lr": 0.00028090169943749475}
+{"epoch": 83, "train_loss": 0.01988092315578123, "val_dice": 0.7946984397328928, "lr": 0.0002587785252292473}
+{"epoch": 84, "train_loss": 0.01951701957387022, "val_dice": 0.7884224156484144, "lr": 0.00023090169943749473}
+{"epoch": 85, "train_loss": 0.018196047305053215, "val_dice": 0.7981199704339407, "lr": 0.00019999999999999998}
+{"epoch": 86, "train_loss": 0.01653376115278124, "val_dice": 0.7893771619307904, "lr": 0.00016909830056250526}
+{"epoch": 87, "train_loss": 0.015128034676807725, "val_dice": 0.7994933980730884, "lr": 0.00014122147477075268}
+{"epoch": 88, "train_loss": 0.01373999986140627, "val_dice": 0.8026762634551582, "lr": 0.00011909830056250527}
+{"epoch": 89, "train_loss": 0.012481665430020899, "val_dice": 0.8024478957874948, "lr": 0.00010489434837048466}
+{"epoch": 90, "train_loss": 0.011542536641723307, "val_dice": 0.7996702943979402, "lr": 0.0003}
+{"epoch": 91, "train_loss": 0.019631593528889938, "val_dice": 0.7885667620390511, "lr": 0.00029510565162951536}
+{
+  "status": "pass",
+  "method": "lvit",
+  "epochs": 91,
+  "best_epoch": 40,
+  "best_val_dice": 0.8067377537092686,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gates/lvit/official_qata/best_checkpoint.pt",
+  "cuda_device": "cuda:0",
+  "physical_cuda_device": "0",
+  "native_settings": {
+    "seed": 666,
+    "batch_size": 2,
+    "lr": 0.0003,
+    "max_epochs": 2000,
+    "patience": 50,
+    "loss": "WeightedDiceBCE(0.5,0.5)"
+  },
+  "elapsed_seconds": 48910.1497092247
+}
+[2026-09-15T12:46:26-04:00] PASS lvit_official_check
+[2026-09-15T12:46:26-04:00] START prolearn_official_check
+/data/ramialle/miniconda3/envs/phase1_official_prolearn/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[✓] Loading prototypes from /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/ProLearn/prototypes/prototype_qata_6_16_1024_contrastive.pkl
+/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gates/official_qata_run.py:183: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  return torch.load(path, map_location="cpu")
+{"epoch": 1, "train_loss": 1.0261476242600662, "val_dice": 0.728701682004001, "lr": 0.0001}
+{"epoch": 2, "train_loss": 0.9092055957078767, "val_dice": 0.753416873259174, "lr": 9.99938933078422e-05}
+{"epoch": 3, "train_loss": 0.8847066722106399, "val_dice": 0.7681283260075841, "lr": 9.997557473810371e-05}
+{"epoch": 4, "train_loss": 0.8734946644247787, "val_dice": 0.7451332419213922, "lr": 9.994504881061753e-05}
+{"epoch": 5, "train_loss": 0.8589897495287127, "val_dice": 0.7585816105151193, "lr": 9.990232305719945e-05}
+{"epoch": 6, "train_loss": 0.8570816480587878, "val_dice": 0.7769367906328178, "lr": 9.984740801978984e-05}
+{"epoch": 7, "train_loss": 0.8336219883532354, "val_dice": 0.7665515728894441, "lr": 9.978031724785246e-05}
+{"epoch": 8, "train_loss": 0.831953463102238, "val_dice": 0.7654266421656412, "lr": 9.97010672950314e-05}
+{"epoch": 9, "train_loss": 0.8190269727987205, "val_dice": 0.7620732711694556, "lr": 9.960967771506666e-05}
+{"epoch": 10, "train_loss": 0.8150269981445009, "val_dice": 0.7655390464316889, "lr": 9.950617105696959e-05}
+{"epoch": 11, "train_loss": 0.8065483766556454, "val_dice": 0.7802410935754956, "lr": 9.939057285945931e-05}
+{"epoch": 12, "train_loss": 0.7964623468667998, "val_dice": 0.7725018009678979, "lr": 9.92629116446613e-05}
+{"epoch": 13, "train_loss": 0.788145047830818, "val_dice": 0.7822826228999358, "lr": 9.912321891107009e-05}
+{"epoch": 14, "train_loss": 0.7825389010577539, "val_dice": 0.7721407285013593, "lr": 9.89715291257774e-05}
+{"epoch": 15, "train_loss": 0.775940202932578, "val_dice": 0.7779267165025187, "lr": 9.880787971596799e-05}
+{"epoch": 16, "train_loss": 0.7754452998943475, "val_dice": 0.778931850983264, "lr": 9.863231105968498e-05}
+{"epoch": 17, "train_loss": 0.7679876698489954, "val_dice": 0.7776120499850487, "lr": 9.844486647586723e-05}
+{"epoch": 18, "train_loss": 0.7570683185748908, "val_dice": 0.7811976145246464, "lr": 9.824559221366101e-05}
+{"epoch": 19, "train_loss": 0.7518127380008044, "val_dice": 0.7804765640396267, "lr": 9.803453744100869e-05}
+{"epoch": 20, "train_loss": 0.7453550507006235, "val_dice": 0.7802379455409574, "lr": 9.781175423251735e-05}
+{"epoch": 21, "train_loss": 0.7427182784857993, "val_dice": 0.7822159752301856, "lr": 9.757729755661011e-05}
+{"epoch": 22, "train_loss": 0.7366911167027318, "val_dice": 0.7783299852618811, "lr": 9.73312252619635e-05}
+{"epoch": 23, "train_loss": 0.7322115629098064, "val_dice": 0.7807903144641554, "lr": 9.707359806323416e-05}
+{"epoch": 24, "train_loss": 0.7320178916939828, "val_dice": 0.7761415757442205, "lr": 9.680447952607844e-05}
+{"epoch": 25, "train_loss": 0.7265818920729459, "val_dice": 0.7747857530605885, "lr": 9.652393605146843e-05}
+{"epoch": 26, "train_loss": 0.7204962317304564, "val_dice": 0.7819886894973531, "lr": 9.623203685930868e-05}
+{"epoch": 27, "train_loss": 0.7169008386393708, "val_dice": 0.7820626931894568, "lr": 9.592885397135704e-05}
+{"epoch": 28, "train_loss": 0.7134469784248785, "val_dice": 0.7802517051209595, "lr": 9.561446219345451e-05}
+{"epoch": 29, "train_loss": 0.7110221252064342, "val_dice": 0.7812224546873627, "lr": 9.528893909706794e-05}
+{"epoch": 30, "train_loss": 0.7075665778342956, "val_dice": 0.7804572704457335, "lr": 9.495236500015045e-05}
+{"epoch": 31, "train_loss": 0.7057126226168233, "val_dice": 0.7763486016539113, "lr": 9.460482294732418e-05}
+{"epoch": 32, "train_loss": 0.7067823854670648, "val_dice": 0.7738934128830031, "lr": 9.424639868939032e-05}
+{"epoch": 33, "train_loss": 0.7093644724432783, "val_dice": 0.7670649013125538, "lr": 9.387718066217123e-05}
+{
+  "status": "pass",
+  "method": "prolearn",
+  "epochs": 33,
+  "best_epoch": 13,
+  "best_val_dice": 0.7822826228999358,
+  "checkpoint": "/data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gates/prolearn/official_qata/best_checkpoint.pt",
+  "cuda_device": "cuda:0",
+  "physical_cuda_device": "0",
+  "native_settings": {
+    "seed": 42,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "max_epochs": 50,
+    "patience": 20,
+    "loss": "MONAI DiceCELoss"
+  },
+  "elapsed_seconds": 2098.110459804535
+}
+[2026-09-15T13:21:28-04:00] PASS prolearn_official_check
+[2026-09-15T13:21:28-04:00] SECTION 1.3 COMPLETE

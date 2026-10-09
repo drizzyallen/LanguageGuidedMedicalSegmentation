@@ -1,0 +1,5 @@
+path: methods/phase1_language_guided/runs/lvit/mosmed/seed_1003/best_checkpoint.pt
+sha256: fbc0dbfc74bb92a4744a38e0d432a23beb1eb2adccf9c01fe7a1fd36a3b56bed
+epoch: 248
+best_val_dice: 0.785894014742609
+selection: validation mean per-case Dice at threshold 0.5

@@ -1,4 +1,4 @@
-"""Section 1.4: full-paired, XLSX-authoritative three-seed experiment.
+"""Section 1.4: full-paired three-seed experiment on the frozen Phase 0 splits.
 
 Upstream modules are read-only. Each process handles one method/dataset/seed.
 """
@@ -238,7 +238,7 @@ def run(args):
     for path in sorted(source.rglob("*.py")):
         inputs[str(path)] = digest(path)
     metadata = dict(method=args.method, dataset=args.dataset, seed=args.seed, paired_report_fraction=1.0,
-                    split_authority="Phase 1 XLSX; Phase 0 image/mask pool", settings=settings,
+                    split_authority="Phase 0 frozen manifests (byte-identical copies)", settings=settings,
                     samples={split: len(split_records(records, split)) for split in ("train", "val", "test")},
                     input_sha256=inputs, runner_sha256=digest(__file__),
                     text_required_at_inference=True, augmentation="disabled by text-safe adapter policy",
@@ -248,7 +248,8 @@ def run(args):
     metadata_path = output / "run_config.json"
     if metadata_path.exists() and not args.smoke:
         old = json.loads(metadata_path.read_text())
-        if old != metadata:
+        # The physical GPU may legitimately change between resumes.
+        if {k: v for k, v in old.items() if k != "physical_gpu"} != {k: v for k, v in metadata.items() if k != "physical_gpu"}:
             raise RuntimeError("Run inputs/configuration changed; refusing resume")
     else:
         save_json(metadata_path, metadata)
@@ -299,20 +300,35 @@ def run(args):
         torch.set_rng_state(state["torch_rng"])
         torch.cuda.set_rng_state_all(state["cuda_rng"])
         generator.set_state(state["loader_rng"])
-    stopped = start - 1 - best_epoch > settings["patience"]
+    # Upstream LViT/RecLMIS loops have no finiteness check: a nonfinite loss
+    # backpropagates NaN into every parameter, validation Dice can never exceed
+    # the earlier best, and early stopping then tests the pre-event best
+    # checkpoint. Stopping at the event selects that same checkpoint.
+    nonfinite_stop = output / "nonfinite_stop.json"
+    stop_reason = "nonfinite_training_loss" if nonfinite_stop.exists() else "early_stopping_or_max_epochs"
+    stopped = nonfinite_stop.exists() or start - 1 - best_epoch > settings["patience"]
     for epoch in range(start, settings["max_epochs"] + 1):
         if stopped:
             break
         model.train()
         total = 0.0
-        for images, masks, value, _ in train_loader:
+        for step, (images, masks, value, _) in enumerate(train_loader):
             optimizer.zero_grad()
             _, loss = forward(images.to(args.device), masks.to(args.device), value)
             if not torch.isfinite(loss):
-                raise RuntimeError("Nonfinite training loss")
+                if best_epoch == 0:
+                    raise RuntimeError("Nonfinite training loss before any validation checkpoint")
+                save_json(nonfinite_stop, dict(epoch=epoch, step=step, loss=str(float(loss.detach().cpu())),
+                                               best_epoch=best_epoch, best_val_dice=best))
+                stop_reason = "nonfinite_training_loss"
+                print(json.dumps(dict(nonfinite_stop=epoch, step=step, best_epoch=best_epoch)), flush=True)
+                stopped = True
+                break
             loss.backward()
             optimizer.step()
             total += float(loss.detach().cpu()) * len(images)
+        if stopped:
+            break
         dice = evaluate(model, val_loader, forward, args.device)
         scheduler.step()
         row = dict(epoch=epoch, train_loss=total / len(train), val_dice=dice, lr=optimizer.param_groups[0]["lr"])
@@ -329,7 +345,7 @@ def run(args):
         save_json(output / "progress.json", dict(history=history, best_val_dice=best, best_epoch=best_epoch))
         print(json.dumps(row), flush=True)
     summary = export_once(args, output, model, extra, forward, records)
-    save_json(output / "result.json", dict(status="complete", best_val_dice=best, **summary))
+    save_json(output / "result.json", dict(status="complete", best_val_dice=best, training_stop=stop_reason, **summary))
 
 
 def main():
@@ -341,6 +357,11 @@ def main():
     parser.add_argument("--smoke", action="store_true")
     args = parser.parse_args()
     run(args)
+    # bert_embedding's mxnet 1.4 can stall during interpreter teardown, which
+    # previously stopped the seed queue after result.json was written.
+    sys.stdout.flush()
+    sys.stderr.flush()
+    os._exit(0)
 
 
 if __name__ == "__main__":

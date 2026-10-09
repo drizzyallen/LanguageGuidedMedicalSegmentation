@@ -1,0 +1,7 @@
+{
+  "best_epoch": 17,
+  "best_val_dice": 0.8193824853489998,
+  "epoch": 97,
+  "loss": "nan",
+  "step": 98
+}

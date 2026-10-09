@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1003/upstream/mosmed/best.pt
+sha256: 634952ef9881ee101e313e6038a2074bba781bd67cce5197d683b04be98d4342
+epoch: 62
+selection: validation Dice (frozen Phase 0 rule)

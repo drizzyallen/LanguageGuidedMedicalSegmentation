@@ -1,0 +1,22 @@
+schema_version: 1
+# Same procedure and analysis seed as Phase 0 (methods/phase0_image_only/configs/statistics.yaml).
+analysis_seed: 20260817
+bootstrap_resamples: 10000
+permutation_resamples: 100000
+confidence_level: 0.95
+metrics: [dice, miou, hd95, assd]
+primary_metric: dice
+datasets: [qata, mosmed]
+seeds: [1001, 1002, 1003]
+# Phase 1 scope set by the research advisor on 2026-10-03: ProLearn is not run.
+# The final comparison therefore has 5 methods and C(5,2) = 10 pairs.
+methods:
+  - {key: unet, label: U-Net v2, phase: phase0}
+  - {key: tripath_lesionnet, label: TriPathLesionNet, phase: phase0}
+  - {key: panoptic_fpn, label: Panoptic FPN, phase: phase0}
+  - {key: lvit, label: LViT-T, phase: phase1}
+  - {key: reclmis, label: RecLMIS, phase: phase1}
+case_metrics: runs/<phase>/<method>/<dataset>/<seed>/per_case_metrics.csv (evaluation/shared_evaluator.py, native mask grid)
+multiple_testing: holm_within_dataset_across_all_10_dice_comparisons
+secondary_metric_p_values: exploratory_unadjusted
+unit: source_id_cluster_when_available_otherwise_image

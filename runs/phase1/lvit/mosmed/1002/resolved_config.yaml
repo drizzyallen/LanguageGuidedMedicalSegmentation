@@ -1,0 +1,53 @@
+phase: phase1
+method: lvit
+dataset: mosmed
+seed: 1002
+run_config:
+  augmentation: disabled by text-safe adapter policy
+  checkpoint_selection: validation mean per-case Dice at threshold 0.5
+  dataset: mosmed
+  deterministic_algorithms: true
+  input_sha256:
+    /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/PROVENANCE.yaml: fbd28b476d105acdd57aec0730820e656ffbd47835ca815cd3a3e726b595e853
+    /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/adapter.py: ecfcd4ded18f68e662786881f1db0065f7a6a816ec8883bb654e1e2876a20c41
+    /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/data_manifests/mosmed.csv: 5f2cbe3a7e1cf91cb5dec1697c1d82c65bd8c46860186dfa67f584c5c6d2973e
+    /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/data_manifests/qata.csv: e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a
+    /data/ramialle/LanguageGuidedMedicalSegmentation/methods/phase1_language_guided/gate_common.py: 8c9f6c54238598059559e21455c6128270084e880205a1cc1fd0241b80309165
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/Config.py: 0843ecc1c22f2ec07b19655bc5258d44d5b6f21a34018666993e5798c808b8ce
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/Load_Dataset.py: c5e6312d03451fdc85b8b978276ebfea65e33bffa5f0d41b032cd61896e72220
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/Train_one_epoch.py: 7b716cf3fd63478e5303377c4ba0681501cfcf3570c65a2d882250aba5019249
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/nets/LViT.py: 25daed5053d01b017307944b25901d89e61897a95ae41188fb5d27d1731b2a4a
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/nets/UNet.py: 16282c479bea5dc945fe348acdb54941bfd38517c9a7a87361853c4036fcc7e3
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/nets/Vit.py: 97dae44c284ad1bef92957e7bd96db9055042d6396e492da97943cd13a339d88
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/nets/pixlevel.py: 647e6aab18b51eab01479ef5d8b50df91a8641aca3c26819e493c599e345e482
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/nets/textlevel.py: 2bd132984927e971fd2eade9cc23a64081f5e0d12d07ee02bcaf65566e49c19b
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/test_model.py: 8c1236a67ab90f64e51c623be9f408448ea93330f415d6951d1f40e8c7867cb8
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/train_model.py: cf2dbf721705b25ef16094f5c23ba5ecc6368237a66a28a90e7b2c044de00a79
+    /data/ramialle/LanguageGuidedMedicalSegmentation/upstream/LViT/utils.py: 30a9b3c78ade5e865602094fcb61dbaa646f4fadd79269144ec362664db92902
+    /data/ramialle/datasets/MosMedData+-Text/Test_text_MosMedData+.xlsx: f6b7d569c71af79773bfd926a7ee295ccf8ef058b5159d686323cd091d5a8db1
+    /data/ramialle/datasets/MosMedData+-Text/Train_text_MosMedData+ 1.xlsx: f029c1bd606ab6fef682d6e6d67fb875cd17f8268b834ef3ad5baf444134db33
+    /data/ramialle/datasets/MosMedData+-Text/Val_text_MosMedData+ 1.xlsx: c8763cb6d636f84de9b14004c9f5c22729f6c49ce8d594af8501c75b4d7c7401
+    /data/ramialle/datasets/QaTa-Text/Test_text_for_Covid19.xlsx: 708587c318248d305ff6e61757b4c0d7fec9037c93f86b870a5c76ccbacfc08a
+    /data/ramialle/datasets/QaTa-Text/Train_text_for_Covid19.xlsx: 35c0f5250c2e8ee5e2bfbefd83823472ede28d5d587add3083449510e3a6e909
+  method: lvit
+  paired_report_fraction: 1.0
+  physical_gpu: '3'
+  runner_sha256: ec0918dd583491fc6a38f7cad8a7bf58f88067a9138f3a4c97146727ae0cfaa5
+  samples:
+    test: 546
+    train: 1746
+    val: 437
+  seed: 1002
+  settings:
+    batch_size: 2
+    loss: WeightedDiceBCE(0.5,0.5)
+    lr: 0.0003
+    max_epochs: 2000
+    optimizer: Adam
+    patience: 50
+    scheduler: CosineAnnealingWarmRestarts(10,1,1e-4)
+  smoke: false
+  split_authority: Phase 0 frozen manifests (byte-identical copies)
+  text_required_at_inference: true
+  torch_version: 1.8.0+cu111
+training_stop: early_stopping_or_max_epochs
