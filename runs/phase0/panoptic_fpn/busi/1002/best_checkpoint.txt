@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1002/upstream/busi/best.pt
+sha256: 0fd6e7d343d0b99cae8a13452be7e7058d4497be01f87afe8398f52cb310cb00
+epoch: 34
+selection: validation Dice (frozen Phase 0 rule)

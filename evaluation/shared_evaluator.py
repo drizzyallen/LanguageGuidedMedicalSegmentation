@@ -3,9 +3,9 @@
 Every method saved float32 test probability maps at its own network
 resolution (Phase 0: 384x384, Phase 1: 224x224). This evaluator scores all of
 them in one common space: each probability map is resampled bilinearly to the
-original ground-truth mask grid (QaTa 224x224, MosMed 512x512), binarized with
-the method's frozen threshold rule, and compared with the original mask
-(pixel > 0). HD95 and ASSD are therefore in native-image pixels for every
+original ground-truth mask grid (QaTa 224x224, MosMed 512x512, BUSI per-image size), binarized
+with the method's frozen threshold rule, and compared with the original mask
+(PIL grayscale value > 0, the Phase 0 rule). HD95 and ASSD are therefore in native-image pixels for every
 method.
 
 Resampling inverts the coordinate mapping that the method's own pipeline used
@@ -51,7 +51,7 @@ from scipy.ndimage import binary_erosion, distance_transform_edt, map_coordinate
 ROOT = Path(__file__).resolve().parents[1]
 MANIFESTS = ROOT / "methods" / "phase0_image_only" / "data_manifests"
 PHASE1_MANIFESTS = ROOT / "methods" / "phase1_language_guided" / "data_manifests"
-DATASETS = ("qata", "mosmed")
+DATASETS = ("qata", "mosmed", "busi")  # BUSI: Phase 0 methods only
 SEEDS = (1001, 1002, 1003)
 THRESHOLD = 0.5
 # phase, source runs root, stored resolution, threshold rule frozen in that
@@ -99,6 +99,11 @@ def to_native(probability, height, width, alignment):
     return map_coordinates(probability, grid, order=1, mode="nearest").astype(np.float32)
 
 
+def native_mask(path):
+    """Original ground truth on its own grid; same binarization as the Phase 0 loader."""
+    return np.asarray(Image.open(str(path)).convert("L"), dtype=np.uint8) > 0
+
+
 def stored_resolution_mask(path, phase, size):
     """The exact ground-truth resizing each phase's exporter used."""
     if phase == "phase0":
@@ -118,7 +123,8 @@ def sha256(path):
 
 def test_cases(dataset):
     manifest = MANIFESTS / (dataset + ".csv")
-    if sha256(manifest) != sha256(PHASE1_MANIFESTS / (dataset + ".csv")):
+    phase1 = PHASE1_MANIFESTS / (dataset + ".csv")
+    if phase1.is_file() and sha256(manifest) != sha256(phase1):
         raise RuntimeError("Phase 0 and Phase 1 manifests differ for " + dataset)
     with manifest.open(newline="") as stream:
         rows = [row for row in csv.DictReader(stream) if row["split"] == "test"]
@@ -132,7 +138,7 @@ def score_case(job):
             or probability.min() < 0 or probability.max() > 1:
         raise RuntimeError("Invalid probability map " + str(probability_path))
     stored = metrics(binarize(probability, rule), stored_resolution_mask(mask_path, phase, size))
-    target = cv2.imread(str(mask_path), cv2.IMREAD_GRAYSCALE) > 0
+    target = native_mask(mask_path)
     height, width = target.shape
     native_probability = to_native(probability, height, width, alignment)
     prediction = binarize(native_probability, rule)
@@ -188,7 +194,8 @@ def evaluate_run(method, dataset, seed, pool):
     summary = dict(phase=phase, method=method, dataset=dataset, seed=seed, test_samples=len(rows),
                    evaluator="evaluation/shared_evaluator.py", evaluator_sha256=sha256(__file__),
                    evaluation_space="native ground-truth mask grid",
-                   native_mask_shape=list(cv2.imread(str(cases[0][2]), cv2.IMREAD_GRAYSCALE).shape),
+                   native_mask_shape=("per image (BUSI sizes vary)" if dataset == "busi"
+                                      else list(native_mask(cases[0][2]).shape)),
                    stored_probability_shape=[size, size],
                    probability_resize="bilinear, %s-aligned (inverse of the pipeline's target resizing)" % alignment,
                    threshold=THRESHOLD, threshold_rule="probability > 0.5" if rule == "gt" else "probability >= 0.5",
@@ -212,6 +219,8 @@ def main():
     with Pool(args.workers) as pool:
         for method in args.methods:
             for dataset in args.datasets:
+                if dataset == "busi" and METHODS[method][0] != "phase0":
+                    continue
                 for seed in SEEDS:
                     evaluate_run(method, dataset, seed, pool)
 

@@ -1,17 +1,18 @@
 # Adapter validation
 
-Date: 2026-09-12
+Date: 2026-10-09 (supersedes the 2026-09-12 record, which validated the
+archived annotation-workbook split).
 
-The shared adapter was run across every row of both Phase 1 manifest copies.
-The copies preserve Phase 0 image/mask records while using annotation-defined
-split membership. The frozen Phase 0 manifests remain unchanged.
-All referenced image and mask files exist, every `sample_id` is unique, and
-every row resolves to one unique nonempty report.
+`validate_adapter.py` was run across every row of both Phase 1 manifests.
+Each manifest is byte-identical to the frozen Phase 0 manifest (checked by
+sha256 inside the script). All referenced image and mask files exist, every
+`sample_id` is unique, and every row resolves to exactly one nonempty report,
+joined by image basename (never by directory order).
 
-| Dataset | Train | Validation | Test | Total | Result |
-|---|---:|---:|---:|---:|---|
-| QaTa | 5,716 | 1,429 | 2,113 | 9,258 | PASS |
-| MosMed | 2,183 | 273 | 273 | 2,729 | PASS |
+| Dataset | Train | Validation | Test | Total | Unique reports | Manifest sha256 | Result |
+|---|---:|---:|---:|---:|---:|---|---|
+| QaTa | 5,716 | 1,429 | 2,113 | 9,258 | 394 | `e12e88a0…` | PASS |
+| MosMed | 1,746 | 437 | 546 | 2,729 | 115 | `5f2cbe3a…` | PASS |
 
 Additional policy checks passed:
 
@@ -23,4 +24,6 @@ Additional policy checks passed:
 - a permitted cache binds the exact method, encoder fingerprint, sample ID,
   and report text and reuses the cached result.
 
-The source hashes are pinned in `PROVENANCE.yaml`.
+Report text comes unchanged from the annotation workbooks pinned in
+`adapter.py` (`PINNED_SHA256`). No report was generated or edited in this
+repository. See `PROVENANCE_CURRENT.md` for the current input hashes.

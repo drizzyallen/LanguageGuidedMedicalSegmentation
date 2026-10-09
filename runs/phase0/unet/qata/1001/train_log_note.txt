@@ -1,0 +1,3 @@
+upstream/qata/history.csv covers only epochs 53 onward: a later relaunch of this run rewrote it.
+train_log.csv was rebuilt from the trainer's terminal log (methods/phase0_image_only/logs/unet_tmux.log),
+and its overlapping epochs were checked against history.csv. The original files are unchanged.

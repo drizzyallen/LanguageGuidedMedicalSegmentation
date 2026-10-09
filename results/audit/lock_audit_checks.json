@@ -1,0 +1,6229 @@
+{
+  "runs": [
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "qata",
+      "seed": 1001,
+      "run_path": "runs/phase0/unet/qata/1001",
+      "source_path": "methods/phase0_image_only/runs/unet/qata/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 41,
+      "best_val_epoch": 41,
+      "logged_epochs": 56,
+      "checkpoint_sha256": "d51d40c48300217feaaed1cf712e56c6cbac919488a3cb731700001d36d73daa",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.4630541853721274e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [
+        "train_log_note.txt"
+      ],
+      "dice_vector_sha": "5dfbacbfbb55f29c",
+      "mean_dice": 0.7877954407107253,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "qata",
+      "seed": 1002,
+      "run_path": "runs/phase0/unet/qata/1002",
+      "source_path": "methods/phase0_image_only/runs/unet/qata/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 58,
+      "best_val_epoch": 58,
+      "logged_epochs": 73,
+      "checkpoint_sha256": "e0096903ab7eb99d2603eb8cb238f84f528365317d7b6445cf83fc16b4b593a8",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.3474178387224754e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "6719a09bc362ee3b",
+      "mean_dice": 0.7846060857435999,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "qata",
+      "seed": 1003,
+      "run_path": "runs/phase0/unet/qata/1003",
+      "source_path": "methods/phase0_image_only/runs/unet/qata/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 47,
+      "best_val_epoch": 47,
+      "logged_epochs": 62,
+      "checkpoint_sha256": "b06f976acd8691dec2e308fa857f56ac4af7c34552d8ca501db8d0e8b946d5c8",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.4630541853721274e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "5f57991766af75d5",
+      "mean_dice": 0.780985135337514,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "run_path": "runs/phase0/unet/mosmed/1001",
+      "source_path": "methods/phase0_image_only/runs/unet/mosmed/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 98,
+      "best_val_epoch": 98,
+      "logged_epochs": 100,
+      "checkpoint_sha256": "efa5c28de0ca709b687d624902acc2c953f56c4341953f276d8f9ea3d3cc36cd",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 4.545454483471075e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "4177942ee1d5cf99",
+      "mean_dice": 0.7926594637721742,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "run_path": "runs/phase0/unet/mosmed/1002",
+      "source_path": "methods/phase0_image_only/runs/unet/mosmed/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 91,
+      "best_val_epoch": 91,
+      "logged_epochs": 100,
+      "checkpoint_sha256": "d11493a9b73bd541ad06cb02758c5bea02455e9e0ee53b44c6ee32551636641c",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 4.166666614583334e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "5df2c9764d61de02",
+      "mean_dice": 0.7945122206481207,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "run_path": "runs/phase0/unet/mosmed/1003",
+      "source_path": "methods/phase0_image_only/runs/unet/mosmed/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 89,
+      "best_val_epoch": 89,
+      "logged_epochs": 100,
+      "checkpoint_sha256": "26f03048289725201995d31704657c09512c32c0d5cece26ca5d174bebda8e15",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.941176444636678e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "d9732bf57a835ab5",
+      "mean_dice": 0.7938943719347054,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "busi",
+      "seed": 1001,
+      "run_path": "runs/phase0/unet/busi/1001",
+      "source_path": "methods/phase0_image_only/runs/unet/busi/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 51,
+      "best_val_epoch": 51,
+      "logged_epochs": 66,
+      "checkpoint_sha256": "7fb0b98e4ac3f480a22b4b0c272b26f087ee8d1f3e669443e7dd33f62f355df7",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.332978172285948e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "a82e1f4a8d6919f7",
+      "mean_dice": 0.6700639303715243,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "busi",
+      "seed": 1002,
+      "run_path": "runs/phase0/unet/busi/1002",
+      "source_path": "methods/phase0_image_only/runs/unet/busi/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 46,
+      "best_val_epoch": 46,
+      "logged_epochs": 61,
+      "checkpoint_sha256": "b86f1cf52a18e53bdffe107273ba9886dc4ff119b03416b339eee3cd75cdf5aa",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.464450782862059e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "1d9866360edc7ed5",
+      "mean_dice": 0.7116815840417993,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "unet",
+      "dataset": "busi",
+      "seed": 1003,
+      "run_path": "runs/phase0/unet/busi/1003",
+      "source_path": "methods/phase0_image_only/runs/unet/busi/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 51,
+      "best_val_epoch": 51,
+      "logged_epochs": 66,
+      "checkpoint_sha256": "062a269ddc224f59e6ed8c43a3eb489b1fb009d44333daeeed26207314ca4cab",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.1475786090952175e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "73574f6cc8dabc85",
+      "mean_dice": 0.6994747150633275,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "seed": 1001,
+      "run_path": "runs/phase0/tripath_lesionnet/qata/1001",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 48,
+      "best_val_epoch": 48,
+      "logged_epochs": 63,
+      "checkpoint_sha256": "e21a0c888f9a392ce8c02306d22a7dcc6a7903b602231f29beb54c4a50cca99a",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.3474178387224754e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "a7187e29e4ace5d4",
+      "mean_dice": 0.7797933992823625,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "seed": 1002,
+      "run_path": "runs/phase0/tripath_lesionnet/qata/1002",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 55,
+      "best_val_epoch": 55,
+      "logged_epochs": 70,
+      "checkpoint_sha256": "d9941f178daeb7ed1fd9816785e73940366af57ba9be714e0bf55238bb65efed",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.3477088943338105e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "e040eca0ef8d9562",
+      "mean_dice": 0.7787784915986261,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "seed": 1003,
+      "run_path": "runs/phase0/tripath_lesionnet/qata/1003",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/qata/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 54,
+      "best_val_epoch": 54,
+      "logged_epochs": 69,
+      "checkpoint_sha256": "6d6de76fe3aab1013870fc33f18233eb7f55204051b65b587380e3bae096bff9",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.8939393928632917e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "88ac749babdce22f",
+      "mean_dice": 0.7854361047863603,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "run_path": "runs/phase0/tripath_lesionnet/mosmed/1001",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 89,
+      "best_val_epoch": 89,
+      "logged_epochs": 100,
+      "checkpoint_sha256": "07b3b054a9f70c533d68f976094a4580e1cc1afb63b5c31f2ace6de56c31241a",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.5151515082644626e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "b31f94474c05c806",
+      "mean_dice": 0.8158155418559869,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "run_path": "runs/phase0/tripath_lesionnet/mosmed/1002",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 49,
+      "best_val_epoch": 49,
+      "logged_epochs": 64,
+      "checkpoint_sha256": "5e6dd6d71a96ec35b62329767cde44210c888c5715166b4ebba8c73a00bc1f48",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.1094673513234454e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "d79e93e0479d1bd8",
+      "mean_dice": 0.7996211129407429,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "run_path": "runs/phase0/tripath_lesionnet/mosmed/1003",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/mosmed/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 80,
+      "best_val_epoch": 80,
+      "logged_epochs": 95,
+      "checkpoint_sha256": "7690418f8b4ddd35a463c23207a0953ebf54872be5b6b6dbcffa75a7cb3c8c81",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.7857142761479591e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "3b4cf8d1a85d9da9",
+      "mean_dice": 0.8057299008065225,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "seed": 1001,
+      "run_path": "runs/phase0/tripath_lesionnet/busi/1001",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 63,
+      "best_val_epoch": 63,
+      "logged_epochs": 78,
+      "checkpoint_sha256": "6fc44f0fc44ceae2f442121e8c97505a0e222eaad33ddfb93fdb094bf04278d7",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.54697921139757e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "ab0b7e2fff239020",
+      "mean_dice": 0.7951280317027959,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "seed": 1002,
+      "run_path": "runs/phase0/tripath_lesionnet/busi/1002",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 45,
+      "best_val_epoch": 45,
+      "logged_epochs": 60,
+      "checkpoint_sha256": "c54e80e96ff5a323f680bd2af7d3746ee0042fe22f0a09f2240511b00ee7bf9a",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.342115307778613e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "25c9b76c79f26233",
+      "mean_dice": 0.7915820071393523,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "seed": 1003,
+      "run_path": "runs/phase0/tripath_lesionnet/busi/1003",
+      "source_path": "methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 45,
+      "best_val_epoch": 45,
+      "logged_epochs": 60,
+      "checkpoint_sha256": "3ac683b90e4c0afc4d47a14ec5b18e2f6584345aac88e8a74198442f2a8e7f86",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.5150380949791042e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "aae0756f9333db8b",
+      "mean_dice": 0.7954310381307869,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "seed": 1001,
+      "run_path": "runs/phase0/panoptic_fpn/qata/1001",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 28,
+      "best_val_epoch": 28,
+      "logged_epochs": 43,
+      "checkpoint_sha256": "b43bbda98ddfc77c5ef1c524be2c652870ed0b5a61186bd59763f39143808577",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.0593220335616561e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "696f5802b0a3f059",
+      "mean_dice": 0.8036294580735212,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "seed": 1002,
+      "run_path": "runs/phase0/panoptic_fpn/qata/1002",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 18,
+      "best_val_epoch": 18,
+      "logged_epochs": 33,
+      "checkpoint_sha256": "3d28212956207da9b81141092baee7f506c50a3b07ec5f00a6c084b11a90c68c",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 7.852268835151222e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "90f41aacb7ce7fac",
+      "mean_dice": 0.8013618309826116,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "seed": 1003,
+      "run_path": "runs/phase0/panoptic_fpn/qata/1003",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/qata/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 17,
+      "best_val_epoch": 17,
+      "logged_epochs": 32,
+      "checkpoint_sha256": "3fac8463aa2b07ee52aedd5493f777d26e8334622040c5cf8cfe4e4339216001",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 7.562253601101077e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "e3ec3ba7aad8cdaf",
+      "mean_dice": 0.8054673366372671,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "run_path": "runs/phase0/panoptic_fpn/mosmed/1001",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 48,
+      "best_val_epoch": 48,
+      "logged_epochs": 63,
+      "checkpoint_sha256": "d5a5385fa9d057b8f18b4bd6503f2cbb633c3bd801ba220b2a1f0e44d87ea26d",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.0833333203125e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "50a461d9e313e9da",
+      "mean_dice": 0.8090144905933885,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "run_path": "runs/phase0/panoptic_fpn/mosmed/1002",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 65,
+      "best_val_epoch": 65,
+      "logged_epochs": 80,
+      "checkpoint_sha256": "f5105902c45bfa1254e40aff6019b0ca5bd3e7b4053dd397d4e140fc31d20d04",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 4.545454483471075e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "34b7a6137def4214",
+      "mean_dice": 0.8047946798894504,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "run_path": "runs/phase0/panoptic_fpn/mosmed/1003",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/mosmed/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 62,
+      "best_val_epoch": 62,
+      "logged_epochs": 77,
+      "checkpoint_sha256": "634952ef9881ee101e313e6038a2074bba781bd67cce5197d683b04be98d4342",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 4.545454483471075e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "c1ecb22ebeced348",
+      "mean_dice": 0.8088905471446058,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "seed": 1001,
+      "run_path": "runs/phase0/panoptic_fpn/busi/1001",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 15,
+      "best_val_epoch": 15,
+      "logged_epochs": 30,
+      "checkpoint_sha256": "e1626ad2c06edf8fbef9ff53547436c5e891af1945c2cff1577a00dcd7466756",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.4320877816942357e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "07ab15a79065af99",
+      "mean_dice": 0.8200860087370652,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "seed": 1002,
+      "run_path": "runs/phase0/panoptic_fpn/busi/1002",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 34,
+      "best_val_epoch": 34,
+      "logged_epochs": 49,
+      "checkpoint_sha256": "0fd6e7d343d0b99cae8a13452be7e7058d4497be01f87afe8398f52cb310cb00",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.2047363107114961e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "08b0582b13b66a1f",
+      "mean_dice": 0.8263468481122362,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase0",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "seed": 1003,
+      "run_path": "runs/phase0/panoptic_fpn/busi/1003",
+      "source_path": "methods/phase0_image_only/runs/panoptic_fpn/busi/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 26,
+      "best_val_epoch": 26,
+      "logged_epochs": 41,
+      "checkpoint_sha256": "f73e9312aef0a2aacee21c6360f1ad20bc82654c6e591248678c17fcc1f89118",
+      "test_n_expected": 130,
+      "test_n": 130,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.139810468231417e-11,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "aef1bb545d2680e3",
+      "mean_dice": 0.8276660495125121,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1001,
+      "run_path": "runs/phase1/lvit/qata/1001",
+      "source_path": "methods/phase1_language_guided/runs/lvit/qata/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 29,
+      "best_val_epoch": 29,
+      "logged_epochs": 80,
+      "checkpoint_sha256": "133f71c2803cd7acf7ebd6974a8f9045fd4ec94263580bf2bd481a18c9389756",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.7361111102068862e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "bbac33ba1a8a6ad4",
+      "mean_dice": 0.817395964710093,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1002,
+      "run_path": "runs/phase1/lvit/qata/1002",
+      "source_path": "methods/phase1_language_guided/runs/lvit/qata/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 50,
+      "best_val_epoch": 50,
+      "logged_epochs": 101,
+      "checkpoint_sha256": "e94b20970766b94d13c06aa15a981b9965da72a2122c010b0d7f57eb225b1ba0",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.3474178387224754e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "1c0d8c38348e45da",
+      "mean_dice": 0.815852892406379,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "qata",
+      "seed": 1003,
+      "run_path": "runs/phase1/lvit/qata/1003",
+      "source_path": "methods/phase1_language_guided/runs/lvit/qata/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 10,
+      "best_val_epoch": 10,
+      "logged_epochs": 61,
+      "checkpoint_sha256": "1c3ef87c212095f634ce91f338c2805f9a137375968529655dd73cc6c3de696b",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.450980390354671e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "c8cea32e7511584c",
+      "mean_dice": 0.8194148841965231,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "run_path": "runs/phase1/lvit/mosmed/1001",
+      "source_path": "methods/phase1_language_guided/runs/lvit/mosmed/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 149,
+      "best_val_epoch": 149,
+      "logged_epochs": 200,
+      "checkpoint_sha256": "dcaee587d64531b72a17cb26c042bf1fcfae20146c06b0ef9578e5eb4ae1021b",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.4863258124275802e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "f9f2325e3b1f0651",
+      "mean_dice": 0.7930188024623064,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "run_path": "runs/phase1/lvit/mosmed/1002",
+      "source_path": "methods/phase1_language_guided/runs/lvit/mosmed/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 218,
+      "best_val_epoch": 218,
+      "logged_epochs": 269,
+      "checkpoint_sha256": "e1faa28e423c71bd135f8d0141f012cf6b2a71d070e815380bfdba370f9c29b6",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.999999988e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "ec6e5f3d0ef7ec7b",
+      "mean_dice": 0.7931090956168433,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "run_path": "runs/phase1/lvit/mosmed/1003",
+      "source_path": "methods/phase1_language_guided/runs/lvit/mosmed/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 248,
+      "best_val_epoch": 248,
+      "logged_epochs": 299,
+      "checkpoint_sha256": "fbc0dbfc74bb92a4744a38e0d432a23beb1eb2adccf9c01fe7a1fd36a3b56bed",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.5306122480573947e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "9788e58ecbe9b6ed",
+      "mean_dice": 0.7924482479385747,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1001,
+      "run_path": "runs/phase1/reclmis/qata/1001",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/qata/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 18,
+      "best_val_epoch": 18,
+      "logged_epochs": 119,
+      "checkpoint_sha256": "57b4f80e29aa1b04ca11f7ec974806346e60c4224d21ddf3581460f692f00818",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.706484640764598e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "46686641a0a6f442",
+      "mean_dice": 0.835803740552623,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1002,
+      "run_path": "runs/phase1/reclmis/qata/1002",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/qata/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 20,
+      "best_val_epoch": 20,
+      "logged_epochs": 121,
+      "checkpoint_sha256": "5b8891a31f24b4d4929f860977ed299cfe2722aa81f9ad4fbd8efc265816e08d",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.79856115010869e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "6dcb0b4014b727ff",
+      "mean_dice": 0.8338670477329743,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "qata",
+      "seed": 1003,
+      "run_path": "runs/phase1/reclmis/qata/1003",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/qata/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 17,
+      "best_val_epoch": 17,
+      "logged_epochs": 96,
+      "checkpoint_sha256": "b70d72567259dd4c6e9f8e4a3ccffd3adbb1a98ad80e91044bf98dcf84de8a8b",
+      "test_n_expected": 2113,
+      "test_n": 2113,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.7361111102068862e-10,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "4180e77f49f52657",
+      "mean_dice": 0.8411248415497022,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1001,
+      "run_path": "runs/phase1/reclmis/mosmed/1001",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/mosmed/seed_1001",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 35,
+      "best_val_epoch": 35,
+      "logged_epochs": 66,
+      "checkpoint_sha256": "9289311ba9a7faf050b7e577eec4d19f0a80542216239904c7ea90fcb49de2da",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.923076911982248e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "57a11ad18ae02b36",
+      "mean_dice": 0.7855592821015466,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1002,
+      "run_path": "runs/phase1/reclmis/mosmed/1002",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/mosmed/seed_1002",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 70,
+      "best_val_epoch": 70,
+      "logged_epochs": 101,
+      "checkpoint_sha256": "d052380f08ba52d6acf0429fc01361bb1abd89c811b56b9a77a15b4cec0be26b",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 2.6666666375074755e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "31f4ce2eecd1e6c7",
+      "mean_dice": 0.7947109606353392,
+      "valid": true,
+      "issues": []
+    },
+    {
+      "phase": "phase1",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "seed": 1003,
+      "run_path": "runs/phase1/reclmis/mosmed/1003",
+      "source_path": "methods/phase1_language_guided/runs/reclmis/mosmed/seed_1003",
+      "run_found": true,
+      "training_completed": true,
+      "checkpoint_present": true,
+      "selected_epoch": 48,
+      "best_val_epoch": 48,
+      "logged_epochs": 79,
+      "checkpoint_sha256": "9d7f2bbfaf7162999c311adef10aaf2cf699e24319e19d92dc70725ebd0768c3",
+      "test_n_expected": 546,
+      "test_n": 546,
+      "missing_predictions": 0,
+      "missing_probabilities": 0,
+      "extra_predictions": 0,
+      "nonfinite_values": 0,
+      "out_of_range_values": 0,
+      "miou_dice_relation_max_error": 1.7857142761479591e-09,
+      "summary_mean_max_error": 0.0,
+      "artifacts": {
+        "resolved_config.yaml": true,
+        "environment.txt": true,
+        "train_log.csv": true,
+        "best_checkpoint.txt": true,
+        "test_summary.json": true,
+        "per_case_metrics.csv": true,
+        "predictions": true
+      },
+      "note_files": [],
+      "dice_vector_sha": "e96af4a683319d7d",
+      "mean_dice": 0.7865224208174003,
+      "valid": true,
+      "issues": []
+    }
+  ],
+  "run_totals": {
+    "expected": 39,
+    "found": 39,
+    "valid": 39,
+    "invalid": 0,
+    "missing": 0
+  },
+  "seed_duplication": [
+    {
+      "method": "unet",
+      "dataset": "qata",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        41,
+        58,
+        47
+      ],
+      "mean_dice": [
+        0.7878,
+        0.7846,
+        0.781
+      ]
+    },
+    {
+      "method": "unet",
+      "dataset": "mosmed",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        98,
+        91,
+        89
+      ],
+      "mean_dice": [
+        0.7927,
+        0.7945,
+        0.7939
+      ]
+    },
+    {
+      "method": "unet",
+      "dataset": "busi",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        51,
+        46,
+        51
+      ],
+      "mean_dice": [
+        0.6701,
+        0.7117,
+        0.6995
+      ]
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        48,
+        55,
+        54
+      ],
+      "mean_dice": [
+        0.7798,
+        0.7788,
+        0.7854
+      ]
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        89,
+        49,
+        80
+      ],
+      "mean_dice": [
+        0.8158,
+        0.7996,
+        0.8057
+      ]
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        63,
+        45,
+        45
+      ],
+      "mean_dice": [
+        0.7951,
+        0.7916,
+        0.7954
+      ]
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        28,
+        18,
+        17
+      ],
+      "mean_dice": [
+        0.8036,
+        0.8014,
+        0.8055
+      ]
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        48,
+        65,
+        62
+      ],
+      "mean_dice": [
+        0.809,
+        0.8048,
+        0.8089
+      ]
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        15,
+        34,
+        26
+      ],
+      "mean_dice": [
+        0.8201,
+        0.8263,
+        0.8277
+      ]
+    },
+    {
+      "method": "lvit",
+      "dataset": "qata",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        29,
+        50,
+        10
+      ],
+      "mean_dice": [
+        0.8174,
+        0.8159,
+        0.8194
+      ]
+    },
+    {
+      "method": "lvit",
+      "dataset": "mosmed",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        149,
+        218,
+        248
+      ],
+      "mean_dice": [
+        0.793,
+        0.7931,
+        0.7924
+      ]
+    },
+    {
+      "method": "reclmis",
+      "dataset": "qata",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        18,
+        20,
+        17
+      ],
+      "mean_dice": [
+        0.8358,
+        0.8339,
+        0.8411
+      ]
+    },
+    {
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "unique_checkpoints": 3,
+      "unique_dice_vectors": 3,
+      "selected_epochs": [
+        35,
+        70,
+        48
+      ],
+      "mean_dice": [
+        0.7856,
+        0.7947,
+        0.7865
+      ]
+    }
+  ],
+  "identical_dice_vectors_across_runs": [],
+  "prediction_mask_spot_check": {
+    "cases_compared": 50,
+    "cases_with_identical_masks_across_methods": 1,
+    "note": "identical files across methods occur only where predictions are empty (all-background PNGs are byte-identical)"
+  },
+  "config_drift": [
+    {
+      "method": "unet",
+      "dataset": "qata",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "unet",
+      "dataset": "mosmed",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "unet",
+      "dataset": "busi",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed",
+        "upstream_resolved_config.output_dir",
+        "upstream_resolved_config.seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "differing_fields": [
+        "run_metadata.determinism.seed",
+        "run_metadata.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "lvit",
+      "dataset": "qata",
+      "differing_fields": [
+        "run_config.physical_gpu",
+        "run_config.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "lvit",
+      "dataset": "mosmed",
+      "differing_fields": [
+        "run_config.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "reclmis",
+      "dataset": "qata",
+      "differing_fields": [
+        "nonfinite_stop.best_epoch",
+        "nonfinite_stop.best_val_dice",
+        "nonfinite_stop.epoch",
+        "nonfinite_stop.loss",
+        "nonfinite_stop.step",
+        "run_config.physical_gpu",
+        "run_config.seed",
+        "seed",
+        "training_stop"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    },
+    {
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "differing_fields": [
+        "run_config.seed",
+        "seed"
+      ],
+      "unexpected_differences": [],
+      "identical_environment": true
+    }
+  ],
+  "version_consistency": {
+    "phase1_runner_hashes": [
+      "ec0918dd583491fc6a38f7cad8a7bf58f88067a9138f3a4c97146727ae0cfaa5"
+    ],
+    "phase0_config_and_commit_per_method": {
+      "unet": [
+        [
+          "fbc8aa206cb96f494ea70d8ddb15ab1d0de8a994344f1fbe029173c3732ed0a6",
+          "fdeb44037aba52900d852271293b165a697ecf06"
+        ]
+      ],
+      "tripath_lesionnet": [
+        [
+          "0659c5929a037e4fe463be3164421d1e4fd6a75676d60c13b09be8b5e07187de",
+          "fdeb44037aba52900d852271293b165a697ecf06"
+        ]
+      ],
+      "panoptic_fpn": [
+        [
+          "6fc20799539cc60c76c25bee156a156dd55bdb1632a4229c3095d040ece36503",
+          "fdeb44037aba52900d852271293b165a697ecf06"
+        ]
+      ]
+    }
+  },
+  "datasets": {
+    "qata": {
+      "counts": {
+        "train": 5716,
+        "val": 1429,
+        "test": 2113
+      },
+      "unique_sources": {
+        "train": 3840,
+        "val": 1211,
+        "test": 474
+      },
+      "duplicate_sample_ids": 0,
+      "missing_images": 0,
+      "missing_masks": 0,
+      "source_overlap": {
+        "train-val": 444,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "identical_image_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "identical_mask_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "test_images_from_train_source": 0,
+      "split_id_sha256": {
+        "train": "26e05c48d5cbb05d",
+        "val": "f64ff2d35a96c819",
+        "test": "3fba2d8f4ee8e206"
+      },
+      "manifest_sha256": "e12e88a0b570ad143cd6517f35e8d20de0e65e53cbeb46c2c1d4928e3a614a4a"
+    },
+    "mosmed": {
+      "counts": {
+        "train": 1746,
+        "val": 437,
+        "test": 546
+      },
+      "unique_sources": {
+        "train": 138,
+        "val": 78,
+        "test": 86
+      },
+      "duplicate_sample_ids": 0,
+      "missing_images": 0,
+      "missing_masks": 0,
+      "source_overlap": {
+        "train-val": 64,
+        "train-test": 68,
+        "val-test": 63
+      },
+      "identical_image_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "identical_mask_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "test_images_from_train_source": 528,
+      "split_id_sha256": {
+        "train": "d24342ce76892eb8",
+        "val": "6a3da241ea65788e",
+        "test": "1165120ec3db5458"
+      },
+      "manifest_sha256": "5f2cbe3a7e1cf91cb5dec1697c1d82c65bd8c46860186dfa67f584c5c6d2973e"
+    },
+    "busi": {
+      "counts": {
+        "train": 413,
+        "val": 104,
+        "test": 130
+      },
+      "unique_sources": {
+        "train": 413,
+        "val": 104,
+        "test": 130
+      },
+      "duplicate_sample_ids": 0,
+      "missing_images": 0,
+      "missing_masks": 0,
+      "source_overlap": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "identical_image_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "identical_mask_hash_across_splits": {
+        "train-val": 0,
+        "train-test": 0,
+        "val-test": 0
+      },
+      "test_images_from_train_source": 0,
+      "split_id_sha256": {
+        "train": "e275999d1fe4a293",
+        "val": "09060fa6c3d9f76b",
+        "test": "4b6da3717ae2dc97"
+      },
+      "manifest_sha256": "b4063cc1cdd0823024aa9c96fa199cdb108907cb31c7329413fb6f51a15685af"
+    }
+  },
+  "hash_spot_check": {
+    "qata": {
+      "files_checked": 400,
+      "mismatches": 0
+    },
+    "mosmed": {
+      "files_checked": 400,
+      "mismatches": 0
+    },
+    "busi": {
+      "files_checked": 400,
+      "mismatches": 0
+    }
+  },
+  "phase0_statistics": [
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 0.003113373221834271,
+      "recomputed_difference": 0.003113373221834271,
+      "stored_ci": [
+        -0.0010893644693535658,
+        0.0074183162525677734
+      ],
+      "recomputed_ci": [
+        -0.0010603249226304925,
+        0.007381796053033679
+      ],
+      "stored_raw_p": 0.15805841941580584,
+      "recomputed_raw_p": 0.15548844511554885,
+      "stored_holm_p": 0.15805841941580584,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.004292615194173213,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.01887091930361092,
+      "recomputed_difference": -0.01887091930361092,
+      "stored_ci": [
+        -0.02287038330160097,
+        -0.015150213209141875
+      ],
+      "recomputed_ci": [
+        -0.02284110846764955,
+        -0.015166536075231385
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 2.999970000299997e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0037919933888524216,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.02198429252544519,
+      "recomputed_difference": -0.02198429252544519,
+      "stored_ci": [
+        -0.026084408036496216,
+        -0.01821256514825053
+      ],
+      "recomputed_ci": [
+        -0.02609932696054539,
+        -0.018105167067312605
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 2.999970000299997e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013643321197161152,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": -0.013087848293079195,
+      "recomputed_difference": -0.013087848293079194,
+      "stored_ci": [
+        -0.020816253116802123,
+        -0.005074561237797631
+      ],
+      "recomputed_ci": [
+        -0.020634379774627117,
+        -0.005174834875169432
+      ],
+      "stored_raw_p": 0.006379936200637993,
+      "recomputed_raw_p": 0.006489935100648993,
+      "stored_holm_p": 0.017759822401775982,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.011553608314337547,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.013740848463424693,
+      "recomputed_difference": -0.013740848463424691,
+      "stored_ci": [
+        -0.021616815049720736,
+        -0.0050742288806564576
+      ],
+      "recomputed_ci": [
+        -0.02144708392491111,
+        -0.00535262074348712
+      ],
+      "stored_raw_p": 0.005919940800591994,
+      "recomputed_raw_p": 0.005209947900520995,
+      "stored_holm_p": 0.017759822401775982,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.016828799317441263,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.0006530001703454963,
+      "recomputed_difference": -0.0006530001703454968,
+      "stored_ci": [
+        -0.006183278673179468,
+        0.005270723529239597
+      ],
+      "recomputed_ci": [
+        -0.005978348582569689,
+        0.005341397594230625
+      ],
+      "stored_raw_p": 0.8177818221817782,
+      "recomputed_raw_p": 0.8187318126818732,
+      "stored_holm_p": 0.8177818221817782,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.01789157073555462,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "busi",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": -0.10035042401846601,
+      "recomputed_difference": -0.10035042401846601,
+      "stored_ci": [
+        -0.1368007046734382,
+        -0.0659420846071371
+      ],
+      "recomputed_ci": [
+        -0.136037915576876,
+        -0.06713477198256412
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 2.999970000299997e-05,
+      "n_cases": 130,
+      "n_clusters": 130,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0168319306008365,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "busi",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.1312661777684688,
+      "recomputed_difference": -0.1312661777684688,
+      "stored_ci": [
+        -0.16747850129659092,
+        -0.09658417191290754
+      ],
+      "recomputed_ci": [
+        -0.16755441543408262,
+        -0.0963942372673472
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 2.999970000299997e-05,
+      "n_cases": 130,
+      "n_clusters": 130,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.002679123241753356,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "busi",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.030915753750002797,
+      "recomputed_difference": -0.030915753750002797,
+      "stored_ci": [
+        -0.05200447215745525,
+        -0.011792523378593822
+      ],
+      "recomputed_ci": [
+        -0.052367741311871725,
+        -0.01170728334297408
+      ],
+      "stored_raw_p": 0.0015199848001519985,
+      "recomputed_raw_p": 0.0017899821001789982,
+      "stored_holm_p": 0.0015199848001519985,
+      "n_cases": 130,
+      "n_clusters": 130,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.00903386096541123,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 3,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    }
+  ],
+  "final_statistics": [
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 0.003126222041496846,
+      "recomputed_difference": 0.003126222041496846,
+      "stored_ci": [
+        -0.0012311407511616703,
+        0.00739132991510147
+      ],
+      "recomputed_ci": [
+        -0.00118600047106069,
+        0.007412069493162358
+      ],
+      "stored_raw_p": 0.15651843481565184,
+      "recomputed_raw_p": 0.15530844691553083,
+      "stored_holm_p": 0.15651843481565184,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0052351909154761435,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.01902398796718692,
+      "recomputed_difference": -0.01902398796718692,
+      "stored_ci": [
+        -0.023045067178146948,
+        -0.015184778071659768
+      ],
+      "recomputed_ci": [
+        -0.02292593052678431,
+        -0.015326986889019935
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.01809205939293003,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": -0.03309235984038531,
+      "recomputed_difference": -0.03309235984038531,
+      "stored_ci": [
+        -0.03969880690610321,
+        -0.026798789266411504
+      ],
+      "recomputed_ci": [
+        -0.03962716243285489,
+        -0.02669274253549048
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008220665574497464,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": -0.0524696560144868,
+      "recomputed_difference": -0.0524696560144868,
+      "stored_ci": [
+        -0.05932204447736716,
+        -0.04586230407521283
+      ],
+      "recomputed_ci": [
+        -0.05932022758527076,
+        -0.04614051666757539
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.02066998203903188,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.022150210008683772,
+      "recomputed_difference": -0.022150210008683772,
+      "stored_ci": [
+        -0.026204717727663137,
+        -0.018280984221194372
+      ],
+      "recomputed_ci": [
+        -0.026253565087668244,
+        -0.018258636760139724
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.006164689911041156,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": -0.03621858188188216,
+      "recomputed_difference": -0.03621858188188216,
+      "stored_ci": [
+        -0.04287264523217667,
+        -0.02971532225162561
+      ],
+      "recomputed_ci": [
+        -0.04273274038955549,
+        -0.029943778927926525
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017363461901681216,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": -0.055595878055983636,
+      "recomputed_difference": -0.055595878055983636,
+      "stored_ci": [
+        -0.0625694886759706,
+        -0.04929428451589405
+      ],
+      "recomputed_ci": [
+        -0.0625760176038319,
+        -0.04918608583290353
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008150434576058388,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": -0.014068371873198388,
+      "recomputed_difference": -0.014068371873198388,
+      "stored_ci": [
+        -0.020120652214362992,
+        -0.008087852069861677
+      ],
+      "recomputed_ci": [
+        -0.020312952635327668,
+        -0.007956150753021956
+      ],
+      "stored_raw_p": 1.999980000199998e-05,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.015981352524379135,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": -0.03344566804729987,
+      "recomputed_difference": -0.03344566804729987,
+      "stored_ci": [
+        -0.039863456127258425,
+        -0.027672760535154016
+      ],
+      "recomputed_ci": [
+        -0.03960526431017235,
+        -0.027629928008754696
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.02117941631265908,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "dice",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": -0.019377296174101482,
+      "recomputed_difference": -0.019377296174101482,
+      "stored_ci": [
+        -0.02329184359358279,
+        -0.015777333591078316
+      ],
+      "recomputed_ci": [
+        -0.02324442267840342,
+        -0.015871074791505273
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.012474692347966146,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 0.005519532167924366,
+      "recomputed_difference": 0.005519532167924366,
+      "stored_ci": [
+        0.0007439573536496087,
+        0.010487897062003216
+      ],
+      "recomputed_ci": [
+        0.0006905504791571602,
+        0.010518808342503376
+      ],
+      "stored_raw_p": 0.025999740002599973,
+      "recomputed_raw_p": 0.026209737902620975,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.005481034991078821,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.022998199082535736,
+      "recomputed_difference": -0.022998199082535736,
+      "stored_ci": [
+        -0.027226174155872043,
+        -0.018940242127378597
+      ],
+      "recomputed_ci": [
+        -0.027159545286078994,
+        -0.018963420500087428
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008041204002630918,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": -0.040907391691425335,
+      "recomputed_difference": -0.040907391691425335,
+      "stored_ci": [
+        -0.04792729405988988,
+        -0.03410380130479859
+      ],
+      "recomputed_ci": [
+        -0.04786505097256189,
+        -0.034007740000729335
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.006949134040951936,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": -0.06371178182613697,
+      "recomputed_difference": -0.06371178182613697,
+      "stored_ci": [
+        -0.0710265501653686,
+        -0.056941118919767435
+      ],
+      "recomputed_ci": [
+        -0.07091031496560353,
+        -0.05674504938564917
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013920023512201337,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.028517731250460105,
+      "recomputed_difference": -0.028517731250460105,
+      "stored_ci": [
+        -0.03333575281528954,
+        -0.02393061898856729
+      ],
+      "recomputed_ci": [
+        -0.03334088506664052,
+        -0.0240126041317828
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.00871706290691676,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": -0.0464269238593497,
+      "recomputed_difference": -0.0464269238593497,
+      "stored_ci": [
+        -0.053667740701347146,
+        -0.039306483521665075
+      ],
+      "recomputed_ci": [
+        -0.05377872168656706,
+        -0.03948788518731379
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.012631322131418739,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": -0.06923131399406135,
+      "recomputed_difference": -0.06923131399406135,
+      "stored_ci": [
+        -0.07695057384834031,
+        -0.0620565201596275
+      ],
+      "recomputed_ci": [
+        -0.07663194876719803,
+        -0.061762383003492585
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.02139277108848753,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": -0.017909192608889596,
+      "recomputed_difference": -0.017909192608889596,
+      "stored_ci": [
+        -0.024613480214866573,
+        -0.011393062108910019
+      ],
+      "recomputed_ci": [
+        -0.02470440345164275,
+        -0.011424736001991492
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.006877485723028087,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": -0.04071358274360124,
+      "recomputed_difference": -0.04071358274360124,
+      "stored_ci": [
+        -0.04735183134819301,
+        -0.03421558356478225
+      ],
+      "recomputed_ci": [
+        -0.04754866673300366,
+        -0.034409604914040784
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.014984140681269994,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "miou",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": -0.022804390134711645,
+      "recomputed_difference": -0.022804390134711645,
+      "stored_ci": [
+        -0.026800961223554003,
+        -0.019110272381605287
+      ],
+      "recomputed_ci": [
+        -0.026742649424530848,
+        -0.01897302607427022
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017845775606790945,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 0.09398409988068525,
+      "recomputed_difference": 0.09398409988068525,
+      "stored_ci": [
+        -0.9102957090599995,
+        1.100389553966563
+      ],
+      "recomputed_ci": [
+        -0.932023327187257,
+        1.111777979679371
+      ],
+      "stored_raw_p": 0.8556914430855691,
+      "recomputed_raw_p": 0.8555514444855551,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.010806076180491958,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 4.207804357508938,
+      "recomputed_difference": 4.207804357508938,
+      "stored_ci": [
+        3.2578711372218314,
+        5.293532132854498
+      ],
+      "recomputed_ci": [
+        3.210547146743031,
+        5.301361796878948
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.02324748107878955,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": 11.974568746005055,
+      "recomputed_difference": 11.974568746005055,
+      "stored_ci": [
+        10.240773603389714,
+        13.835611986157703
+      ],
+      "recomputed_ci": [
+        10.220787555923694,
+        13.836092246286642
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.005559651182602203,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": 15.22189011625457,
+      "recomputed_difference": 15.22189011625457,
+      "stored_ci": [
+        13.426383993751784,
+        17.215174192342133
+      ],
+      "recomputed_ci": [
+        13.423571640300457,
+        17.172595210785293
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.01123814709314913,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 4.1138202576282525,
+      "recomputed_difference": 4.1138202576282525,
+      "stored_ci": [
+        3.2222646817171947,
+        5.079763351578301
+      ],
+      "recomputed_ci": [
+        3.2404527443459794,
+        5.082436306921091
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009791696179327384,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": 11.88058464612437,
+      "recomputed_difference": 11.88058464612437,
+      "stored_ci": [
+        10.17172635658067,
+        13.70838675476486
+      ],
+      "recomputed_ci": [
+        10.233880591026322,
+        13.707276784121467
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017574272745430514,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": 15.127906016373885,
+      "recomputed_difference": 15.127906016373885,
+      "stored_ci": [
+        13.383394224504121,
+        17.0869552116901
+      ],
+      "recomputed_ci": [
+        13.3301352430405,
+        17.076663324072648
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.014380479124791744,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": 7.766764388496118,
+      "recomputed_difference": 7.766764388496118,
+      "stored_ci": [
+        6.179799781420011,
+        9.407458452976156
+      ],
+      "recomputed_ci": [
+        6.218872530343884,
+        9.392002826407868
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.012105601273208415,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": 11.014085758745631,
+      "recomputed_difference": 11.014085758745631,
+      "stored_ci": [
+        9.495752728170997,
+        12.635594247044768
+      ],
+      "recomputed_ci": [
+        9.525045511624707,
+        12.676633456252166
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.01307047153835905,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "hd95",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": 3.247321370249513,
+      "recomputed_difference": 3.247321370249513,
+      "stored_ci": [
+        2.36367583093989,
+        4.202313636707637
+      ],
+      "recomputed_ci": [
+        2.335196029809658,
+        4.202768624097182
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0154896201094591,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 0.7538655782429259,
+      "recomputed_difference": 0.7538655782429259,
+      "stored_ci": [
+        0.11280622658517557,
+        1.4630380569735464
+      ],
+      "recomputed_ci": [
+        0.1450393710106354,
+        1.4721200757946746
+      ],
+      "stored_raw_p": 0.023099769002309978,
+      "recomputed_raw_p": 0.024089759102408976,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.02387230377778054,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 2.0395180732298908,
+      "recomputed_difference": 2.0395180732298908,
+      "stored_ci": [
+        1.426181947866368,
+        2.767307073412292
+      ],
+      "recomputed_ci": [
+        1.4246842485331106,
+        2.7758487422847873
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0063690320237780144,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": 2.7509110713362106,
+      "recomputed_difference": 2.7509110713362106,
+      "stored_ci": [
+        1.7104520920684836,
+        3.7867437672550155
+      ],
+      "recomputed_ci": [
+        1.6817676816286011,
+        3.797037934297922
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013815212372464712,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": 4.492422159999219,
+      "recomputed_difference": 4.492422159999219,
+      "stored_ci": [
+        3.590029500671493,
+        5.514957856664822
+      ],
+      "recomputed_ci": [
+        3.576520806903699,
+        5.479401639473692
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.018471449641449877,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 1.2856524949869648,
+      "recomputed_difference": 1.2856524949869648,
+      "stored_ci": [
+        0.9239431574296327,
+        1.7050099099207372
+      ],
+      "recomputed_ci": [
+        0.9116277114758593,
+        1.706492928395867
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.01576746918812639,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": 1.9970454930932844,
+      "recomputed_difference": 1.9970454930932844,
+      "stored_ci": [
+        1.0851353775416264,
+        2.8638879108507376
+      ],
+      "recomputed_ci": [
+        1.0773998400544813,
+        2.8762329695585227
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.006940290162127801,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": 3.7385565817562925,
+      "recomputed_difference": 3.7385565817562925,
+      "stored_ci": [
+        3.011486207237798,
+        4.520220765977631
+      ],
+      "recomputed_ci": [
+        3.0142750524253423,
+        4.530977036936576
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.007129332921179308,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": 0.7113929981063198,
+      "recomputed_difference": 0.7113929981063198,
+      "stored_ci": [
+        -0.25347954381383125,
+        1.5601919307331324
+      ],
+      "recomputed_ci": [
+        -0.2362396850247183,
+        1.5696037840690664
+      ],
+      "stored_raw_p": 0.12433875661243388,
+      "recomputed_raw_p": 0.1250487495125049,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009505502529568815,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": 2.4529040867693275,
+      "recomputed_difference": 2.4529040867693275,
+      "stored_ci": [
+        1.8191705210149476,
+        3.092774936936033
+      ],
+      "recomputed_ci": [
+        1.817681849113176,
+        3.1070143195617304
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.011180381009749524,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "qata",
+      "metric": "assd",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": 1.7415110886630083,
+      "recomputed_difference": 1.7415110886630083,
+      "stored_ci": [
+        0.9809087659700452,
+        2.6113129043129133
+      ],
+      "recomputed_ci": [
+        0.9717508934211151,
+        2.5980497709040233
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 2113,
+      "n_clusters": 474,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008134874720307396,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": -0.013366833082750707,
+      "recomputed_difference": -0.013366833082750709,
+      "stored_ci": [
+        -0.02101228287611633,
+        -0.00522986242196682
+      ],
+      "recomputed_ci": [
+        -0.02101514566554943,
+        -0.005219909770932666
+      ],
+      "stored_raw_p": 0.005759942400575994,
+      "recomputed_raw_p": 0.005579944200557995,
+      "stored_holm_p": 0.034559654403455965,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0006306162646641121,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.013877887090814854,
+      "recomputed_difference": -0.013877887090814856,
+      "stored_ci": [
+        -0.021741900698522755,
+        -0.005448089512068761
+      ],
+      "recomputed_ci": [
+        -0.021644350385328685,
+        -0.005293440672138977
+      ],
+      "stored_raw_p": 0.006089939100608994,
+      "recomputed_raw_p": 0.0058599414005859945,
+      "stored_holm_p": 0.034559654403455965,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009491262551167445,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": 0.0008299701124252432,
+      "recomputed_difference": 0.0008299701124252457,
+      "stored_ci": [
+        -0.009500361074834816,
+        0.013020820822880337
+      ],
+      "recomputed_ci": [
+        -0.009676523595238674,
+        0.01281583796594969
+      ],
+      "stored_raw_p": 0.8824011759882401,
+      "recomputed_raw_p": 0.8837811621883781,
+      "stored_holm_p": 1.0,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009101780619757062,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": 0.0047577976002380565,
+      "recomputed_difference": 0.004757797600238058,
+      "stored_ci": [
+        -0.004763754640993271,
+        0.016656290518817857
+      ],
+      "recomputed_ci": [
+        -0.004874594061593928,
+        0.016494684643280265
+      ],
+      "stored_raw_p": 0.35825641743582565,
+      "recomputed_raw_p": 0.35725642743572567,
+      "stored_holm_p": 1.0,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.007544609468928752,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.0005110540080641473,
+      "recomputed_difference": -0.0005110540080641468,
+      "stored_ci": [
+        -0.006018332972806575,
+        0.005488473274232389
+      ],
+      "recomputed_ci": [
+        -0.00585007869396774,
+        0.005426764997481459
+      ],
+      "stored_raw_p": 0.8563314366856332,
+      "recomputed_raw_p": 0.8575614243857561,
+      "stored_holm_p": 1.0,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.014622152769986203,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": 0.014196803195175954,
+      "recomputed_difference": 0.014196803195175953,
+      "stored_ci": [
+        0.006732352382470531,
+        0.023275750287364224
+      ],
+      "recomputed_ci": [
+        0.006790971082590575,
+        0.02304141929925305
+      ],
+      "stored_raw_p": 0.0003699963000369996,
+      "recomputed_raw_p": 0.0003899961000389996,
+      "stored_holm_p": 0.0025899741002589974,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0141646226161227,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": 0.018124630682988765,
+      "recomputed_difference": 0.018124630682988765,
+      "stored_ci": [
+        0.010688436521323568,
+        0.02776660674509938
+      ],
+      "recomputed_ci": [
+        0.01055310632634394,
+        0.027948346753192837
+      ],
+      "stored_raw_p": 2.999970000299997e-05,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 0.00023999760002399976,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.010641655734315266,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": 0.0147078572032401,
+      "recomputed_difference": 0.0147078572032401,
+      "stored_ci": [
+        0.008841579547288888,
+        0.021724105878301172
+      ],
+      "recomputed_ci": [
+        0.008895119576484225,
+        0.021666211478517838
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 1.999980000199998e-05,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.004494025340663518,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": 0.018635684691052912,
+      "recomputed_difference": 0.018635684691052912,
+      "stored_ci": [
+        0.011656192530127035,
+        0.027435265116194055
+      ],
+      "recomputed_ci": [
+        0.011784491934643928,
+        0.0272177028006686
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": 9.999900000999991e-05,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013788029324205172,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": true,
+      "stored_significant": true
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "dice",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": 0.003927827487812814,
+      "recomputed_difference": 0.003927827487812814,
+      "stored_ci": [
+        -0.002248342069412344,
+        0.011323767929795336
+      ],
+      "recomputed_ci": [
+        -0.0022505399694139894,
+        0.01121382529317288
+      ],
+      "stored_raw_p": 0.25566744332556673,
+      "recomputed_raw_p": 0.25481745182548177,
+      "stored_holm_p": 1.0,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008100629646302192,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0,
+      "holm_family_size": 10,
+      "holm_from_stored_raw_exact": 1.0,
+      "recomputed_significant": false,
+      "stored_significant": false
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": -0.015926052866101076,
+      "recomputed_difference": -0.015926052866101076,
+      "stored_ci": [
+        -0.024435083425624372,
+        -0.0061381547854982114
+      ],
+      "recomputed_ci": [
+        -0.02452284575955053,
+        -0.006308864181936758
+      ],
+      "stored_raw_p": 0.006169938300616994,
+      "recomputed_raw_p": 0.006239937600623993,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009329948200386578,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.01768022624298241,
+      "recomputed_difference": -0.01768022624298241,
+      "stored_ci": [
+        -0.027207187890659103,
+        -0.007116388802185304
+      ],
+      "recomputed_ci": [
+        -0.02712668201800614,
+        -0.007165478385758619
+      ],
+      "stored_raw_p": 0.006629933700662993,
+      "recomputed_raw_p": 0.005609943900560995,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0040071015741304445,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": -0.0003571745309489411,
+      "recomputed_difference": -0.0003571745309489411,
+      "stored_ci": [
+        -0.0121205883318241,
+        0.01336213753758799
+      ],
+      "recomputed_ci": [
+        -0.012568655700730963,
+        0.013276399666199505
+      ],
+      "stored_raw_p": 0.957320426795732,
+      "recomputed_raw_p": 0.957530424695753,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017583180512281697,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": 0.0031027927144671222,
+      "recomputed_difference": 0.003102792714467124,
+      "stored_ci": [
+        -0.007457096591966242,
+        0.0159575761941632
+      ],
+      "recomputed_ci": [
+        -0.007404308210227611,
+        0.015838023566760027
+      ],
+      "stored_raw_p": 0.5853741462585375,
+      "recomputed_raw_p": 0.5864641353586464,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.0051058850360699674,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.0017541733768813344,
+      "recomputed_difference": -0.0017541733768813344,
+      "stored_ci": [
+        -0.007174297235309873,
+        0.004396841968848377
+      ],
+      "recomputed_ci": [
+        -0.007115954030738281,
+        0.004408208624790641
+      ],
+      "stored_raw_p": 0.5561544384556154,
+      "recomputed_raw_p": 0.5537044629553705,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.005042131422170223,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": 0.015568878335152133,
+      "recomputed_difference": 0.015568878335152133,
+      "stored_ci": [
+        0.007890284530580792,
+        0.02463099812172373
+      ],
+      "recomputed_ci": [
+        0.0079209392330556,
+        0.02430250904056602
+      ],
+      "stored_raw_p": 0.00015999840001599985,
+      "recomputed_raw_p": 0.0001799982000179998,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.019622167201492836,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": 0.019028845580568197,
+      "recomputed_difference": 0.019028845580568197,
+      "stored_ci": [
+        0.01214704728322174,
+        0.02742510191189251
+      ],
+      "recomputed_ci": [
+        0.012033340713468905,
+        0.02726794901045151
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 1.999980000199998e-05,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.010286185333182804,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": 0.01732305171203347,
+      "recomputed_difference": 0.01732305171203347,
+      "stored_ci": [
+        0.011348160707557712,
+        0.023826236956618018
+      ],
+      "recomputed_ci": [
+        0.011404304899265914,
+        0.023933366753187708
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008585441732475173,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": 0.020783018957449533,
+      "recomputed_difference": 0.02078301895744953,
+      "stored_ci": [
+        0.014793819182949083,
+        0.02774444295578068
+      ],
+      "recomputed_ci": [
+        0.014879147343557024,
+        0.027346330023064233
+      ],
+      "stored_raw_p": 9.99990000099999e-06,
+      "recomputed_raw_p": 9.99990000099999e-06,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.03074083068891458,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "miou",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": 0.0034599672454160638,
+      "recomputed_difference": 0.003459967245416065,
+      "stored_ci": [
+        -0.002460891027098568,
+        0.009827874950107975
+      ],
+      "recomputed_ci": [
+        -0.002544787354014747,
+        0.009949638726832244
+      ],
+      "stored_raw_p": 0.28092719072809275,
+      "recomputed_raw_p": 0.2811371886281137,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.00990854386438139,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 5.908276880214299,
+      "recomputed_difference": 5.908276880214297,
+      "stored_ci": [
+        0.8072225055624489,
+        10.97130395550556
+      ],
+      "recomputed_ci": [
+        0.8405636037214128,
+        11.193754755245106
+      ],
+      "stored_raw_p": 0.035389646103538966,
+      "recomputed_raw_p": 0.036349636503634965,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.021885971775717227,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 4.927129773896657,
+      "recomputed_difference": 4.927129773896657,
+      "stored_ci": [
+        0.22005737202561165,
+        9.798258532606468
+      ],
+      "recomputed_ci": [
+        0.24586721512554302,
+        9.586866018113422
+      ],
+      "stored_raw_p": 0.05868941310586894,
+      "recomputed_raw_p": 0.05932940670593294,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.022070168599405977,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": 3.457509889814075,
+      "recomputed_difference": 3.4575098898140753,
+      "stored_ci": [
+        -1.4882441893576484,
+        8.161969438394133
+      ],
+      "recomputed_ci": [
+        -1.5045439907914622,
+        8.1810805985914
+      ],
+      "stored_raw_p": 0.17591824081759183,
+      "recomputed_raw_p": 0.1787182128178718,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.001980387267522066,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": -1.1826669655050013,
+      "recomputed_difference": -1.1826669655050006,
+      "stored_ci": [
+        -6.552792696356175,
+        3.304369007755034
+      ],
+      "recomputed_ci": [
+        -6.689251494005689,
+        3.248605188875296
+      ],
+      "stored_raw_p": 0.6255337446625534,
+      "recomputed_raw_p": 0.6249937500624994,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013843619669199565,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -0.9811471063176413,
+      "recomputed_difference": -0.9811471063176418,
+      "stored_ci": [
+        -5.086807521092897,
+        2.3050215631294635
+      ],
+      "recomputed_ci": [
+        -4.984370907544578,
+        2.2492599534700792
+      ],
+      "stored_raw_p": 0.5970640293597064,
+      "recomputed_raw_p": 0.5980340196598034,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.013858087407211119,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": -2.450766990400224,
+      "recomputed_difference": -2.4507669904002234,
+      "stored_ci": [
+        -8.622127057017348,
+        3.027436532737427
+      ],
+      "recomputed_ci": [
+        -8.418342630987818,
+        3.20038838507511
+      ],
+      "stored_raw_p": 0.4041559584404156,
+      "recomputed_raw_p": 0.4003459965400346,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017492880695440728,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": -7.090943845719298,
+      "recomputed_difference": -7.0909438457193,
+      "stored_ci": [
+        -13.154001909833557,
+        -2.1678869177303275
+      ],
+      "recomputed_ci": [
+        -13.063439296864537,
+        -2.0254828707319863
+      ],
+      "stored_raw_p": 0.008769912300876991,
+      "recomputed_raw_p": 0.00890991090089099,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.012962184275396771,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": -1.4696198840825823,
+      "recomputed_difference": -1.469619884082582,
+      "stored_ci": [
+        -7.054646677466191,
+        3.842348746877285
+      ],
+      "recomputed_ci": [
+        -6.780101081086401,
+        3.7304325974824213
+      ],
+      "stored_raw_p": 0.5918740812591874,
+      "recomputed_raw_p": 0.5885141148588514,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.025194614266467005,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": -6.1097967394016575,
+      "recomputed_difference": -6.1097967394016575,
+      "stored_ci": [
+        -11.378733694572945,
+        -1.5946180916253838
+      ],
+      "recomputed_ci": [
+        -11.445256437026671,
+        -1.469981870234564
+      ],
+      "stored_raw_p": 0.012199878001219988,
+      "recomputed_raw_p": 0.012589874101258988,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.012738629268982877,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": -4.640176855319076,
+      "recomputed_difference": -4.640176855319076,
+      "stored_ci": [
+        -9.117153209263499,
+        -0.6939357461868452
+      ],
+      "recomputed_ci": [
+        -9.200049961287027,
+        -0.7255984280483003
+      ],
+      "stored_raw_p": 0.024269757302426975,
+      "recomputed_raw_p": 0.024589754102458974,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.009841459322035477,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "tripath_lesionnet",
+      "stored_difference": 4.18063522607313,
+      "recomputed_difference": 4.1806352260731305,
+      "stored_ci": [
+        0.753445213745331,
+        8.07802538582023
+      ],
+      "recomputed_ci": [
+        0.750513715961613,
+        7.973881688431404
+      ],
+      "stored_raw_p": 0.027189728102718972,
+      "recomputed_raw_p": 0.027189728102718972,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.014218384527467565,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": 1.0819675034582197,
+      "recomputed_difference": 1.0819675034582195,
+      "stored_ci": [
+        -2.365499456872166,
+        4.254813383573575
+      ],
+      "recomputed_ci": [
+        -2.2571911430218448,
+        4.23356261934046
+      ],
+      "stored_raw_p": 0.5319046809531904,
+      "recomputed_raw_p": 0.5321646783532165,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.016359999362662903,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "lvit",
+      "stored_difference": -1.0724637490296847,
+      "recomputed_difference": -1.0724637490296847,
+      "stored_ci": [
+        -5.8034644193693055,
+        2.5046554073410543
+      ],
+      "recomputed_ci": [
+        -5.6597175602910434,
+        2.534241802053138
+      ],
+      "stored_raw_p": 0.5985740142598575,
+      "recomputed_raw_p": 0.5972240277597224,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.017301972296562225,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "unet",
+      "method_b": "reclmis",
+      "stored_difference": -3.952848221815087,
+      "recomputed_difference": -3.952848221815087,
+      "stored_ci": [
+        -9.311708267164436,
+        -0.22626879458484514
+      ],
+      "recomputed_ci": [
+        -9.364577846090187,
+        -0.20743976857551433
+      ],
+      "stored_raw_p": 0.05516944830551695,
+      "recomputed_raw_p": 0.05545944540554595,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.005819154822979645,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "panoptic_fpn",
+      "stored_difference": -3.098667722614911,
+      "recomputed_difference": -3.0986677226149113,
+      "stored_ci": [
+        -7.167080684094827,
+        -0.1251571097693113
+      ],
+      "recomputed_ci": [
+        -7.308918465632435,
+        -0.149445751683873
+      ],
+      "stored_raw_p": 0.07019929800701993,
+      "recomputed_raw_p": 0.06968930310696893,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.020141908676024382,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "lvit",
+      "stored_difference": -5.253098975102815,
+      "recomputed_difference": -5.253098975102815,
+      "stored_ci": [
+        -11.331501615765921,
+        -1.030307745845711
+      ],
+      "recomputed_ci": [
+        -11.396681268346638,
+        -1.1185362785635962
+      ],
+      "stored_raw_p": 0.023389766102338977,
+      "recomputed_raw_p": 0.023859761402385975,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.008564884209733692,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "tripath_lesionnet",
+      "method_b": "reclmis",
+      "stored_difference": -8.133483447888215,
+      "recomputed_difference": -8.133483447888215,
+      "stored_ci": [
+        -14.886270598761005,
+        -3.397237630335775
+      ],
+      "recomputed_ci": [
+        -14.904678413689043,
+        -3.308549849780776
+      ],
+      "stored_raw_p": 0.0006599934000659993,
+      "recomputed_raw_p": 0.0006199938000619994,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.007719342506783252,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "panoptic_fpn",
+      "method_b": "lvit",
+      "stored_difference": -2.154431252487904,
+      "recomputed_difference": -2.1544312524879037,
+      "stored_ci": [
+        -7.375284069771235,
+        2.206327407202653
+      ],
+      "recomputed_ci": [
+        -7.520465640845825,
+        2.009132413343419
+      ],
+      "stored_raw_p": 0.3852261477385226,
+      "recomputed_raw_p": 0.3852961470385296,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.020580566675357702,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "panoptic_fpn",
+      "method_b": "reclmis",
+      "stored_difference": -5.0348157252733055,
+      "recomputed_difference": -5.0348157252733055,
+      "stored_ci": [
+        -10.314224964689954,
+        -0.8165509339696756
+      ],
+      "recomputed_ci": [
+        -10.378792324477702,
+        -0.7804502834052005
+      ],
+      "stored_raw_p": 0.028689713102868972,
+      "recomputed_raw_p": 0.02940970590294097,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.006798228658817394,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    },
+    {
+      "dataset": "mosmed",
+      "metric": "assd",
+      "method_a": "lvit",
+      "method_b": "reclmis",
+      "stored_difference": -2.8803844727854027,
+      "recomputed_difference": -2.880384472785402,
+      "stored_ci": [
+        -6.97977873251024,
+        0.7218605364664213
+      ],
+      "recomputed_ci": [
+        -6.941753383518739,
+        0.6848309206181289
+      ],
+      "stored_raw_p": 0.14335856641433586,
+      "recomputed_raw_p": 0.14407855921440785,
+      "stored_holm_p": null,
+      "n_cases": 546,
+      "n_clusters": 86,
+      "pairing_ok": true,
+      "difference_exact": true,
+      "ci_endpoint_gap_fraction_of_width": 0.004937305898586097,
+      "ci_agrees": true,
+      "p_agrees": true,
+      "same_ci_excludes_zero": 1.0
+    }
+  ],
+  "absolute_ci_checks": [
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7653153995100823,
+        0.7997165849240487
+      ],
+      "recomputed_ci": [
+        0.7655557169348609,
+        0.7994177361108963
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6637243350601807,
+        0.7057747199955472
+      ],
+      "recomputed_ci": [
+        0.6634462067224758,
+        0.7050991061594336
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        50.506777428436266,
+        59.79253044082611
+      ],
+      "recomputed_ci": [
+        50.48887589308719,
+        59.783960845677846
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        14.579850067041262,
+        18.597765944175936
+      ],
+      "recomputed_ci": [
+        14.587446285524228,
+        18.571424178106916
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7620685198024413,
+        0.8158314168448392
+      ],
+      "recomputed_ci": [
+        0.7616844448992444,
+        0.8155236383627509
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6441177289273858,
+        0.7089369376235639
+      ],
+      "recomputed_ci": [
+        0.6451646081629858,
+        0.7089756684558505
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        16.18196098576784,
+        29.60714586017363
+      ],
+      "recomputed_ci": [
+        16.17935658256328,
+        29.532644062224218
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        4.659187791647798,
+        11.382511043348462
+      ],
+      "recomputed_ci": [
+        4.649463699339978,
+        11.37004922356371
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6427538104540615,
+        0.7416956262145769
+      ],
+      "recomputed_ci": [
+        0.6411051477951077,
+        0.7416884538932308
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.5480784752352612,
+        0.6460105230453707
+      ],
+      "recomputed_ci": [
+        0.5497544572148813,
+        0.6460235043108967
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        61.90167984936949,
+        92.23113361102533
+      ],
+      "recomputed_ci": [
+        61.930140021570516,
+        92.83013440645719
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        25.96466027729591,
+        53.09171631969693
+      ],
+      "recomputed_ci": [
+        25.91795659540612,
+        52.7068417720672
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7626135036039071,
+        0.7968605840170161
+      ],
+      "recomputed_ci": [
+        0.7628357382335476,
+        0.796558545796201
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6573079998366356,
+        0.7001835822284767
+      ],
+      "recomputed_ci": [
+        0.6577800802341075,
+        0.7005054486038295
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        49.867969722728766,
+        59.233232006650084
+      ],
+      "recomputed_ci": [
+        50.056065577452074,
+        59.27782556746547
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        13.556809019181287,
+        16.763374893491584
+      ],
+      "recomputed_ci": [
+        13.495512797337621,
+        16.76078503186644
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7745644403638635,
+        0.8281038057172477
+      ],
+      "recomputed_ci": [
+        0.7744128425055744,
+        0.8285031467145421
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6599604162126396,
+        0.7249815116781257
+      ],
+      "recomputed_ci": [
+        0.660117774250384,
+        0.7250250865575772
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        13.259711533243124,
+        24.43071548341852
+      ],
+      "recomputed_ci": [
+        13.245217760592233,
+        24.365139762907795
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        3.228609296498675,
+        6.971076629485269
+      ],
+      "recomputed_ci": [
+        3.229542520399977,
+        6.901845964354652
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7524525511677731,
+        0.8312071180947518
+      ],
+      "recomputed_ci": [
+        0.7530290636854605,
+        0.8310365108062504
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6609787111981149,
+        0.7429033953592151
+      ],
+      "recomputed_ci": [
+        0.6621438713575498,
+        0.7424050286904371
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        31.740093660985515,
+        46.906412307843446
+      ],
+      "recomputed_ci": [
+        31.723543803977034,
+        46.81879957462546
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        9.847994942736191,
+        16.156059836220322
+      ],
+      "recomputed_ci": [
+        9.850938113277207,
+        16.24950141612285
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7857905475922062,
+        0.8173531853071355
+      ],
+      "recomputed_ci": [
+        0.7856979302300015,
+        0.8174957522049457
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6867923845313089,
+        0.7275167219789459
+      ],
+      "recomputed_ci": [
+        0.6869185286907993,
+        0.7271037137094605
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        43.21189917070342,
+        51.538085852790104
+      ],
+      "recomputed_ci": [
+        43.16869089622559,
+        51.331931970621525
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        11.513838559148592,
+        14.234339753594409
+      ],
+      "recomputed_ci": [
+        11.485465567555261,
+        14.256658545009802
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7726100548516942,
+        0.8298910900667045
+      ],
+      "recomputed_ci": [
+        0.773736355239315,
+        0.8294838469399511
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.661042655833986,
+        0.72780077005227
+      ],
+      "recomputed_ci": [
+        0.6598743469341599,
+        0.7277690631290709
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        13.067829799631882,
+        26.521495129150235
+      ],
+      "recomputed_ci": [
+        13.014241060236154,
+        26.438649291794064
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        3.976351490504031,
+        11.560902558432387
+      ],
+      "recomputed_ci": [
+        3.93711295960586,
+        11.58776045835876
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7863745434282875,
+        0.8592457695438706
+      ],
+      "recomputed_ci": [
+        0.7867243869148245,
+        0.8587886879647574
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7043267000839902,
+        0.7787188401884543
+      ],
+      "recomputed_ci": [
+        0.7030162655971542,
+        0.7786523593172091
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        23.48523942077368,
+        37.296030286941026
+      ],
+      "recomputed_ci": [
+        23.489233642012344,
+        36.9537992153377
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/phase0/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        7.923989841985835,
+        14.810413142964492
+      ],
+      "recomputed_ci": [
+        7.912296623746335,
+        14.821264888403013
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7661878954060797,
+        0.8005847490149826
+      ],
+      "recomputed_ci": [
+        0.7663491072485731,
+        0.8007901980220526
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6650003220420398,
+        0.7071303454500159
+      ],
+      "recomputed_ci": [
+        0.6646885761193897,
+        0.7065372984840596
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        29.030217207868844,
+        34.44506749412412
+      ],
+      "recomputed_ci": [
+        29.00820348615402,
+        34.43287231535791
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        8.335201279242145,
+        10.704653980110265
+      ],
+      "recomputed_ci": [
+        8.355120766207913,
+        10.704575807970953
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7626705211383537,
+        0.8162998158869128
+      ],
+      "recomputed_ci": [
+        0.7619950185816853,
+        0.8164206254947246
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6448730746884151,
+        0.7098698705414247
+      ],
+      "recomputed_ci": [
+        0.6462815396078462,
+        0.7102048681892777
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        22.026660833745137,
+        39.53124617198997
+      ],
+      "recomputed_ci": [
+        22.007063678705464,
+        39.979741620123285
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        6.698624624920997,
+        15.681718187509508
+      ],
+      "recomputed_ci": [
+        6.6291750811318035,
+        15.78883720819615
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.763317146533889,
+        0.7977554182940119
+      ],
+      "recomputed_ci": [
+        0.7633089162155173,
+        0.7975736721105033
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6589315865129692,
+        0.7016778802660572
+      ],
+      "recomputed_ci": [
+        0.6586078315186504,
+        0.7016111497397203
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        28.874968598611325,
+        34.284260604018506
+      ],
+      "recomputed_ci": [
+        28.929693815877283,
+        34.36782235431189
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        7.8167361098995425,
+        9.664017365941236
+      ],
+      "recomputed_ci": [
+        7.8071082894705475,
+        9.69204225994162
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.774721754180463,
+        0.8286246154509599
+      ],
+      "recomputed_ci": [
+        0.7750448519190579,
+        0.8289505626555159
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6602751562182609,
+        0.726295467325866
+      ],
+      "recomputed_ci": [
+        0.6610881562560004,
+        0.7263557722561531
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        17.73121102414219,
+        32.23174252302284
+      ],
+      "recomputed_ci": [
+        17.61713247911132,
+        32.454908840629365
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        4.301015775337351,
+        9.217178138082629
+      ],
+      "recomputed_ci": [
+        4.294279493304465,
+        9.349421852209208
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7864696403398901,
+        0.8184615578110171
+      ],
+      "recomputed_ci": [
+        0.786950078799074,
+        0.818506422669413
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6889214589919969,
+        0.7289649939004885
+      ],
+      "recomputed_ci": [
+        0.6889561377704588,
+        0.7290094509080863
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        25.0727468347803,
+        29.935783613135932
+      ],
+      "recomputed_ci": [
+        25.017200773396493,
+        29.9226434397248
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        6.63217790900118,
+        8.246291936167768
+      ],
+      "recomputed_ci": [
+        6.640515440735591,
+        8.24516815391938
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7747959305139934,
+        0.8299356091323687
+      ],
+      "recomputed_ci": [
+        0.7733288825397057,
+        0.8305807671495264
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6606383279432171,
+        0.7288759034873087
+      ],
+      "recomputed_ci": [
+        0.6607813325452683,
+        0.7287182935774463
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        17.502433513818858,
+        35.23946165606281
+      ],
+      "recomputed_ci": [
+        17.59727358424406,
+        35.16654106285826
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        5.366650081122355,
+        15.42094272845091
+      ],
+      "recomputed_ci": [
+        5.429278320287136,
+        15.666390422524318
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.8014636227623173,
+        0.8315488875840549
+      ],
+      "recomputed_ci": [
+        0.8020615247700437,
+        0.8317979988511117
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7082716493664849,
+        0.7453826436875352
+      ],
+      "recomputed_ci": [
+        0.7084601012496763,
+        0.7451152381692472
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        17.845876191870627,
+        21.540725825291524
+      ],
+      "recomputed_ci": [
+        17.916048233336006,
+        21.52670119231814
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        5.659456697952559,
+        7.9517064447454695
+      ],
+      "recomputed_ci": [
+        5.662697558704503,
+        7.916500875778157
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7575927630799844,
+        0.8170782568692855
+      ],
+      "recomputed_ci": [
+        0.756289213541301,
+        0.8173629673924747
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6416593362029184,
+        0.71200516236963
+      ],
+      "recomputed_ci": [
+        0.6426084018559247,
+        0.7127862771460761
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        18.307509289684596,
+        37.4899339850374
+      ],
+      "recomputed_ci": [
+        18.366999981018925,
+        37.44648149446185
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "lvit",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        6.424293966676519,
+        19.314746124733624
+      ],
+      "recomputed_ci": [
+        6.4709626271447265,
+        19.09333948224621
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "qata",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.8231672974620473,
+        0.8495397148972733
+      ],
+      "recomputed_ci": [
+        0.8229814096610698,
+        0.849512427548791
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "qata",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7323716353465506,
+        0.7665145883494205
+      ],
+      "recomputed_ci": [
+        0.7322062981049545,
+        0.7669825646452404
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "qata",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        14.98256396508238,
+        17.923029702007085
+      ],
+      "recomputed_ci": [
+        15.0028739637085,
+        17.879589981992297
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "qata",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        4.273436251127656,
+        5.7260249017709945
+      ],
+      "recomputed_ci": [
+        4.29986160376952,
+        5.73756612705476
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 474,
+      "stored_n_clusters": 474
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7510882455376544,
+        0.8146166812109046
+      ],
+      "recomputed_ci": [
+        0.7508878819701242,
+        0.8145973178079857
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6393225449503341,
+        0.7092251541633813
+      ],
+      "recomputed_ci": [
+        0.6383507847175933,
+        0.7099717387099432
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        22.602642832561436,
+        42.82038024329274
+      ],
+      "recomputed_ci": [
+        22.364362344660922,
+        43.32279360604864
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "reclmis",
+      "dataset": "mosmed",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        8.127332726658095,
+        23.794357810397845
+      ],
+      "recomputed_ci": [
+        8.126357555940606,
+        23.594950055001163
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 86,
+      "stored_n_clusters": 86
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6430737262502837,
+        0.7419566968791991
+      ],
+      "recomputed_ci": [
+        0.6436221563721126,
+        0.7418221082428347
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.5478633773554514,
+        0.6469624548718557
+      ],
+      "recomputed_ci": [
+        0.5476981255969747,
+        0.6476266802787267
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        91.60409970811989,
+        133.3745561076397
+      ],
+      "recomputed_ci": [
+        91.36631443489044,
+        133.60339518156746
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "unet",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        37.10053732730505,
+        71.84506141748598
+      ],
+      "recomputed_ci": [
+        37.23710354002142,
+        71.60584433166642
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7522759842691801,
+        0.831113630363761
+      ],
+      "recomputed_ci": [
+        0.7529769981295498,
+        0.8313534448793045
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.6614920347653964,
+        0.7423476551675898
+      ],
+      "recomputed_ci": [
+        0.6626441036768328,
+        0.7427677703866833
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        44.65527713065077,
+        67.76463294633997
+      ],
+      "recomputed_ci": [
+        44.653995987823414,
+        67.50675469838488
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "tripath_lesionnet",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        13.737369843506889,
+        22.597699101711477
+      ],
+      "recomputed_ci": [
+        13.767817488626271,
+        22.58350610023843
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "dice",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7857850748721128,
+        0.8590827573853016
+      ],
+      "recomputed_ci": [
+        0.7856027028642776,
+        0.858859697297429
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "miou",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        0.7042460432438626,
+        0.7797474646829855
+      ],
+      "recomputed_ci": [
+        0.7032703055004703,
+        0.7788921408432694
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "hd95",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        33.07018868469018,
+        52.1074573733855
+      ],
+      "recomputed_ci": [
+        33.06739889012027,
+        51.85821367033829
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    },
+    {
+      "file": "results/final_five_method/absolute_ci.csv",
+      "method": "panoptic_fpn",
+      "dataset": "busi",
+      "metric": "assd",
+      "mean_exact": 1.0,
+      "sd_exact": 1.0,
+      "stored_ci": [
+        11.026512641619128,
+        19.8327042125251
+      ],
+      "recomputed_ci": [
+        11.073873296889674,
+        19.87625185363038
+      ],
+      "ci_agrees": 1.0,
+      "n_clusters": 130,
+      "stored_n_clusters": 130
+    }
+  ],
+  "phase0_report_vs_files": {
+    "rows_parsed": 18,
+    "mismatches": []
+  },
+  "final_report_vs_summary_csv": {
+    "rows": 13,
+    "rows_not_found_verbatim": []
+  }
+}

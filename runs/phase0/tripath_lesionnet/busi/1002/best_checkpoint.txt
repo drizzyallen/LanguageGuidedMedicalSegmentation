@@ -1,0 +1,4 @@
+path: methods/phase0_image_only/runs/tripath_lesionnet/busi/seed_1002/upstream/busi/best.pt
+sha256: c54e80e96ff5a323f680bd2af7d3746ee0042fe22f0a09f2240511b00ee7bf9a
+epoch: 45
+selection: validation Dice (frozen Phase 0 rule)
